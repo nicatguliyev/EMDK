@@ -8,7 +8,7 @@
 
 import UIKit
 import Toast_Swift
-// deyisiklik
+// deyisiklik edildi
 struct cellData {
     var id  = Int()
     var opened = Bool()
