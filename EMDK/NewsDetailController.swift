@@ -32,6 +32,7 @@ class NewsDetailController: UIViewController, WKNavigationDelegate {
     var  tryAgainButton = UIButton()
     var checkConnIndicator = UIActivityIndicatorView()
     var newsId = 0
+    var x = 1
     var detailModel: NewsDetail?
     
     @IBOutlet weak var newsImage: UIImageView!
