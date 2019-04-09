@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jT4-Lx-C9Z">
+            <rect key="frame" x="0.0" y="0.0" width="98" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="98" height="48"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vn1-qN-wNW">
+                        <rect key="frame" x="0.0" y="0.0" width="98" height="48"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxm-YP-PO7">
+                                <rect key="frame" x="0.0" y="0.0" width="49" height="48"/>
+                                <state key="normal" backgroundImage="Logo.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ui-dd-9BU">
+                                <rect key="frame" x="49" y="0.0" width="49" height="48"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="share.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Vxm-YP-PO7" secondAttribute="bottom" id="0dM-hJ-DwJ"/>
+                            <constraint firstItem="1ui-dd-9BU" firstAttribute="width" secondItem="Vn1-qN-wNW" secondAttribute="width" multiplier="0.5" id="7hg-p1-gXO"/>
+                            <constraint firstItem="1ui-dd-9BU" firstAttribute="top" secondItem="Vn1-qN-wNW" secondAttribute="top" id="9uZ-D5-cEn"/>
+                            <constraint firstItem="Vxm-YP-PO7" firstAttribute="leading" secondItem="Vn1-qN-wNW" secondAttribute="leading" id="CLk-w1-pgy"/>
+                            <constraint firstItem="Vxm-YP-PO7" firstAttribute="leading" secondItem="Vn1-qN-wNW" secondAttribute="leading" id="G2c-bN-5px"/>
+                            <constraint firstAttribute="trailing" secondItem="1ui-dd-9BU" secondAttribute="trailing" id="NLz-7C-nJt"/>
+                            <constraint firstAttribute="bottom" secondItem="Vxm-YP-PO7" secondAttribute="bottom" id="fHY-rC-l11"/>
+                            <constraint firstItem="Vxm-YP-PO7" firstAttribute="top" secondItem="Vn1-qN-wNW" secondAttribute="top" id="wAD-Yd-8RB"/>
+                            <constraint firstItem="Vxm-YP-PO7" firstAttribute="top" secondItem="Vn1-qN-wNW" secondAttribute="top" id="x2Q-bI-UkO"/>
+                            <constraint firstItem="Vxm-YP-PO7" firstAttribute="width" secondItem="Vn1-qN-wNW" secondAttribute="width" multiplier="0.5" id="yJH-9r-neh"/>
+                            <constraint firstAttribute="bottom" secondItem="1ui-dd-9BU" secondAttribute="bottom" id="ya5-NE-sG1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Vn1-qN-wNW" secondAttribute="bottom" id="19Z-VU-Zwk"/>
+                <constraint firstItem="Vn1-qN-wNW" firstAttribute="leading" secondItem="jT4-Lx-C9Z" secondAttribute="leading" id="F7K-Ko-TQL"/>
+                <constraint firstItem="Vn1-qN-wNW" firstAttribute="top" secondItem="jT4-Lx-C9Z" secondAttribute="top" id="Lwa-vq-m2c"/>
+                <constraint firstAttribute="trailing" secondItem="Vn1-qN-wNW" secondAttribute="trailing" id="XhW-St-qK9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="OyO-OS-Iod"/>
+            <size key="customSize" width="98" height="48"/>
+            <point key="canvasLocation" x="57.600000000000001" y="120.53973013493254"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Logo.png" width="352" height="339"/>
+        <image name="share.png" width="50" height="50"/>
+    </resources>
+</document>

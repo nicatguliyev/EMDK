@@ -1,0 +1,11 @@
+framework module LoginWithEgov {
+  umbrella header "LoginWithEgov.h"
+
+  export *
+  module * { export * }
+}
+
+module LoginWithEgov.Swift {
+    header "LoginWithEgov-Swift.h"
+    requires objc
+}
