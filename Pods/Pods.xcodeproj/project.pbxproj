@@ -1,0 +1,1964 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		004366730128FA92459F6A43322ECB74 /* ThemifyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83657D3E634CBA7CD18AC36871918F0B /* ThemifyIcon.swift */; };
+		00D34533DF7802EA4E0FECF630502367 /* StepIndicator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CF819ABDFA344B556430EF84F2CC08E /* StepIndicator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		021BC73FCEBDAC00B057DF9152B7BA81 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F74DE776A3C635AC8EB0D713EAA96A /* FlatButton.swift */; };
+		02AB488DB13320EF1B3D6305676B9931 /* UIImage+MultiFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 860635E0B5F6937920E2E98F0C27A2C8 /* UIImage+MultiFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		045AA4DCBFCD2FFA6383C9AC75314E75 /* NSButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FDA7FC5FB57D633C21331420AADFF85A /* NSButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06832A7E488A0F1C45662516DD2158CA /* FontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10965813DDB41EF0EAB1F53F7F78834 /* FontLoader.swift */; };
+		07E3573A646CFF26BCEED73CFDAFEDFE /* SwiftyButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ACE9C9F53AA3A517709CFC1F2C1D9FC /* SwiftyButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09A365A71FE3B05FA8D33A76B26CF891 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEB5A2286A80E3EEA542FCD5D8E38034 /* Ionicons.ttf */; };
+		0E8B7BCA82243F5845DB01E631EBBB01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DF8B266552D1A15FF4D9F9A0CA0388 /* Foundation.framework */; };
+		0F9BE200339A6EACD253EE1BB66C7B07 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F26123EAAF9B1E2D1594A0D5B2581BD /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13A880B5BDE8D469C49FEC35A11686C0 /* LGButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9433B5BEA5C034DB8B8A5D2601F744 /* LGButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		195CB5171838C4F102F5232A6B66BEFB /* Pods-EMDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42F5CAD1B295130A2614FEF0A58FA2CD /* Pods-EMDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A82C7F29B911D0A5C5DFE852D69F79D /* UIImage+ForceDecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA0BA9D1A8DBCE32B1FA4E19F40F689 /* UIImage+ForceDecode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B602B4782E04198E2FFB4F647CF7E39 /* StepIndicator.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5821CA426E98668A764DC282292831F6 /* StepIndicator.bundle */; };
+		1D6A72FBDC1DAA136FF8E8AEA620BAF2 /* LGButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4CA0A2CD12B630B520C60DDA56EE07 /* LGButton-dummy.m */; };
+		1EB1117C0ABD333F4C150B96EBEC81F9 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DC8C95991331C7E9BEB6D26FBD9D41 /* SDWebImageDownloaderOperation.m */; };
+		1F71569CF3C3EFC02318EC1CA6DAB06C /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EA261689EE7A3C6598E4D1D21C7B34C7 /* NSImage+WebCache.m */; };
+		20B3B17525EFADFBED9B7702D1D896BD /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD6F14149D05F3A9E9D21EFCEDFFE06 /* ImageIO.framework */; };
+		219E2092A81A05F3F05F5FE0968A4F4C /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB41AB5835611E275FD4796D89EE18E /* SDWebImage-dummy.m */; };
+		23E49CCCC31BC2A09722B94E41BBF62A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DF8B266552D1A15FF4D9F9A0CA0388 /* Foundation.framework */; };
+		24286345C8FD8C145E23A41B933BC841 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9AF0E33C6FDF7139C261848175B77B9 /* Media.xcassets */; };
+		2444C710102E0E6E609F6E27423D81AB /* SDWebImageGIFCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 786E4C9174FBE7E2931EC9F20B06CE39 /* SDWebImageGIFCoder.m */; };
+		270CA35F9C695CBC65D2FCE1B48ABA82 /* ButtonBackgroundColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B710B6516B27FDAB586090AE33FB38FA /* ButtonBackgroundColor-dummy.m */; };
+		272C177D8FC0646520CA5C3E1EA39126 /* MapIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41448CAC4A7C99F452544640153A64B7 /* MapIcon.swift */; };
+		29E5726EB2F6022488A0F4BD23D6F86C /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 870C97A340BDDBA4AD7E8690153609BA /* SDWebImageManager.m */; };
+		2BC574C211A4D8E6EDC26E53A0ACDC3C /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF8D9E3D8471927563CE4F74274E5107 /* octicons.ttf */; };
+		2C245E95598628C31009A7E756BD61CF /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6CBD6567DEEAABCF66B85904C5E57A /* UIImage+GIF.m */; };
+		30C71A508D8F8E9AF72C2897960E44F2 /* SDWebImageTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 613C60FEA4F5FF8857EE49A633D1BC98 /* SDWebImageTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		329BDEE0E493ECFDADCF71BB09C9C0E1 /* SDWebImageGIFCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C505E7B2B12A56E4515F415B805984B /* SDWebImageGIFCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34D0D649C1A04F9DEBC1E1F04CC7F202 /* IonIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B2BB52B1F67EA293476CAA3CADA41B /* IonIcons.swift */; };
+		36486187C20F939AA27B7DA74D394BF1 /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = F78E40BC7C40F759E2CE4305E72CD318 /* SDAnimatedImageRep.m */; };
+		41B6A03A663041E5A4DA6313D990DFAF /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 79A5D9B680FF8D117D5C882C0DB8CE44 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48A05BC23C1C67AC31EEB66DEF4744A0 /* CustomPressableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71281CF911E5D1E9B32CCD795E2C83DC /* CustomPressableButton.swift */; };
+		4AE497B31918F51F48675CDEDDD57171 /* themify.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 369EA17EFAA65B9C3F5A90048C09DCFC /* themify.ttf */; };
+		4BE6E1CA3EC31B7EF1BBA9FC5F874280 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46C9128D10FAB8D97CEB8125C90A4923 /* FontAwesome.ttf */; };
+		501A0762F0FC52A26944A7B972B88AC3 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 5914A59BC8DCF2B12D3FCA1E1C5E3F66 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53184B884DEC6C1E5E3EC8D440B945EC /* LGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D172FB34C21CBF9A12DE8B62A602C2 /* LGButton.swift */; };
+		53936D988AD09D4912288DB3CDBA6077 /* LineLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C619294A6AEE5203E156B7192EF641 /* LineLayer.swift */; };
+		61E6F134F4885F5DC6F06E169A4C155A /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E4FE707D3E54E0FD3AA1E1228EF6AAF /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61EEE9A7B10B5F7D02EAD6AA82F1C1FD /* MaterialIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C855D34B7853488B3670F45ECFAC488 /* MaterialIcon.swift */; };
+		62B3B2F8E4321FEEF1A2687FA5E2CACE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DF8B266552D1A15FF4D9F9A0CA0388 /* Foundation.framework */; };
+		64047E62EBA6CC7F869FCE6E09B2E624 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 69C9C1751278B791811F3347B295873E /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6405B48E40911C7E1E11160BCB4097F3 /* SDWebImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0322E8AF12273979D20225EFD53709 /* SDWebImageCodersManager.m */; };
+		66914E8F547A4E2F230EE0617A2F377E /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = FB410080AB4BCA52ED5B6515236E110A /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67A0F66B69946CE3E33B16544540E3A3 /* SDWebImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 97609FCAA929226354F7FFFD05100AFC /* SDWebImageCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68979F8C77239525062C2912819DAE02 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 74DEC82A191F2B2DC166163D6E519CB0 /* SDWebImagePrefetcher.m */; };
+		7037B59D9E26ABD4AE0401A924F09E66 /* NSButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0926A6D020F11535247FBFC142423609 /* NSButton+WebCache.m */; };
+		71064578532CD24B04E845535034D97B /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CF23156BB2F6F006FE88EEA8D5AD19 /* UIView+WebCache.m */; };
+		75783271AB302D087F639F7EB9AFA328 /* Pods-EMDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D8A242A9FD6799E0AA90E955541FAC /* Pods-EMDK-dummy.m */; };
+		76050E66DF3D3BEB0431C547A96082B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DF8B266552D1A15FF4D9F9A0CA0388 /* Foundation.framework */; };
+		7A25E36E5CCE182840123DF86348EA60 /* AnnularLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478B023643C4A763FA0EABA1A9EE0E83 /* AnnularLayer.swift */; };
+		7C19E802FFAA570EA182020677068CAA /* Iconic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5396BDBF9F253D69FE68A0682FF166C7 /* Iconic.swift */; };
+		8290FA3CDC8D5538889D715C631D903F /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5710B489A2A235CEB5F310AB354F119 /* Toast-Swift-dummy.m */; };
+		8521285B0B95728859FA31E56FB35E9D /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0F470F46E9A09CE655B9D8374B4ED2B /* MaterialIcons-Regular.ttf */; };
+		86F51BD570822489B4192EED046BAC2A /* SDAnimatedImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D19C6F38F56C906FB7B59191E2E9C67 /* SDAnimatedImageRep.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B7D54D15161B7E676E1BA4B657329AC /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F417F8967F89CA2ADD4A6EC72E7AF390 /* SDWebImageDownloader.m */; };
+		8F97371AA1F4F12CFC543AEFCF60D156 /* NSImage+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = F3AF0B1A344BEFE310D2D6CF0FABAE5D /* NSImage+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92CA045B255D473684AACEA20C7AAD09 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902DA13066143FE7A7BD1C106977A12A /* Utils.swift */; };
+		98092A6004F265E3138E701D96FCD69D /* open-iconic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E80B183544E35CF7C0E5B05FEE51970B /* open-iconic.ttf */; };
+		981122534D27F04E7A74D156A2803767 /* SDWebImageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EEBA6890DBF1D147A33360F22E2D2DB1 /* SDWebImageTransition.m */; };
+		9AD4E69583DF95283B99EB0D593C4B5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C518C3BF1F02EBE0521A9B7E10573A /* QuartzCore.framework */; };
+		9B210E678223089FC95C1D564265B86F /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = DDDBA7A5C2EFA9230F332304799665C3 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A14C7C7D26E5A26EAB4AC3013B321C48 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A3B28F47B6447F08356B37218C9EC0 /* NSData+ImageContentType.m */; };
+		A17DF6F1DFDDCF9728BFC472CF59ECA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DF8B266552D1A15FF4D9F9A0CA0388 /* Foundation.framework */; };
+		A1CF5DF477365F1947C0083280770128 /* SDWebImageImageIOCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D962B430512185A05B209ED6DCE082DD /* SDWebImageImageIOCoder.m */; };
+		A73B11C975BB1DA52EC1E2ED3FFE9045 /* SDWebImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA81A2CCE2A44AF141D742125653CEEC /* SDWebImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8521459A734ECAB49427D0F09ABC3D0 /* UIButton+ButtonBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2067F3D2040998C000612BC6930AE42 /* UIButton+ButtonBackgroundColor.swift */; };
+		A8C1BD8E6BE41562D15EF81875B38BAE /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D6802EEF59BCD59B58FBAF3B6E0A73CF /* UIImageView+HighlightedWebCache.m */; };
+		A9197F8C7A93267D9DA01BEF1FB66812 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = D6E47B8A7EA85799BE7140A9E5C694A5 /* SDWebImageCompat.m */; };
+		A9AA194638115AEF446FE77C0A4587E9 /* SDImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7EB0BCA1EFA493783C205B73068F9A /* SDImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA4DBBF269CA902FC32D63C50975F586 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBE4B32ECA5A5CE70D263F8224E4480 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA7C5A0813546A95270C73E24DEDD28A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DF8B266552D1A15FF4D9F9A0CA0388 /* Foundation.framework */; };
+		AAA9C4A7BACF62A919C041CD1BFBC046 /* StepIndicator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E66459547CDFA41705267C2E32D5A0 /* StepIndicator-dummy.m */; };
+		AB0B838496FCCB8E8221B6CDE0467362 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 38956C3B861A3DA52FE21C23098E7853 /* UIButton+WebCache.m */; };
+		AEF7D107CFBFC92CEDA323C394DA9FAE /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AAA66078CB0428C98FDB23FA5E4574D /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF2BA725A3277DB91BF5F0BF43B9F9B0 /* SwiftIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23DE4B0D70E27BEB862EE605FEE247 /* SwiftIconLabel.swift */; };
+		AF68AE3AF8F8084921F84485D7C37B49 /* SDWebImagePrefetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = FB5F0F30743AACB71E8F580FFAA2AE01 /* SDWebImagePrefetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1F3CB52F5CA79FE65B1B8AF739B8AF4 /* map-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F03CA679848FD3F4C7E9DF064A1E4C5 /* map-icons.ttf */; };
+		B4C3B795E308171C1BA0AC1A16E4B0AB /* SDWebImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFC0BAA62E19D5EB6E39D8D896E676B /* SDWebImageCoderHelper.m */; };
+		BCF3AF6018E45E0ED5F07594C8E52DBF /* Octicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD70F9678BD1ED5DD3F3EAD4C327F27D /* Octicon.swift */; };
+		C32C1AF380A056527AA2CD6F36DDF2CF /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4647D7D73CAECCAF84B2FAB3DEB48658 /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C797AB837D4F406D8F2F9E13371EA3EA /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3120CDBB203C116962A2EECBD432B48B /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB335FD9EDE5CC8769F58A3A75E115C4 /* SDWebImageCoderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B7408A30ED686538636F1E988278A24E /* SDWebImageCoderHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC2C807DB96F976ED767B1920291107F /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B05AB60ECAA4DC779FF228417EDF47 /* SDImageCache.m */; };
+		CF0CDA5B06934B858DB55235EC846390 /* SDImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A4E5FEDADDA8155FCECDC9FDC79ED4 /* SDImageCacheConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF1E2AA9793F38AB4FE0106DEAE11456 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 965EC0688C9A83821C96D43B7311B971 /* UIView+WebCacheOperation.m */; };
+		D79A7ECE9A29255DC2CAC683FEDC0831 /* ButtonBackgroundColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CBAE38A342CA7181BEBAEB3D3131A820 /* ButtonBackgroundColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D81A1CA5D3C6843D3D0C837CBAF6D9C0 /* SDWebImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B92B6A835E5C331174C4DBB3938ED417 /* SDWebImageFrame.m */; };
+		DA8A9EF1961316F250A801420A821CC2 /* SDWebImageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E4B17747050A7E1F76BA7A4C54915F2 /* SDWebImageFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD148AE0CB7F12547F97B4CD983B1A73 /* SDWebImageImageIOCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 246FEFA336783BECA1802B180400D6D2 /* SDWebImageImageIOCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDC8FC97C93F8BA5E4AAA44681BFB91D /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF48DB476F47FD60C989C6D13FFEAF7C /* FontAwesome.swift */; };
+		DE804CEE057CA17AADA17FB0C752C8C8 /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A2720D14B58E19CD6B735C55A79A216B /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0A8276A92859C90B672043E4A88DF1A /* SwiftyButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1E242BD393F61220AD7C35DDFB1F09 /* SwiftyButton-dummy.m */; };
+		E30BB33160B564C2935EA8721C315909 /* SDImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B016CF64EC56469EB5CDB4B02D5A5B1E /* SDImageCacheConfig.m */; };
+		E3D6857B0FD0E4F89B8C013C0B5511C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DF8B266552D1A15FF4D9F9A0CA0388 /* Foundation.framework */; };
+		E6615C7075BC0444842D920E85BA093B /* SwiftIconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0084BFD3954D44E9BB3D55D8529A1F6 /* SwiftIconFont.swift */; };
+		E70686DEB56C9F1B7A0B014D15ED1960 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = C92A06E4C0740A04E9E3C3129EA99879 /* UIImage+MultiFormat.m */; };
+		E889F34B0B019640E93070DF166A9070 /* LGButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE3D4F370CF2BB0957B119D49AF6DFF /* LGButton.xib */; };
+		EA0A7BD540B415284EFD10A23EFEFC8A /* PressableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EED0AC2A8052C08FDB4A7CA2ABE030 /* PressableButton.swift */; };
+		EAE80EF141911F09712DCEF1B1831D67 /* SDWebImageCodersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ACF98EC30684EA9ABE732D0E583BAF /* SDWebImageCodersManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED132384A68259D2844BCE90BB999773 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC680A83DFB950C69CB2F6362823B59 /* Toast.swift */; };
+		ED621A281597536BC703B8FB24201CE4 /* SDWebImageCompat.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A3388BC112C0F99E6629BAB98047EE6 /* SDWebImageCompat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEDF2CA37DF9F340FCB783E1EB1D81F8 /* SDWebImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F1D156BFC1E65C2C45876000A86F48 /* SDWebImageCoder.m */; };
+		F1C5E57411D44EAB9C2A68F11C492A6E /* StepIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2CC483D96D06C56C32EECF6D02046A /* StepIndicatorView.swift */; };
+		F25921801DBA1AF8980A2AD44312B067 /* UIImage+ForceDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A034F5C033C6AF1B9244E885ABC05D9 /* UIImage+ForceDecode.m */; };
+		FACA74594C67DB69050BF503725C8028 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD380F46B47A38BC873ACECD1D6BC3F /* UIKit.framework */; };
+		FFF53E53943400380BBF548F1D5CAE83 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8EEB1F60B02EE8B212B3BA480DE9A8 /* UIImageView+WebCache.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B1723E76EE4525B17E27FEC7C2B9EAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6299E98812D1A7FFE98805BD094ABC8E;
+			remoteInfo = "StepIndicator-StepIndicator";
+		};
+		25792FEAB417476069B1F0515249C1E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04B5E2FD25DCB82AA480891E27CC9A12;
+			remoteInfo = StepIndicator;
+		};
+		2E11B9858F4E3FB84551806E53E1D333 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D4968B03357A2AE5CB27A92AC7D82B8;
+			remoteInfo = LGButton;
+		};
+		4515E9EBC27DB420D96F4907F39D254F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D15A94B23A38F1D33C97FC05EA1520FB;
+			remoteInfo = SwiftyButton;
+		};
+		6BB7095C8AA417F6C8A488A6B15C2B24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28523B7E19B93869128D6A6AC4BBF00F;
+			remoteInfo = SDWebImage;
+		};
+		977AD8671CC579287A35A7F64AC07E0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D92B913B0AC0F9C54D347BC933D70A21;
+			remoteInfo = "Toast-Swift";
+		};
+		A37D7241C3FFC45B148F89EA4815C1CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01BEBED5EC12ECCC7B7B5D5994442009;
+			remoteInfo = ButtonBackgroundColor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F74DE776A3C635AC8EB0D713EAA96A /* FlatButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlatButton.swift; path = SwiftyButton/FlatButton.swift; sourceTree = "<group>"; };
+		04A4E5FEDADDA8155FCECDC9FDC79ED4 /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/SDImageCacheConfig.h; sourceTree = "<group>"; };
+		04CC094F288EFCF09CCB6567BB9869DE /* Pods-EMDK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EMDK-resources.sh"; sourceTree = "<group>"; };
+		0926A6D020F11535247FBFC142423609 /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/NSButton+WebCache.m"; sourceTree = "<group>"; };
+		0C505E7B2B12A56E4515F415B805984B /* SDWebImageGIFCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageGIFCoder.h; path = SDWebImage/SDWebImageGIFCoder.h; sourceTree = "<group>"; };
+		0E64181B06BBD03D10AF37C05013207D /* LGButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LGButton.modulemap; sourceTree = "<group>"; };
+		12159965962283577895279C6F5EAC21 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
+		13EED0AC2A8052C08FDB4A7CA2ABE030 /* PressableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PressableButton.swift; path = SwiftyButton/PressableButton.swift; sourceTree = "<group>"; };
+		15D8A242A9FD6799E0AA90E955541FAC /* Pods-EMDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EMDK-dummy.m"; sourceTree = "<group>"; };
+		16C59EDB3892DD105710E863D6C9DC3E /* Toast-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Toast-Swift.modulemap"; sourceTree = "<group>"; };
+		1894105B90EA805FDC5248F92C2AC0AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A3388BC112C0F99E6629BAB98047EE6 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
+		1BC680A83DFB950C69CB2F6362823B59 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
+		1C6CBD6567DEEAABCF66B85904C5E57A /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
+		1DA0BA9D1A8DBCE32B1FA4E19F40F689 /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
+		1ED70BA53B51C60396E814AC4443B769 /* ButtonBackgroundColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ButtonBackgroundColor.xcconfig; sourceTree = "<group>"; };
+		1F03CA679848FD3F4C7E9DF064A1E4C5 /* map-icons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "map-icons.ttf"; path = "LGButton/Resources/map-icons.ttf"; sourceTree = "<group>"; };
+		22F1D156BFC1E65C2C45876000A86F48 /* SDWebImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCoder.m; path = SDWebImage/SDWebImageCoder.m; sourceTree = "<group>"; };
+		2412EF4D75A355F03E4534A1ABED95CD /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toast_Swift.framework; path = "Toast-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		246FEFA336783BECA1802B180400D6D2 /* SDWebImageImageIOCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageImageIOCoder.h; path = SDWebImage/SDWebImageImageIOCoder.h; sourceTree = "<group>"; };
+		2ACE9C9F53AA3A517709CFC1F2C1D9FC /* SwiftyButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyButton-umbrella.h"; sourceTree = "<group>"; };
+		2B1E242BD393F61220AD7C35DDFB1F09 /* SwiftyButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyButton-dummy.m"; sourceTree = "<group>"; };
+		2CF819ABDFA344B556430EF84F2CC08E /* StepIndicator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StepIndicator-umbrella.h"; sourceTree = "<group>"; };
+		2D7B930008BC2AFC2B7C36A15ADE608E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E0888CD97BBEE123B97340DA8FA4616 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31068D975625BF3375EA2F3A6B404B97 /* Toast-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-prefix.pch"; sourceTree = "<group>"; };
+		3120CDBB203C116962A2EECBD432B48B /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
+		353CA6252054DD9C716D2E05177D5657 /* Pods-EMDK-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EMDK-acknowledgements.plist"; sourceTree = "<group>"; };
+		369EA17EFAA65B9C3F5A90048C09DCFC /* themify.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = themify.ttf; path = LGButton/Resources/themify.ttf; sourceTree = "<group>"; };
+		37D8DD4409E4F4A0C36B20F3C98A66E0 /* ResourceBundle-StepIndicator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-StepIndicator-Info.plist"; sourceTree = "<group>"; };
+		38956C3B861A3DA52FE21C23098E7853 /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
+		38ACF98EC30684EA9ABE732D0E583BAF /* SDWebImageCodersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCodersManager.h; path = SDWebImage/SDWebImageCodersManager.h; sourceTree = "<group>"; };
+		3C855D34B7853488B3670F45ECFAC488 /* MaterialIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaterialIcon.swift; path = LGButton/Classes/SwiftIconFont/MaterialIcon.swift; sourceTree = "<group>"; };
+		3E7EB0BCA1EFA493783C205B73068F9A /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
+		3F8997A80699EBA71C0AEDB5200DFD75 /* Pods-EMDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EMDK.debug.xcconfig"; sourceTree = "<group>"; };
+		41448CAC4A7C99F452544640153A64B7 /* MapIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapIcon.swift; path = LGButton/Classes/SwiftIconFont/MapIcon.swift; sourceTree = "<group>"; };
+		41B6C131794A82975645C5A57AFDAE35 /* Pods-EMDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EMDK.modulemap"; sourceTree = "<group>"; };
+		42F5CAD1B295130A2614FEF0A58FA2CD /* Pods-EMDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EMDK-umbrella.h"; sourceTree = "<group>"; };
+		44A3B28F47B6447F08356B37218C9EC0 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		4647D7D73CAECCAF84B2FAB3DEB48658 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/SDWebImageDownloader.h; sourceTree = "<group>"; };
+		46C9128D10FAB8D97CEB8125C90A4923 /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.ttf; path = LGButton/Resources/FontAwesome.ttf; sourceTree = "<group>"; };
+		46FA2576077D2BAE76FF8532B7281C61 /* SwiftyButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyButton-prefix.pch"; sourceTree = "<group>"; };
+		471CC333EE306998B465F38280469E4D /* StepIndicator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = StepIndicator.modulemap; sourceTree = "<group>"; };
+		478B023643C4A763FA0EABA1A9EE0E83 /* AnnularLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnnularLayer.swift; path = StepIndicator/AnnularLayer.swift; sourceTree = "<group>"; };
+		4A034F5C033C6AF1B9244E885ABC05D9 /* UIImage+ForceDecode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ForceDecode.m"; path = "SDWebImage/UIImage+ForceDecode.m"; sourceTree = "<group>"; };
+		4C0322E8AF12273979D20225EFD53709 /* SDWebImageCodersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCodersManager.m; path = SDWebImage/SDWebImageCodersManager.m; sourceTree = "<group>"; };
+		4F74D469EFF427AD468076549AB4641B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5396BDBF9F253D69FE68A0682FF166C7 /* Iconic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Iconic.swift; path = LGButton/Classes/SwiftIconFont/Iconic.swift; sourceTree = "<group>"; };
+		54D0FDF3DA602CB4303D0B6A13DF6031 /* SwiftyButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyButton.framework; path = SwiftyButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5821CA426E98668A764DC282292831F6 /* StepIndicator.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = StepIndicator.bundle; path = "StepIndicator-StepIndicator.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5914A59BC8DCF2B12D3FCA1E1C5E3F66 /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/UIButton+WebCache.h"; sourceTree = "<group>"; };
+		5E4B17747050A7E1F76BA7A4C54915F2 /* SDWebImageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageFrame.h; path = SDWebImage/SDWebImageFrame.h; sourceTree = "<group>"; };
+		60153A46344AB3913F9A31F7C5949346 /* SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDWebImage.modulemap; sourceTree = "<group>"; };
+		613C60FEA4F5FF8857EE49A633D1BC98 /* SDWebImageTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageTransition.h; path = SDWebImage/SDWebImageTransition.h; sourceTree = "<group>"; };
+		623536925A8697567C181870635A2509 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65B05AB60ECAA4DC779FF228417EDF47 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
+		66DC8C95991331C7E9BEB6D26FBD9D41 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		69C9C1751278B791811F3347B295873E /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		6AF46895959815AF0390375697EE7D2F /* Toast-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Swift.xcconfig"; sourceTree = "<group>"; };
+		6AF78E083AD9FED062EAF672EC54AC97 /* Pods-EMDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EMDK.release.xcconfig"; sourceTree = "<group>"; };
+		6D23DE4B0D70E27BEB862EE605FEE247 /* SwiftIconLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftIconLabel.swift; path = LGButton/Classes/SwiftIconFont/SwiftIconLabel.swift; sourceTree = "<group>"; };
+		71281CF911E5D1E9B32CCD795E2C83DC /* CustomPressableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomPressableButton.swift; path = SwiftyButton/CustomPressableButton.swift; sourceTree = "<group>"; };
+		74C518C3BF1F02EBE0521A9B7E10573A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		74DEC82A191F2B2DC166163D6E519CB0 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		786E4C9174FBE7E2931EC9F20B06CE39 /* SDWebImageGIFCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageGIFCoder.m; path = SDWebImage/SDWebImageGIFCoder.m; sourceTree = "<group>"; };
+		78B2BB52B1F67EA293476CAA3CADA41B /* IonIcons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IonIcons.swift; path = LGButton/Classes/SwiftIconFont/IonIcons.swift; sourceTree = "<group>"; };
+		79A5D9B680FF8D117D5C882C0DB8CE44 /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
+		7AAA66078CB0428C98FDB23FA5E4574D /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
+		7BB41AB5835611E275FD4796D89EE18E /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
+		7DBA9F63FE389107B9444B82ABD4FFA3 /* ButtonBackgroundColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ButtonBackgroundColor-prefix.pch"; sourceTree = "<group>"; };
+		7EE8CD99574719638F8BDCF2593853FF /* Pods_EMDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EMDK.framework; path = "Pods-EMDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F26123EAAF9B1E2D1594A0D5B2581BD /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		8139D36F511CE4498A1BE76553557EB3 /* LGButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LGButton.framework; path = LGButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		814B2EB8BFE9846DB55649C9C45555B2 /* StepIndicator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StepIndicator-prefix.pch"; sourceTree = "<group>"; };
+		81CF23156BB2F6F006FE88EEA8D5AD19 /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/UIView+WebCache.m"; sourceTree = "<group>"; };
+		81DF8B266552D1A15FF4D9F9A0CA0388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		83657D3E634CBA7CD18AC36871918F0B /* ThemifyIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemifyIcon.swift; path = LGButton/Classes/SwiftIconFont/ThemifyIcon.swift; sourceTree = "<group>"; };
+		85E66459547CDFA41705267C2E32D5A0 /* StepIndicator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StepIndicator-dummy.m"; sourceTree = "<group>"; };
+		860635E0B5F6937920E2E98F0C27A2C8 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		870C97A340BDDBA4AD7E8690153609BA /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
+		8AD6F14149D05F3A9E9D21EFCEDFFE06 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		8B4F9C5A95743E2AA6503BD9CA55948A /* StepIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StepIndicator.framework; path = StepIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D19C6F38F56C906FB7B59191E2E9C67 /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/SDAnimatedImageRep.h; sourceTree = "<group>"; };
+		8E4FE707D3E54E0FD3AA1E1228EF6AAF /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/SDWebImageManager.h; sourceTree = "<group>"; };
+		902DA13066143FE7A7BD1C106977A12A /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = SwiftyButton/Utils.swift; sourceTree = "<group>"; };
+		92159EDAA4276ADAF9B86CDA4A8034D7 /* LGButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LGButton.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95C619294A6AEE5203E156B7192EF641 /* LineLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineLayer.swift; path = StepIndicator/LineLayer.swift; sourceTree = "<group>"; };
+		965EC0688C9A83821C96D43B7311B971 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		97609FCAA929226354F7FFFD05100AFC /* SDWebImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCoder.h; path = SDWebImage/SDWebImageCoder.h; sourceTree = "<group>"; };
+		98392338BE94F76DC3B9A4FA75220F8C /* SwiftyButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyButton.xcconfig; sourceTree = "<group>"; };
+		9B2CC483D96D06C56C32EECF6D02046A /* StepIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepIndicatorView.swift; path = StepIndicator/StepIndicatorView.swift; sourceTree = "<group>"; };
+		A0084BFD3954D44E9BB3D55D8529A1F6 /* SwiftIconFont.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftIconFont.swift; path = LGButton/Classes/SwiftIconFont/SwiftIconFont.swift; sourceTree = "<group>"; };
+		A2720D14B58E19CD6B735C55A79A216B /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		A2EC25DAEF58FCCDE83440B2A8F0432A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9AF0E33C6FDF7139C261848175B77B9 /* Media.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = StepIndicator/Media.xcassets; sourceTree = "<group>"; };
+		AA2260C02E715E7E8852AB10D2FBBD2F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAE3D4F370CF2BB0957B119D49AF6DFF /* LGButton.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LGButton.xib; path = LGButton/Resources/LGButton.xib; sourceTree = "<group>"; };
+		AD0C7F6A08184071592720C3443A2B1B /* LGButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LGButton-prefix.pch"; sourceTree = "<group>"; };
+		AF2D180CC3012CE9A09916693460A6F3 /* Pods-EMDK-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EMDK-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B016CF64EC56469EB5CDB4B02D5A5B1E /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/SDImageCacheConfig.m; sourceTree = "<group>"; };
+		B710B6516B27FDAB586090AE33FB38FA /* ButtonBackgroundColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ButtonBackgroundColor-dummy.m"; sourceTree = "<group>"; };
+		B7408A30ED686538636F1E988278A24E /* SDWebImageCoderHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCoderHelper.h; path = SDWebImage/SDWebImageCoderHelper.h; sourceTree = "<group>"; };
+		B92B6A835E5C331174C4DBB3938ED417 /* SDWebImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageFrame.m; path = SDWebImage/SDWebImageFrame.m; sourceTree = "<group>"; };
+		BA81A2CCE2A44AF141D742125653CEEC /* SDWebImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-umbrella.h"; sourceTree = "<group>"; };
+		C2067F3D2040998C000612BC6930AE42 /* UIButton+ButtonBackgroundColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+ButtonBackgroundColor.swift"; path = "ButtonBackgroundColor-iOS/UIButton+ButtonBackgroundColor.swift"; sourceTree = "<group>"; };
+		C386D3C46A40B32DCF0EAB8FF4BCC40C /* StepIndicator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StepIndicator.xcconfig; sourceTree = "<group>"; };
+		C45D6E5B70AB87D066AB6488F7F6A25E /* Pods-EMDK-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EMDK-frameworks.sh"; sourceTree = "<group>"; };
+		C5710B489A2A235CEB5F310AB354F119 /* Toast-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-Swift-dummy.m"; sourceTree = "<group>"; };
+		C92A06E4C0740A04E9E3C3129EA99879 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		CBAE38A342CA7181BEBAEB3D3131A820 /* ButtonBackgroundColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ButtonBackgroundColor-umbrella.h"; sourceTree = "<group>"; };
+		CD70F9678BD1ED5DD3F3EAD4C327F27D /* Octicon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Octicon.swift; path = LGButton/Classes/SwiftIconFont/Octicon.swift; sourceTree = "<group>"; };
+		CEB5A2286A80E3EEA542FCD5D8E38034 /* Ionicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = Ionicons.ttf; path = LGButton/Resources/Ionicons.ttf; sourceTree = "<group>"; };
+		CF48DB476F47FD60C989C6D13FFEAF7C /* FontAwesome.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAwesome.swift; path = LGButton/Classes/SwiftIconFont/FontAwesome.swift; sourceTree = "<group>"; };
+		CF8EEB1F60B02EE8B212B3BA480DE9A8 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		D10965813DDB41EF0EAB1F53F7F78834 /* FontLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontLoader.swift; path = LGButton/Classes/SwiftIconFont/FontLoader.swift; sourceTree = "<group>"; };
+		D3E9EC2F5DB18B758E4145419C0A2EF6 /* ButtonBackgroundColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ButtonBackgroundColor.modulemap; sourceTree = "<group>"; };
+		D6802EEF59BCD59B58FBAF3B6E0A73CF /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		D6E47B8A7EA85799BE7140A9E5C694A5 /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
+		D962B430512185A05B209ED6DCE082DD /* SDWebImageImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageImageIOCoder.m; path = SDWebImage/SDWebImageImageIOCoder.m; sourceTree = "<group>"; };
+		DDDBA7A5C2EFA9230F332304799665C3 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
+		E0F470F46E9A09CE655B9D8374B4ED2B /* MaterialIcons-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "MaterialIcons-Regular.ttf"; path = "LGButton/Resources/MaterialIcons-Regular.ttf"; sourceTree = "<group>"; };
+		E7C8DBE91775305071481DA4D70D0AF7 /* SwiftyButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyButton.modulemap; sourceTree = "<group>"; };
+		E80B183544E35CF7C0E5B05FEE51970B /* open-iconic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = "open-iconic.ttf"; path = "LGButton/Resources/open-iconic.ttf"; sourceTree = "<group>"; };
+		EA261689EE7A3C6598E4D1D21C7B34C7 /* NSImage+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+WebCache.m"; path = "SDWebImage/NSImage+WebCache.m"; sourceTree = "<group>"; };
+		EC4CA0A2CD12B630B520C60DDA56EE07 /* LGButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LGButton-dummy.m"; sourceTree = "<group>"; };
+		EC833391C5292A2D04F20E0B7973F11D /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDWebImage.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEBA6890DBF1D147A33360F22E2D2DB1 /* SDWebImageTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageTransition.m; path = SDWebImage/SDWebImageTransition.m; sourceTree = "<group>"; };
+		F3AF0B1A344BEFE310D2D6CF0FABAE5D /* NSImage+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+WebCache.h"; path = "SDWebImage/NSImage+WebCache.h"; sourceTree = "<group>"; };
+		F3D172FB34C21CBF9A12DE8B62A602C2 /* LGButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LGButton.swift; path = LGButton/Classes/LGButton.swift; sourceTree = "<group>"; };
+		F417F8967F89CA2ADD4A6EC72E7AF390 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
+		F78E40BC7C40F759E2CE4305E72CD318 /* SDAnimatedImageRep.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImageRep.m; path = SDWebImage/SDAnimatedImageRep.m; sourceTree = "<group>"; };
+		FA0D4843A4EC2F107497CB530E2C8539 /* ButtonBackgroundColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ButtonBackgroundColor.framework; path = ButtonBackgroundColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB410080AB4BCA52ED5B6515236E110A /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderOperation.h; path = SDWebImage/SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		FB5F0F30743AACB71E8F580FFAA2AE01 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		FCFC0BAA62E19D5EB6E39D8D896E676B /* SDWebImageCoderHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCoderHelper.m; path = SDWebImage/SDWebImageCoderHelper.m; sourceTree = "<group>"; };
+		FDA7FC5FB57D633C21331420AADFF85A /* NSButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSButton+WebCache.h"; path = "SDWebImage/NSButton+WebCache.h"; sourceTree = "<group>"; };
+		FDD2C6198C37F0466E38AD2DDC08F4DC /* SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.xcconfig; sourceTree = "<group>"; };
+		FE9433B5BEA5C034DB8B8A5D2601F744 /* LGButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LGButton-umbrella.h"; sourceTree = "<group>"; };
+		FEBE4B32ECA5A5CE70D263F8224E4480 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		FF8D9E3D8471927563CE4F74274E5107 /* octicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = octicons.ttf; path = LGButton/Resources/octicons.ttf; sourceTree = "<group>"; };
+		FFD380F46B47A38BC873ACECD1D6BC3F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16A24AB84A6601F03CDFD9135D6B4315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E8B7BCA82243F5845DB01E631EBBB01 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		176E38E0503BD2E2E962D2BE7E4A1D26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CA80BFD554E28082BB2069A33BA396E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62B3B2F8E4321FEEF1A2687FA5E2CACE /* Foundation.framework in Frameworks */,
+				20B3B17525EFADFBED9B7702D1D896BD /* ImageIO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8967C056A78CD15406479C6D44D5870C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23E49CCCC31BC2A09722B94E41BBF62A /* Foundation.framework in Frameworks */,
+				9AD4E69583DF95283B99EB0D593C4B5B /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C66B541D6DA7FA36EF0CD7C96A10E0C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17DF6F1DFDDCF9728BFC472CF59ECA5 /* Foundation.framework in Frameworks */,
+				FACA74594C67DB69050BF503725C8028 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBE8864EE54C61B1A5B8EA10B3E30EBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3D6857B0FD0E4F89B8C013C0B5511C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE512E7FDF340883B8ADC32093BC0D2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA7C5A0813546A95270C73E24DEDD28A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F184F7736113CEBAD952B0039854FE41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76050E66DF3D3BEB0431C547A96082B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		088645E1D82BD13C229F0F02ED2BD6A6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3E9EC2F5DB18B758E4145419C0A2EF6 /* ButtonBackgroundColor.modulemap */,
+				1ED70BA53B51C60396E814AC4443B769 /* ButtonBackgroundColor.xcconfig */,
+				B710B6516B27FDAB586090AE33FB38FA /* ButtonBackgroundColor-dummy.m */,
+				7DBA9F63FE389107B9444B82ABD4FFA3 /* ButtonBackgroundColor-prefix.pch */,
+				CBAE38A342CA7181BEBAEB3D3131A820 /* ButtonBackgroundColor-umbrella.h */,
+				1894105B90EA805FDC5248F92C2AC0AE /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ButtonBackgroundColor";
+			sourceTree = "<group>";
+		};
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9AE682B91F9429A5CEE7C153208B027 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22C6951ABC3A484D767F2846ED431A06 /* SwiftyButton */ = {
+			isa = PBXGroup;
+			children = (
+				71281CF911E5D1E9B32CCD795E2C83DC /* CustomPressableButton.swift */,
+				01F74DE776A3C635AC8EB0D713EAA96A /* FlatButton.swift */,
+				13EED0AC2A8052C08FDB4A7CA2ABE030 /* PressableButton.swift */,
+				902DA13066143FE7A7BD1C106977A12A /* Utils.swift */,
+				8AA2A752ED35517B1E470513AA8C17FA /* Support Files */,
+			);
+			name = SwiftyButton;
+			path = SwiftyButton;
+			sourceTree = "<group>";
+		};
+		294871E8A5BF3CC10C20A997617AC9ED /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E0888CD97BBEE123B97340DA8FA4616 /* Info.plist */,
+				37D8DD4409E4F4A0C36B20F3C98A66E0 /* ResourceBundle-StepIndicator-Info.plist */,
+				471CC333EE306998B465F38280469E4D /* StepIndicator.modulemap */,
+				C386D3C46A40B32DCF0EAB8FF4BCC40C /* StepIndicator.xcconfig */,
+				85E66459547CDFA41705267C2E32D5A0 /* StepIndicator-dummy.m */,
+				814B2EB8BFE9846DB55649C9C45555B2 /* StepIndicator-prefix.pch */,
+				2CF819ABDFA344B556430EF84F2CC08E /* StepIndicator-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/StepIndicator";
+			sourceTree = "<group>";
+		};
+		2FC475329E5B6E59BCB9DFD2166993C6 /* ButtonBackgroundColor */ = {
+			isa = PBXGroup;
+			children = (
+				C2067F3D2040998C000612BC6930AE42 /* UIButton+ButtonBackgroundColor.swift */,
+				088645E1D82BD13C229F0F02ED2BD6A6 /* Support Files */,
+			);
+			name = ButtonBackgroundColor;
+			path = ButtonBackgroundColor;
+			sourceTree = "<group>";
+		};
+		530FF7E45A48F53093CD19C8692A30AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A9AF0E33C6FDF7139C261848175B77B9 /* Media.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5DDB01F6BA8754279DF78555F4D0A604 /* Pods-EMDK */ = {
+			isa = PBXGroup;
+			children = (
+				AA2260C02E715E7E8852AB10D2FBBD2F /* Info.plist */,
+				41B6C131794A82975645C5A57AFDAE35 /* Pods-EMDK.modulemap */,
+				AF2D180CC3012CE9A09916693460A6F3 /* Pods-EMDK-acknowledgements.markdown */,
+				353CA6252054DD9C716D2E05177D5657 /* Pods-EMDK-acknowledgements.plist */,
+				15D8A242A9FD6799E0AA90E955541FAC /* Pods-EMDK-dummy.m */,
+				C45D6E5B70AB87D066AB6488F7F6A25E /* Pods-EMDK-frameworks.sh */,
+				04CC094F288EFCF09CCB6567BB9869DE /* Pods-EMDK-resources.sh */,
+				42F5CAD1B295130A2614FEF0A58FA2CD /* Pods-EMDK-umbrella.h */,
+				3F8997A80699EBA71C0AEDB5200DFD75 /* Pods-EMDK.debug.xcconfig */,
+				6AF78E083AD9FED062EAF672EC54AC97 /* Pods-EMDK.release.xcconfig */,
+			);
+			name = "Pods-EMDK";
+			path = "Target Support Files/Pods-EMDK";
+			sourceTree = "<group>";
+		};
+		63F4C40B81EDB046F8C5FA0C1E1952ED /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2EC25DAEF58FCCDE83440B2A8F0432A /* Info.plist */,
+				16C59EDB3892DD105710E863D6C9DC3E /* Toast-Swift.modulemap */,
+				6AF46895959815AF0390375697EE7D2F /* Toast-Swift.xcconfig */,
+				C5710B489A2A235CEB5F310AB354F119 /* Toast-Swift-dummy.m */,
+				31068D975625BF3375EA2F3A6B404B97 /* Toast-Swift-prefix.pch */,
+				3120CDBB203C116962A2EECBD432B48B /* Toast-Swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Toast-Swift";
+			sourceTree = "<group>";
+		};
+		784903E4BD4E10D38C55DEA22ECE3AA1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				623536925A8697567C181870635A2509 /* Info.plist */,
+				0E64181B06BBD03D10AF37C05013207D /* LGButton.modulemap */,
+				92159EDAA4276ADAF9B86CDA4A8034D7 /* LGButton.xcconfig */,
+				EC4CA0A2CD12B630B520C60DDA56EE07 /* LGButton-dummy.m */,
+				AD0C7F6A08184071592720C3443A2B1B /* LGButton-prefix.pch */,
+				FE9433B5BEA5C034DB8B8A5D2601F744 /* LGButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LGButton";
+			sourceTree = "<group>";
+		};
+		7930E63177F907A8EE17EC8FA68E77C0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F74D469EFF427AD468076549AB4641B /* Info.plist */,
+				60153A46344AB3913F9A31F7C5949346 /* SDWebImage.modulemap */,
+				FDD2C6198C37F0466E38AD2DDC08F4DC /* SDWebImage.xcconfig */,
+				7BB41AB5835611E275FD4796D89EE18E /* SDWebImage-dummy.m */,
+				12159965962283577895279C6F5EAC21 /* SDWebImage-prefix.pch */,
+				BA81A2CCE2A44AF141D742125653CEEC /* SDWebImage-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SDWebImage";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				DDAA8834D46E175E3EB296120571AFEC /* Pods */,
+				8DABBB2B84021A2791A67DB0002E280D /* Products */,
+				8F552D8EEE88A50C491D440C7BE757C1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8AA2A752ED35517B1E470513AA8C17FA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D7B930008BC2AFC2B7C36A15ADE608E /* Info.plist */,
+				E7C8DBE91775305071481DA4D70D0AF7 /* SwiftyButton.modulemap */,
+				98392338BE94F76DC3B9A4FA75220F8C /* SwiftyButton.xcconfig */,
+				2B1E242BD393F61220AD7C35DDFB1F09 /* SwiftyButton-dummy.m */,
+				46FA2576077D2BAE76FF8532B7281C61 /* SwiftyButton-prefix.pch */,
+				2ACE9C9F53AA3A517709CFC1F2C1D9FC /* SwiftyButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyButton";
+			sourceTree = "<group>";
+		};
+		8DABBB2B84021A2791A67DB0002E280D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA0D4843A4EC2F107497CB530E2C8539 /* ButtonBackgroundColor.framework */,
+				8139D36F511CE4498A1BE76553557EB3 /* LGButton.framework */,
+				7EE8CD99574719638F8BDCF2593853FF /* Pods_EMDK.framework */,
+				EC833391C5292A2D04F20E0B7973F11D /* SDWebImage.framework */,
+				5821CA426E98668A764DC282292831F6 /* StepIndicator.bundle */,
+				8B4F9C5A95743E2AA6503BD9CA55948A /* StepIndicator.framework */,
+				54D0FDF3DA602CB4303D0B6A13DF6031 /* SwiftyButton.framework */,
+				2412EF4D75A355F03E4534A1ABED95CD /* Toast_Swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F552D8EEE88A50C491D440C7BE757C1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DDB01F6BA8754279DF78555F4D0A604 /* Pods-EMDK */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B4BA69BF6AB86EA5724FFA190483D2EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				46C9128D10FAB8D97CEB8125C90A4923 /* FontAwesome.ttf */,
+				CEB5A2286A80E3EEA542FCD5D8E38034 /* Ionicons.ttf */,
+				AAE3D4F370CF2BB0957B119D49AF6DFF /* LGButton.xib */,
+				1F03CA679848FD3F4C7E9DF064A1E4C5 /* map-icons.ttf */,
+				E0F470F46E9A09CE655B9D8374B4ED2B /* MaterialIcons-Regular.ttf */,
+				FF8D9E3D8471927563CE4F74274E5107 /* octicons.ttf */,
+				E80B183544E35CF7C0E5B05FEE51970B /* open-iconic.ttf */,
+				369EA17EFAA65B9C3F5A90048C09DCFC /* themify.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B64F176B59BA72D4D836E8D11B24DB6F /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				D46EA4C7D362A1E029FC8F6133159039 /* Core */,
+				7930E63177F907A8EE17EC8FA68E77C0 /* Support Files */,
+			);
+			name = SDWebImage;
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		C15062710E75B9998727EE9B5236CB1D /* LGButton */ = {
+			isa = PBXGroup;
+			children = (
+				CF48DB476F47FD60C989C6D13FFEAF7C /* FontAwesome.swift */,
+				D10965813DDB41EF0EAB1F53F7F78834 /* FontLoader.swift */,
+				5396BDBF9F253D69FE68A0682FF166C7 /* Iconic.swift */,
+				78B2BB52B1F67EA293476CAA3CADA41B /* IonIcons.swift */,
+				F3D172FB34C21CBF9A12DE8B62A602C2 /* LGButton.swift */,
+				41448CAC4A7C99F452544640153A64B7 /* MapIcon.swift */,
+				3C855D34B7853488B3670F45ECFAC488 /* MaterialIcon.swift */,
+				CD70F9678BD1ED5DD3F3EAD4C327F27D /* Octicon.swift */,
+				A0084BFD3954D44E9BB3D55D8529A1F6 /* SwiftIconFont.swift */,
+				6D23DE4B0D70E27BEB862EE605FEE247 /* SwiftIconLabel.swift */,
+				83657D3E634CBA7CD18AC36871918F0B /* ThemifyIcon.swift */,
+				B4BA69BF6AB86EA5724FFA190483D2EC /* Resources */,
+				784903E4BD4E10D38C55DEA22ECE3AA1 /* Support Files */,
+			);
+			name = LGButton;
+			path = LGButton;
+			sourceTree = "<group>";
+		};
+		D46EA4C7D362A1E029FC8F6133159039 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FDA7FC5FB57D633C21331420AADFF85A /* NSButton+WebCache.h */,
+				0926A6D020F11535247FBFC142423609 /* NSButton+WebCache.m */,
+				69C9C1751278B791811F3347B295873E /* NSData+ImageContentType.h */,
+				44A3B28F47B6447F08356B37218C9EC0 /* NSData+ImageContentType.m */,
+				F3AF0B1A344BEFE310D2D6CF0FABAE5D /* NSImage+WebCache.h */,
+				EA261689EE7A3C6598E4D1D21C7B34C7 /* NSImage+WebCache.m */,
+				8D19C6F38F56C906FB7B59191E2E9C67 /* SDAnimatedImageRep.h */,
+				F78E40BC7C40F759E2CE4305E72CD318 /* SDAnimatedImageRep.m */,
+				3E7EB0BCA1EFA493783C205B73068F9A /* SDImageCache.h */,
+				65B05AB60ECAA4DC779FF228417EDF47 /* SDImageCache.m */,
+				04A4E5FEDADDA8155FCECDC9FDC79ED4 /* SDImageCacheConfig.h */,
+				B016CF64EC56469EB5CDB4B02D5A5B1E /* SDImageCacheConfig.m */,
+				97609FCAA929226354F7FFFD05100AFC /* SDWebImageCoder.h */,
+				22F1D156BFC1E65C2C45876000A86F48 /* SDWebImageCoder.m */,
+				B7408A30ED686538636F1E988278A24E /* SDWebImageCoderHelper.h */,
+				FCFC0BAA62E19D5EB6E39D8D896E676B /* SDWebImageCoderHelper.m */,
+				38ACF98EC30684EA9ABE732D0E583BAF /* SDWebImageCodersManager.h */,
+				4C0322E8AF12273979D20225EFD53709 /* SDWebImageCodersManager.m */,
+				1A3388BC112C0F99E6629BAB98047EE6 /* SDWebImageCompat.h */,
+				D6E47B8A7EA85799BE7140A9E5C694A5 /* SDWebImageCompat.m */,
+				4647D7D73CAECCAF84B2FAB3DEB48658 /* SDWebImageDownloader.h */,
+				F417F8967F89CA2ADD4A6EC72E7AF390 /* SDWebImageDownloader.m */,
+				FB410080AB4BCA52ED5B6515236E110A /* SDWebImageDownloaderOperation.h */,
+				66DC8C95991331C7E9BEB6D26FBD9D41 /* SDWebImageDownloaderOperation.m */,
+				5E4B17747050A7E1F76BA7A4C54915F2 /* SDWebImageFrame.h */,
+				B92B6A835E5C331174C4DBB3938ED417 /* SDWebImageFrame.m */,
+				0C505E7B2B12A56E4515F415B805984B /* SDWebImageGIFCoder.h */,
+				786E4C9174FBE7E2931EC9F20B06CE39 /* SDWebImageGIFCoder.m */,
+				246FEFA336783BECA1802B180400D6D2 /* SDWebImageImageIOCoder.h */,
+				D962B430512185A05B209ED6DCE082DD /* SDWebImageImageIOCoder.m */,
+				8E4FE707D3E54E0FD3AA1E1228EF6AAF /* SDWebImageManager.h */,
+				870C97A340BDDBA4AD7E8690153609BA /* SDWebImageManager.m */,
+				DDDBA7A5C2EFA9230F332304799665C3 /* SDWebImageOperation.h */,
+				FB5F0F30743AACB71E8F580FFAA2AE01 /* SDWebImagePrefetcher.h */,
+				74DEC82A191F2B2DC166163D6E519CB0 /* SDWebImagePrefetcher.m */,
+				613C60FEA4F5FF8857EE49A633D1BC98 /* SDWebImageTransition.h */,
+				EEBA6890DBF1D147A33360F22E2D2DB1 /* SDWebImageTransition.m */,
+				5914A59BC8DCF2B12D3FCA1E1C5E3F66 /* UIButton+WebCache.h */,
+				38956C3B861A3DA52FE21C23098E7853 /* UIButton+WebCache.m */,
+				1DA0BA9D1A8DBCE32B1FA4E19F40F689 /* UIImage+ForceDecode.h */,
+				4A034F5C033C6AF1B9244E885ABC05D9 /* UIImage+ForceDecode.m */,
+				79A5D9B680FF8D117D5C882C0DB8CE44 /* UIImage+GIF.h */,
+				1C6CBD6567DEEAABCF66B85904C5E57A /* UIImage+GIF.m */,
+				860635E0B5F6937920E2E98F0C27A2C8 /* UIImage+MultiFormat.h */,
+				C92A06E4C0740A04E9E3C3129EA99879 /* UIImage+MultiFormat.m */,
+				A2720D14B58E19CD6B735C55A79A216B /* UIImageView+HighlightedWebCache.h */,
+				D6802EEF59BCD59B58FBAF3B6E0A73CF /* UIImageView+HighlightedWebCache.m */,
+				7F26123EAAF9B1E2D1594A0D5B2581BD /* UIImageView+WebCache.h */,
+				CF8EEB1F60B02EE8B212B3BA480DE9A8 /* UIImageView+WebCache.m */,
+				7AAA66078CB0428C98FDB23FA5E4574D /* UIView+WebCache.h */,
+				81CF23156BB2F6F006FE88EEA8D5AD19 /* UIView+WebCache.m */,
+				FEBE4B32ECA5A5CE70D263F8224E4480 /* UIView+WebCacheOperation.h */,
+				965EC0688C9A83821C96D43B7311B971 /* UIView+WebCacheOperation.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		D9AE682B91F9429A5CEE7C153208B027 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				81DF8B266552D1A15FF4D9F9A0CA0388 /* Foundation.framework */,
+				8AD6F14149D05F3A9E9D21EFCEDFFE06 /* ImageIO.framework */,
+				74C518C3BF1F02EBE0521A9B7E10573A /* QuartzCore.framework */,
+				FFD380F46B47A38BC873ACECD1D6BC3F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DDAA8834D46E175E3EB296120571AFEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FC475329E5B6E59BCB9DFD2166993C6 /* ButtonBackgroundColor */,
+				C15062710E75B9998727EE9B5236CB1D /* LGButton */,
+				B64F176B59BA72D4D836E8D11B24DB6F /* SDWebImage */,
+				EBCF32421E3531FC0896219C715F346D /* StepIndicator */,
+				22C6951ABC3A484D767F2846ED431A06 /* SwiftyButton */,
+				EFF15AFA4879F9546D6BF057D074C859 /* Toast-Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EBCF32421E3531FC0896219C715F346D /* StepIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				478B023643C4A763FA0EABA1A9EE0E83 /* AnnularLayer.swift */,
+				95C619294A6AEE5203E156B7192EF641 /* LineLayer.swift */,
+				9B2CC483D96D06C56C32EECF6D02046A /* StepIndicatorView.swift */,
+				530FF7E45A48F53093CD19C8692A30AF /* Resources */,
+				294871E8A5BF3CC10C20A997617AC9ED /* Support Files */,
+			);
+			name = StepIndicator;
+			path = StepIndicator;
+			sourceTree = "<group>";
+		};
+		EFF15AFA4879F9546D6BF057D074C859 /* Toast-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				1BC680A83DFB950C69CB2F6362823B59 /* Toast.swift */,
+				63F4C40B81EDB046F8C5FA0C1E1952ED /* Support Files */,
+			);
+			name = "Toast-Swift";
+			path = "Toast-Swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		17366496D978F68744EDA39879E33630 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79A7ECE9A29255DC2CAC683FEDC0831 /* ButtonBackgroundColor-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		365333520092A752E684B6CA7C180DF8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				195CB5171838C4F102F5232A6B66BEFB /* Pods-EMDK-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C9D8D530F2C7F064895A9CD658A7F3B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C797AB837D4F406D8F2F9E13371EA3EA /* Toast-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CC9B32A7F89D4BA2E8FDF750D38F4E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				045AA4DCBFCD2FFA6383C9AC75314E75 /* NSButton+WebCache.h in Headers */,
+				64047E62EBA6CC7F869FCE6E09B2E624 /* NSData+ImageContentType.h in Headers */,
+				8F97371AA1F4F12CFC543AEFCF60D156 /* NSImage+WebCache.h in Headers */,
+				86F51BD570822489B4192EED046BAC2A /* SDAnimatedImageRep.h in Headers */,
+				A9AA194638115AEF446FE77C0A4587E9 /* SDImageCache.h in Headers */,
+				CF0CDA5B06934B858DB55235EC846390 /* SDImageCacheConfig.h in Headers */,
+				A73B11C975BB1DA52EC1E2ED3FFE9045 /* SDWebImage-umbrella.h in Headers */,
+				67A0F66B69946CE3E33B16544540E3A3 /* SDWebImageCoder.h in Headers */,
+				CB335FD9EDE5CC8769F58A3A75E115C4 /* SDWebImageCoderHelper.h in Headers */,
+				EAE80EF141911F09712DCEF1B1831D67 /* SDWebImageCodersManager.h in Headers */,
+				ED621A281597536BC703B8FB24201CE4 /* SDWebImageCompat.h in Headers */,
+				C32C1AF380A056527AA2CD6F36DDF2CF /* SDWebImageDownloader.h in Headers */,
+				66914E8F547A4E2F230EE0617A2F377E /* SDWebImageDownloaderOperation.h in Headers */,
+				DA8A9EF1961316F250A801420A821CC2 /* SDWebImageFrame.h in Headers */,
+				329BDEE0E493ECFDADCF71BB09C9C0E1 /* SDWebImageGIFCoder.h in Headers */,
+				DD148AE0CB7F12547F97B4CD983B1A73 /* SDWebImageImageIOCoder.h in Headers */,
+				61E6F134F4885F5DC6F06E169A4C155A /* SDWebImageManager.h in Headers */,
+				9B210E678223089FC95C1D564265B86F /* SDWebImageOperation.h in Headers */,
+				AF68AE3AF8F8084921F84485D7C37B49 /* SDWebImagePrefetcher.h in Headers */,
+				30C71A508D8F8E9AF72C2897960E44F2 /* SDWebImageTransition.h in Headers */,
+				501A0762F0FC52A26944A7B972B88AC3 /* UIButton+WebCache.h in Headers */,
+				1A82C7F29B911D0A5C5DFE852D69F79D /* UIImage+ForceDecode.h in Headers */,
+				41B6A03A663041E5A4DA6313D990DFAF /* UIImage+GIF.h in Headers */,
+				02AB488DB13320EF1B3D6305676B9931 /* UIImage+MultiFormat.h in Headers */,
+				DE804CEE057CA17AADA17FB0C752C8C8 /* UIImageView+HighlightedWebCache.h in Headers */,
+				0F9BE200339A6EACD253EE1BB66C7B07 /* UIImageView+WebCache.h in Headers */,
+				AEF7D107CFBFC92CEDA323C394DA9FAE /* UIView+WebCache.h in Headers */,
+				AA4DBBF269CA902FC32D63C50975F586 /* UIView+WebCacheOperation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92A1DC2DD0B43C7E59F409636939ABF8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00D34533DF7802EA4E0FECF630502367 /* StepIndicator-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		957C23AA2E2CBE0A04E6B4E3CF58FFA9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A880B5BDE8D469C49FEC35A11686C0 /* LGButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D61016F3208DDB7D07944D4BBFD9F470 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07E3573A646CFF26BCEED73CFDAFEDFE /* SwiftyButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		01BEBED5EC12ECCC7B7B5D5994442009 /* ButtonBackgroundColor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B1583A34C6ECFF6BE5C1D8C4313C71 /* Build configuration list for PBXNativeTarget "ButtonBackgroundColor" */;
+			buildPhases = (
+				17366496D978F68744EDA39879E33630 /* Headers */,
+				28A46A639932B3E03703B801A77426B3 /* Sources */,
+				CBE8864EE54C61B1A5B8EA10B3E30EBC /* Frameworks */,
+				10177029A37638D1726F509AA6844EE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ButtonBackgroundColor;
+			productName = ButtonBackgroundColor;
+			productReference = FA0D4843A4EC2F107497CB530E2C8539 /* ButtonBackgroundColor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		04B5E2FD25DCB82AA480891E27CC9A12 /* StepIndicator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECE59AB45D2298B7C56E00FB5A7C4AA6 /* Build configuration list for PBXNativeTarget "StepIndicator" */;
+			buildPhases = (
+				92A1DC2DD0B43C7E59F409636939ABF8 /* Headers */,
+				2B0568909EF098525D733A8D502EC398 /* Sources */,
+				16A24AB84A6601F03CDFD9135D6B4315 /* Frameworks */,
+				00B5C72B2851CB92821F7FFCB788A609 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B1C956699B126A6CE907345C4515511 /* PBXTargetDependency */,
+			);
+			name = StepIndicator;
+			productName = StepIndicator;
+			productReference = 8B4F9C5A95743E2AA6503BD9CA55948A /* StepIndicator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		28523B7E19B93869128D6A6AC4BBF00F /* SDWebImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10185DE193235578F016D746774893BF /* Build configuration list for PBXNativeTarget "SDWebImage" */;
+			buildPhases = (
+				84CC9B32A7F89D4BA2E8FDF750D38F4E /* Headers */,
+				E5922EC536C5FE766507D914787695D9 /* Sources */,
+				3CA80BFD554E28082BB2069A33BA396E /* Frameworks */,
+				4657D5887EEBEEB960B325A26AF1A564 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDWebImage;
+			productName = SDWebImage;
+			productReference = EC833391C5292A2D04F20E0B7973F11D /* SDWebImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2D4968B03357A2AE5CB27A92AC7D82B8 /* LGButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E743D4E6F93F842BF69A00283DC6C35E /* Build configuration list for PBXNativeTarget "LGButton" */;
+			buildPhases = (
+				957C23AA2E2CBE0A04E6B4E3CF58FFA9 /* Headers */,
+				1CBA8F51F33B084F0CE8B0754F6198B6 /* Sources */,
+				DE512E7FDF340883B8ADC32093BC0D2C /* Frameworks */,
+				23DFE4305B591F60C241CFED8720ABBC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LGButton;
+			productName = LGButton;
+			productReference = 8139D36F511CE4498A1BE76553557EB3 /* LGButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		401A312884763AE519579315245E737E /* Pods-EMDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4964271E58E17C8FD1FF2897E8E7C3C7 /* Build configuration list for PBXNativeTarget "Pods-EMDK" */;
+			buildPhases = (
+				365333520092A752E684B6CA7C180DF8 /* Headers */,
+				54B77488C72D674CD862417F6F95FCE0 /* Sources */,
+				F184F7736113CEBAD952B0039854FE41 /* Frameworks */,
+				9E2B43532A9B1D37AD27452B7A7A65D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4773CB1AF24EF59A5FEC67C139FCBA9C /* PBXTargetDependency */,
+				2D647B00F285C4A2A18DD8EBDA34BEA2 /* PBXTargetDependency */,
+				10BA77C2835BB0328916C5E7606587E1 /* PBXTargetDependency */,
+				0B0612F0C691327CF2ACB1B17A72FC0B /* PBXTargetDependency */,
+				CDE2AEF674F6576953F58646411BC7DB /* PBXTargetDependency */,
+				53A48ACCF64D540B24B09170329E4F38 /* PBXTargetDependency */,
+			);
+			name = "Pods-EMDK";
+			productName = "Pods-EMDK";
+			productReference = 7EE8CD99574719638F8BDCF2593853FF /* Pods_EMDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6299E98812D1A7FFE98805BD094ABC8E /* StepIndicator-StepIndicator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7A7401A28B060F48793C69F94A18119 /* Build configuration list for PBXNativeTarget "StepIndicator-StepIndicator" */;
+			buildPhases = (
+				B446BF37AB7AB39A71D732DFB268200A /* Sources */,
+				176E38E0503BD2E2E962D2BE7E4A1D26 /* Frameworks */,
+				37FDD2176356B05269EF251088DB14B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StepIndicator-StepIndicator";
+			productName = "StepIndicator-StepIndicator";
+			productReference = 5821CA426E98668A764DC282292831F6 /* StepIndicator.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D15A94B23A38F1D33C97FC05EA1520FB /* SwiftyButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 313C46972737655C73A3E2137828FDB7 /* Build configuration list for PBXNativeTarget "SwiftyButton" */;
+			buildPhases = (
+				D61016F3208DDB7D07944D4BBFD9F470 /* Headers */,
+				B3D41B0EE49F59E34944C99FC2C5242D /* Sources */,
+				C66B541D6DA7FA36EF0CD7C96A10E0C0 /* Frameworks */,
+				C774DC51B971AF37407E5D0CC06124F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyButton;
+			productName = SwiftyButton;
+			productReference = 54D0FDF3DA602CB4303D0B6A13DF6031 /* SwiftyButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D92B913B0AC0F9C54D347BC933D70A21 /* Toast-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B98A1907C2998FDFD7C0C778A1266FF /* Build configuration list for PBXNativeTarget "Toast-Swift" */;
+			buildPhases = (
+				3C9D8D530F2C7F064895A9CD658A7F3B /* Headers */,
+				B75296FF9B9CE9A588614BD3E6FD7B01 /* Sources */,
+				8967C056A78CD15406479C6D44D5870C /* Frameworks */,
+				945B4E5CB0F33D3910CD5649F5AFC7EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Toast-Swift";
+			productName = "Toast-Swift";
+			productReference = 2412EF4D75A355F03E4534A1ABED95CD /* Toast_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8DABBB2B84021A2791A67DB0002E280D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01BEBED5EC12ECCC7B7B5D5994442009 /* ButtonBackgroundColor */,
+				2D4968B03357A2AE5CB27A92AC7D82B8 /* LGButton */,
+				401A312884763AE519579315245E737E /* Pods-EMDK */,
+				28523B7E19B93869128D6A6AC4BBF00F /* SDWebImage */,
+				04B5E2FD25DCB82AA480891E27CC9A12 /* StepIndicator */,
+				6299E98812D1A7FFE98805BD094ABC8E /* StepIndicator-StepIndicator */,
+				D15A94B23A38F1D33C97FC05EA1520FB /* SwiftyButton */,
+				D92B913B0AC0F9C54D347BC933D70A21 /* Toast-Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00B5C72B2851CB92821F7FFCB788A609 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B602B4782E04198E2FFB4F647CF7E39 /* StepIndicator.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10177029A37638D1726F509AA6844EE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23DFE4305B591F60C241CFED8720ABBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BE6E1CA3EC31B7EF1BBA9FC5F874280 /* FontAwesome.ttf in Resources */,
+				09A365A71FE3B05FA8D33A76B26CF891 /* Ionicons.ttf in Resources */,
+				E889F34B0B019640E93070DF166A9070 /* LGButton.xib in Resources */,
+				B1F3CB52F5CA79FE65B1B8AF739B8AF4 /* map-icons.ttf in Resources */,
+				8521285B0B95728859FA31E56FB35E9D /* MaterialIcons-Regular.ttf in Resources */,
+				2BC574C211A4D8E6EDC26E53A0ACDC3C /* octicons.ttf in Resources */,
+				98092A6004F265E3138E701D96FCD69D /* open-iconic.ttf in Resources */,
+				4AE497B31918F51F48675CDEDDD57171 /* themify.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37FDD2176356B05269EF251088DB14B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24286345C8FD8C145E23A41B933BC841 /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4657D5887EEBEEB960B325A26AF1A564 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945B4E5CB0F33D3910CD5649F5AFC7EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E2B43532A9B1D37AD27452B7A7A65D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C774DC51B971AF37407E5D0CC06124F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CBA8F51F33B084F0CE8B0754F6198B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDC8FC97C93F8BA5E4AAA44681BFB91D /* FontAwesome.swift in Sources */,
+				06832A7E488A0F1C45662516DD2158CA /* FontLoader.swift in Sources */,
+				7C19E802FFAA570EA182020677068CAA /* Iconic.swift in Sources */,
+				34D0D649C1A04F9DEBC1E1F04CC7F202 /* IonIcons.swift in Sources */,
+				1D6A72FBDC1DAA136FF8E8AEA620BAF2 /* LGButton-dummy.m in Sources */,
+				53184B884DEC6C1E5E3EC8D440B945EC /* LGButton.swift in Sources */,
+				272C177D8FC0646520CA5C3E1EA39126 /* MapIcon.swift in Sources */,
+				61EEE9A7B10B5F7D02EAD6AA82F1C1FD /* MaterialIcon.swift in Sources */,
+				BCF3AF6018E45E0ED5F07594C8E52DBF /* Octicon.swift in Sources */,
+				E6615C7075BC0444842D920E85BA093B /* SwiftIconFont.swift in Sources */,
+				AF2BA725A3277DB91BF5F0BF43B9F9B0 /* SwiftIconLabel.swift in Sources */,
+				004366730128FA92459F6A43322ECB74 /* ThemifyIcon.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28A46A639932B3E03703B801A77426B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270CA35F9C695CBC65D2FCE1B48ABA82 /* ButtonBackgroundColor-dummy.m in Sources */,
+				A8521459A734ECAB49427D0F09ABC3D0 /* UIButton+ButtonBackgroundColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B0568909EF098525D733A8D502EC398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A25E36E5CCE182840123DF86348EA60 /* AnnularLayer.swift in Sources */,
+				53936D988AD09D4912288DB3CDBA6077 /* LineLayer.swift in Sources */,
+				AAA9C4A7BACF62A919C041CD1BFBC046 /* StepIndicator-dummy.m in Sources */,
+				F1C5E57411D44EAB9C2A68F11C492A6E /* StepIndicatorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54B77488C72D674CD862417F6F95FCE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75783271AB302D087F639F7EB9AFA328 /* Pods-EMDK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3D41B0EE49F59E34944C99FC2C5242D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48A05BC23C1C67AC31EEB66DEF4744A0 /* CustomPressableButton.swift in Sources */,
+				021BC73FCEBDAC00B057DF9152B7BA81 /* FlatButton.swift in Sources */,
+				EA0A7BD540B415284EFD10A23EFEFC8A /* PressableButton.swift in Sources */,
+				E0A8276A92859C90B672043E4A88DF1A /* SwiftyButton-dummy.m in Sources */,
+				92CA045B255D473684AACEA20C7AAD09 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B446BF37AB7AB39A71D732DFB268200A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B75296FF9B9CE9A588614BD3E6FD7B01 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8290FA3CDC8D5538889D715C631D903F /* Toast-Swift-dummy.m in Sources */,
+				ED132384A68259D2844BCE90BB999773 /* Toast.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5922EC536C5FE766507D914787695D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7037B59D9E26ABD4AE0401A924F09E66 /* NSButton+WebCache.m in Sources */,
+				A14C7C7D26E5A26EAB4AC3013B321C48 /* NSData+ImageContentType.m in Sources */,
+				1F71569CF3C3EFC02318EC1CA6DAB06C /* NSImage+WebCache.m in Sources */,
+				36486187C20F939AA27B7DA74D394BF1 /* SDAnimatedImageRep.m in Sources */,
+				CC2C807DB96F976ED767B1920291107F /* SDImageCache.m in Sources */,
+				E30BB33160B564C2935EA8721C315909 /* SDImageCacheConfig.m in Sources */,
+				219E2092A81A05F3F05F5FE0968A4F4C /* SDWebImage-dummy.m in Sources */,
+				EEDF2CA37DF9F340FCB783E1EB1D81F8 /* SDWebImageCoder.m in Sources */,
+				B4C3B795E308171C1BA0AC1A16E4B0AB /* SDWebImageCoderHelper.m in Sources */,
+				6405B48E40911C7E1E11160BCB4097F3 /* SDWebImageCodersManager.m in Sources */,
+				A9197F8C7A93267D9DA01BEF1FB66812 /* SDWebImageCompat.m in Sources */,
+				8B7D54D15161B7E676E1BA4B657329AC /* SDWebImageDownloader.m in Sources */,
+				1EB1117C0ABD333F4C150B96EBEC81F9 /* SDWebImageDownloaderOperation.m in Sources */,
+				D81A1CA5D3C6843D3D0C837CBAF6D9C0 /* SDWebImageFrame.m in Sources */,
+				2444C710102E0E6E609F6E27423D81AB /* SDWebImageGIFCoder.m in Sources */,
+				A1CF5DF477365F1947C0083280770128 /* SDWebImageImageIOCoder.m in Sources */,
+				29E5726EB2F6022488A0F4BD23D6F86C /* SDWebImageManager.m in Sources */,
+				68979F8C77239525062C2912819DAE02 /* SDWebImagePrefetcher.m in Sources */,
+				981122534D27F04E7A74D156A2803767 /* SDWebImageTransition.m in Sources */,
+				AB0B838496FCCB8E8221B6CDE0467362 /* UIButton+WebCache.m in Sources */,
+				F25921801DBA1AF8980A2AD44312B067 /* UIImage+ForceDecode.m in Sources */,
+				2C245E95598628C31009A7E756BD61CF /* UIImage+GIF.m in Sources */,
+				E70686DEB56C9F1B7A0B014D15ED1960 /* UIImage+MultiFormat.m in Sources */,
+				A8C1BD8E6BE41562D15EF81875B38BAE /* UIImageView+HighlightedWebCache.m in Sources */,
+				FFF53E53943400380BBF548F1D5CAE83 /* UIImageView+WebCache.m in Sources */,
+				71064578532CD24B04E845535034D97B /* UIView+WebCache.m in Sources */,
+				CF1E2AA9793F38AB4FE0106DEAE11456 /* UIView+WebCacheOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B0612F0C691327CF2ACB1B17A72FC0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StepIndicator;
+			target = 04B5E2FD25DCB82AA480891E27CC9A12 /* StepIndicator */;
+			targetProxy = 25792FEAB417476069B1F0515249C1E7 /* PBXContainerItemProxy */;
+		};
+		10BA77C2835BB0328916C5E7606587E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDWebImage;
+			target = 28523B7E19B93869128D6A6AC4BBF00F /* SDWebImage */;
+			targetProxy = 6BB7095C8AA417F6C8A488A6B15C2B24 /* PBXContainerItemProxy */;
+		};
+		2D647B00F285C4A2A18DD8EBDA34BEA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LGButton;
+			target = 2D4968B03357A2AE5CB27A92AC7D82B8 /* LGButton */;
+			targetProxy = 2E11B9858F4E3FB84551806E53E1D333 /* PBXContainerItemProxy */;
+		};
+		4773CB1AF24EF59A5FEC67C139FCBA9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ButtonBackgroundColor;
+			target = 01BEBED5EC12ECCC7B7B5D5994442009 /* ButtonBackgroundColor */;
+			targetProxy = A37D7241C3FFC45B148F89EA4815C1CE /* PBXContainerItemProxy */;
+		};
+		53A48ACCF64D540B24B09170329E4F38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Toast-Swift";
+			target = D92B913B0AC0F9C54D347BC933D70A21 /* Toast-Swift */;
+			targetProxy = 977AD8671CC579287A35A7F64AC07E0F /* PBXContainerItemProxy */;
+		};
+		7B1C956699B126A6CE907345C4515511 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "StepIndicator-StepIndicator";
+			target = 6299E98812D1A7FFE98805BD094ABC8E /* StepIndicator-StepIndicator */;
+			targetProxy = 1B1723E76EE4525B17E27FEC7C2B9EAF /* PBXContainerItemProxy */;
+		};
+		CDE2AEF674F6576953F58646411BC7DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyButton;
+			target = D15A94B23A38F1D33C97FC05EA1520FB /* SwiftyButton */;
+			targetProxy = 4515E9EBC27DB420D96F4907F39D254F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0201608316197F4D929A0F4AED9B43F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDD2C6198C37F0466E38AD2DDC08F4DC /* SDWebImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDWebImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
+				PRODUCT_MODULE_NAME = SDWebImage;
+				PRODUCT_NAME = SDWebImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0A39BC9C33B5F4B94A166A4D46A9C014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C386D3C46A40B32DCF0EAB8FF4BCC40C /* StepIndicator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StepIndicator";
+				INFOPLIST_FILE = "Target Support Files/StepIndicator/ResourceBundle-StepIndicator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = StepIndicator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		0AA3B91655AF95B1F49159CD8085CD89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2C677CE8F3FF4DDF9F20959A7E1196D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AF78E083AD9FED062EAF672EC54AC97 /* Pods-EMDK.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EMDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EMDK/Pods-EMDK.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2FF7644913C35517974A73E8991E61C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C386D3C46A40B32DCF0EAB8FF4BCC40C /* StepIndicator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StepIndicator";
+				INFOPLIST_FILE = "Target Support Files/StepIndicator/ResourceBundle-StepIndicator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = StepIndicator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		3ED68509D72B5A78086DB0A91D2DCEE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C386D3C46A40B32DCF0EAB8FF4BCC40C /* StepIndicator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/StepIndicator/StepIndicator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StepIndicator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/StepIndicator/StepIndicator.modulemap";
+				PRODUCT_MODULE_NAME = StepIndicator;
+				PRODUCT_NAME = StepIndicator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4CA8C565E05D28D5DFAB57A61F8E9CB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F8997A80699EBA71C0AEDB5200DFD75 /* Pods-EMDK.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EMDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EMDK/Pods-EMDK.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5BDC210CB2C6BCA019950A82548742D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98392338BE94F76DC3B9A4FA75220F8C /* SwiftyButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyButton/SwiftyButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyButton/SwiftyButton.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyButton;
+				PRODUCT_NAME = SwiftyButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5FCAFFDEFF7B6441EDFC2FDEAA9936C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92159EDAA4276ADAF9B86CDA4A8034D7 /* LGButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LGButton/LGButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LGButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LGButton/LGButton.modulemap";
+				PRODUCT_MODULE_NAME = LGButton;
+				PRODUCT_NAME = LGButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7AED3A3752EC43591517E1CD1D928532 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ED70BA53B51C60396E814AC4443B769 /* ButtonBackgroundColor.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ButtonBackgroundColor/ButtonBackgroundColor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ButtonBackgroundColor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ButtonBackgroundColor/ButtonBackgroundColor.modulemap";
+				PRODUCT_MODULE_NAME = ButtonBackgroundColor;
+				PRODUCT_NAME = ButtonBackgroundColor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8000995DA02063BF3777393CD52061DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BACF9872E39DEC2C72D5100FFF82725E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AF46895959815AF0390375697EE7D2F /* Toast-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				PRODUCT_MODULE_NAME = Toast_Swift;
+				PRODUCT_NAME = Toast_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C93AACABA236974415798689B0415ED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AF46895959815AF0390375697EE7D2F /* Toast-Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Toast-Swift/Toast-Swift.modulemap";
+				PRODUCT_MODULE_NAME = Toast_Swift;
+				PRODUCT_NAME = Toast_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C9AFDC612E7F1B9710540031A4BDA81E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92159EDAA4276ADAF9B86CDA4A8034D7 /* LGButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LGButton/LGButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LGButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LGButton/LGButton.modulemap";
+				PRODUCT_MODULE_NAME = LGButton;
+				PRODUCT_NAME = LGButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD22C544FB34B7C46EF2085A80296BDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDD2C6198C37F0466E38AD2DDC08F4DC /* SDWebImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDWebImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
+				PRODUCT_MODULE_NAME = SDWebImage;
+				PRODUCT_NAME = SDWebImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E983ADFF258E136B06FCFC63407FD365 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C386D3C46A40B32DCF0EAB8FF4BCC40C /* StepIndicator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/StepIndicator/StepIndicator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StepIndicator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/StepIndicator/StepIndicator.modulemap";
+				PRODUCT_MODULE_NAME = StepIndicator;
+				PRODUCT_NAME = StepIndicator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F57EC231D1C18A9B93037134EAA773E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ED70BA53B51C60396E814AC4443B769 /* ButtonBackgroundColor.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ButtonBackgroundColor/ButtonBackgroundColor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ButtonBackgroundColor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ButtonBackgroundColor/ButtonBackgroundColor.modulemap";
+				PRODUCT_MODULE_NAME = ButtonBackgroundColor;
+				PRODUCT_NAME = ButtonBackgroundColor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC90BA05E81659831670AB981F63CA86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98392338BE94F76DC3B9A4FA75220F8C /* SwiftyButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyButton/SwiftyButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyButton/SwiftyButton.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyButton;
+				PRODUCT_NAME = SwiftyButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10185DE193235578F016D746774893BF /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0201608316197F4D929A0F4AED9B43F9 /* Debug */,
+				DD22C544FB34B7C46EF2085A80296BDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AA3B91655AF95B1F49159CD8085CD89 /* Debug */,
+				8000995DA02063BF3777393CD52061DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		313C46972737655C73A3E2137828FDB7 /* Build configuration list for PBXNativeTarget "SwiftyButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC90BA05E81659831670AB981F63CA86 /* Debug */,
+				5BDC210CB2C6BCA019950A82548742D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4964271E58E17C8FD1FF2897E8E7C3C7 /* Build configuration list for PBXNativeTarget "Pods-EMDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CA8C565E05D28D5DFAB57A61F8E9CB2 /* Debug */,
+				2C677CE8F3FF4DDF9F20959A7E1196D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B98A1907C2998FDFD7C0C778A1266FF /* Build configuration list for PBXNativeTarget "Toast-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BACF9872E39DEC2C72D5100FFF82725E /* Debug */,
+				C93AACABA236974415798689B0415ED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0B1583A34C6ECFF6BE5C1D8C4313C71 /* Build configuration list for PBXNativeTarget "ButtonBackgroundColor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F57EC231D1C18A9B93037134EAA773E4 /* Debug */,
+				7AED3A3752EC43591517E1CD1D928532 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E743D4E6F93F842BF69A00283DC6C35E /* Build configuration list for PBXNativeTarget "LGButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9AFDC612E7F1B9710540031A4BDA81E /* Debug */,
+				5FCAFFDEFF7B6441EDFC2FDEAA9936C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7A7401A28B060F48793C69F94A18119 /* Build configuration list for PBXNativeTarget "StepIndicator-StepIndicator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A39BC9C33B5F4B94A166A4D46A9C014 /* Debug */,
+				2FF7644913C35517974A73E8991E61C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECE59AB45D2298B7C56E00FB5A7C4AA6 /* Build configuration list for PBXNativeTarget "StepIndicator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ED68509D72B5A78086DB0A91D2DCEE7 /* Debug */,
+				E983ADFF258E136B06FCFC63407FD365 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -8,7 +8,7 @@
 
 import UIKit
 import Toast_Swift
-// deyisiklik edildi
+// deyisiklik edildi 2jjjj
 struct cellData {
     var id  = Int()
     var opened = Bool()
@@ -16,7 +16,7 @@ struct cellData {
     var sectionData = [SubServiceModel]()
     
 }
-
+// Test
 struct SubServiceModel: Decodable {
     let id: Int
     let title: String
