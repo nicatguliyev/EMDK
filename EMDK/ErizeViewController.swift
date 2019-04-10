@@ -11,12 +11,13 @@ import LGButton
 import ButtonBackgroundColor
 import StepIndicator
 
-class ErizeViewController: UIViewController, UITextFieldDelegate {
-    
+class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
     var phoneTextField = UITextField()
     var mailTextField = UITextField()
     var nameTextField = UITextField()
     var voenTextFiled = UITextField()
+    var fileCollectionView: UICollectionView?
     var meqsedBtn = LGButton()
     var x = UIButton()
     var meqsedLbl = UILabel()
@@ -401,8 +402,24 @@ class ErizeViewController: UIViewController, UITextFieldDelegate {
         step6.frame = CGRect(x: view.frame.size.width * CGFloat(5), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
         step6.headerView.layer.cornerRadius = 10
         step6.scrollView.layer.cornerRadius = 10
-        
+       // step6.fileCollectionView = fileCollectionView
         step6.addButton.layer.cornerRadius = 8
+        
+        let cellIdentifier = "cellIdentifier"
+       // step6.fileCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.init())
+        let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+        step6.fileCollectionView.setCollectionViewLayout(layout, animated: true)
+        step6.fileCollectionView.delegate = self
+        step6.fileCollectionView.dataSource = self
+        
+        step6.fileCollectionView.register(UINib(nibName:"FileCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        self.fileCollectionView = step6.fileCollectionView
+        //step6.fileCollectionView = self.fileCollectionView
+        //or if you use class:
+       // self.collectionView.register(MyCollectionCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        
+       // self.fileCollectionView.delegate = self
+       // self.fileCollectionView.dataSource = self
         
         
         horizontalScrollView.addSubview(step6)
@@ -458,6 +475,28 @@ class ErizeViewController: UIViewController, UITextFieldDelegate {
         
         }
     }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellIdentifier", for: indexPath) as! FileCollectionViewCell
+        
+        //in this example I added a label named "title" into the MyCollectionCell class
+       // cell.title.text = self.objects[indexPath.item]
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width/3 - 32, height: 70)
+    }
+    
     
 
 

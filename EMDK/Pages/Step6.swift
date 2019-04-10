@@ -14,5 +14,6 @@ class Step6: UIView {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var fileCollectionView: UICollectionView!
     @IBOutlet weak var addButton: UIButton!
 }

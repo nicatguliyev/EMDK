@@ -19,6 +19,8 @@
 		CD530DFF2256A3C9001BD14C /* WarningModalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD530DFE2256A3C9001BD14C /* WarningModalController.swift */; };
 		CD530E01225A672B001BD14C /* IndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD530E00225A672B001BD14C /* IndicatorView.xib */; };
 		CD530E03225A674F001BD14C /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD530E02225A674F001BD14C /* IndicatorView.swift */; };
+		CD530E24225DFF6D001BD14C /* FileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD530E22225DFF6D001BD14C /* FileCollectionViewCell.swift */; };
+		CD530E25225DFF6D001BD14C /* FileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD530E23225DFF6D001BD14C /* FileCollectionViewCell.xib */; };
 		CD5C00592240C71100D6D86E /* Pods_EMDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07D27F4238B43B920492641 /* Pods_EMDK.framework */; };
 		CD5C005A2240C71100D6D86E /* Pods_EMDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A07D27F4238B43B920492641 /* Pods_EMDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD5C005C2240CFB200D6D86E /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5C005B2240CFB200D6D86E /* LoginWithEgov.framework */; };
@@ -141,6 +143,8 @@
 		CD530DFE2256A3C9001BD14C /* WarningModalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningModalController.swift; sourceTree = "<group>"; };
 		CD530E00225A672B001BD14C /* IndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndicatorView.xib; sourceTree = "<group>"; };
 		CD530E02225A674F001BD14C /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		CD530E22225DFF6D001BD14C /* FileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCollectionViewCell.swift; sourceTree = "<group>"; };
+		CD530E23225DFF6D001BD14C /* FileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD5C005B2240CFB200D6D86E /* LoginWithEgov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithEgov.framework; sourceTree = "<group>"; };
 		CD88CB7421CD1A9E0029F9CC /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		CD88CB7821CE9ED10029F9CC /* TenzimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenzimViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +284,8 @@
 				CDCEAFB721D16F4400DBD82C /* Step6.swift */,
 				CDE65E4521D213E100835247 /* Step7.xib */,
 				CDE65E4721D213FB00835247 /* Step7.swift */,
+				CD530E22225DFF6D001BD14C /* FileCollectionViewCell.swift */,
+				CD530E23225DFF6D001BD14C /* FileCollectionViewCell.xib */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				CDFED6E4224F651500328886 /* step7.png in Resources */,
 				CDFED6D8224F651500328886 /* step5@2x.png in Resources */,
 				CDCEAFAA21D1256800DBD82C /* Step4.xib in Resources */,
+				CD530E25225DFF6D001BD14C /* FileCollectionViewCell.xib in Resources */,
 				CDFED6E7224F651500328886 /* Logo.png in Resources */,
 				CDFED6D9224F651500328886 /* step3.png in Resources */,
 				CDFED6E6224F651500328886 /* step5.png in Resources */,
@@ -620,6 +627,7 @@
 				CDE65E6421D280DA00835247 /* CustomSWRevealController.swift in Sources */,
 				CDACD23621C9205E0005AF76 /* SplashViewController.swift in Sources */,
 				CD530DFF2256A3C9001BD14C /* WarningModalController.swift in Sources */,
+				CD530E24225DFF6D001BD14C /* FileCollectionViewCell.swift in Sources */,
 				CDE80D1C21CBE39F008E05EC /* NewsCollectionCell.swift in Sources */,
 				CDE80D2221CC2908008E05EC /* NewsDetailController.swift in Sources */,
 				CDCEAFA621D10BA400DBD82C /* ErizeTypeCell.swift in Sources */,
