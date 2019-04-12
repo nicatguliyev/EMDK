@@ -26,9 +26,10 @@
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" red="1" green="0.30196078430000001" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="170" height="80"/>
-            <point key="canvasLocation" x="59.200000000000003" y="168.21589205397302"/>
+            <point key="canvasLocation" x="-587" y="-163"/>
         </collectionViewCell>
     </objects>
 </document>

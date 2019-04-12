@@ -985,26 +985,39 @@
                                     <constraint firstAttribute="height" constant="128" id="0f5-wA-4VU"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTI-EO-OAd">
-                                <rect key="frame" x="109" y="290" width="134" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTI-EO-OAd">
+                                <rect key="frame" x="109" y="206" width="134" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="6TC-a8-bP2"/>
+                                    <constraint firstAttribute="height" constant="30" id="Xu3-Un-OLL"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="kokoClicked:" destination="Sy9-ZJ-ohU" eventType="touchUpInside" id="b7f-Cz-thX"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiV-HM-1xU">
+                                <rect key="frame" x="16" y="252" width="343" height="387"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="26n-u4-EdP" firstAttribute="leading" secondItem="hHn-Az-ZUQ" secondAttribute="leading" constant="67" id="3Yg-OX-Iwy"/>
+                            <constraint firstItem="hHn-Az-ZUQ" firstAttribute="trailing" secondItem="EiV-HM-1xU" secondAttribute="trailing" constant="16" id="56G-8w-upG"/>
                             <constraint firstItem="26n-u4-EdP" firstAttribute="top" secondItem="hHn-Az-ZUQ" secondAttribute="top" constant="48" id="5vM-VG-PZA"/>
+                            <constraint firstItem="EiV-HM-1xU" firstAttribute="top" secondItem="LTI-EO-OAd" secondAttribute="bottom" constant="16" id="65b-yY-ocf"/>
+                            <constraint firstItem="EiV-HM-1xU" firstAttribute="leading" secondItem="hHn-Az-ZUQ" secondAttribute="leading" constant="16" id="8Kb-O9-DOF"/>
                             <constraint firstItem="hHn-Az-ZUQ" firstAttribute="trailing" secondItem="26n-u4-EdP" secondAttribute="trailing" constant="68" id="DqK-Zt-UdD"/>
+                            <constraint firstItem="LTI-EO-OAd" firstAttribute="leading" secondItem="hHn-Az-ZUQ" secondAttribute="leading" constant="109" id="YjQ-g3-52H"/>
+                            <constraint firstItem="hHn-Az-ZUQ" firstAttribute="bottom" secondItem="EiV-HM-1xU" secondAttribute="bottom" constant="28" id="nqe-de-cUg"/>
+                            <constraint firstItem="LTI-EO-OAd" firstAttribute="top" secondItem="26n-u4-EdP" secondAttribute="bottom" constant="10" id="prZ-nb-gMn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hHn-Az-ZUQ"/>
                     </view>
                     <connections>
                         <outlet property="koko" destination="LTI-EO-OAd" id="C1L-dT-42X"/>
                         <outlet property="testBtn" destination="26n-u4-EdP" id="Vro-9h-zHX"/>
+                        <outlet property="testScroll" destination="EiV-HM-1xU" id="uSA-j4-3fN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHt-Xl-eJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2195,6 +2208,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="S5j-Yn-4pJ"/>
-        <segue reference="8H6-B4-EyD"/>
+        <segue reference="PT3-Yp-kSQ"/>
     </inferredMetricsTieBreakers>
 </document>

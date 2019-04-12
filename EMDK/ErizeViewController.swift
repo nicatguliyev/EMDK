@@ -11,13 +11,13 @@ import LGButton
 import ButtonBackgroundColor
 import StepIndicator
 
-class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
     var phoneTextField = UITextField()
     var mailTextField = UITextField()
     var nameTextField = UITextField()
     var voenTextFiled = UITextField()
-    var fileCollectionView: UICollectionView?
+  //  var fileCollectionView: UICollectionView?
     var meqsedBtn = LGButton()
     var x = UIButton()
     var meqsedLbl = UILabel()
@@ -54,13 +54,22 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             object: nil)
         
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        hideKeyboardGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(hideKeyboardGesture)
         view.isUserInteractionEnabled = true
         
         stepIndicator.frame.size.width = UIScreen.main.bounds.width - 32
         stepIndicator.layer.cornerRadius = 5
         
-     //   stepImage.image = UIImage(named: "step1.png")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+            self.configureStep1()
+            self.configureStep2()
+            self.configureStep3()
+            self.configureStep4()
+            self.configureStep5()
+            self.configureStep6()
+            self.configureStep7()
+        })
         
     }
     
@@ -199,9 +208,9 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     
     func addPages(){
         
-        let screenWidth = UIScreen.main.bounds.size.width
+           let screenWidth = UIScreen.main.bounds.size.width
         
-         horizontalScrollView.contentSize = CGSize(width: screenWidth * CGFloat(3), height: horizontalScrollView.frame.height)
+         horizontalScrollView.contentSize = CGSize(width: screenWidth * CGFloat(7), height: horizontalScrollView.frame.height)
         
          step1 = Bundle.main.loadNibNamed("Step1", owner: self, options: nil)?.first as! Step1
         
@@ -254,66 +263,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
        
     }
     
-    override func viewDidLayoutSubviews() {
 
-        
-        // Step1 - in  detallari
-        step1.frame = CGRect(x: view.frame.size.width * CGFloat(0), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
-        step1.headerView.layer.cornerRadius = 10
-        step1.scrollView.layer.cornerRadius = 10
-        phoneTextField = step1.phoneTextField
-        mailTextField = step1.mailTextField
-        step1ScrollBottomConst = step1.bottomConst
-        phoneTextField.delegate = self
-        mailTextField.delegate = self
-        horizontalScrollView.addSubview(step1)
-        
-     
-       // step2 - nin detallari
-        step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
-        step2.segmentView.layer.cornerRadius = 10
-        step2.segmentView.layer.borderColor = purpleColor.cgColor
-        step2.segmentView.layer.borderWidth = 1
-        step2.segmentView.layer.masksToBounds = true
-        step2.step2HeaderView.layer.cornerRadius = 10
-        step2.step2ScrollView.layer.cornerRadius = 10
-        fizikiBtn = step2.fizikiBtn
-        huquqiBtn = step2.huquqiBtn
-        nameTextField = step2.nameTextField
-        voenTextFiled = step2.voenTextField
-        nameTextField.delegate = self
-        voenTextFiled.delegate = self
-        huquqiBtn.addTarget(self, action: #selector(huquqiClicked), for: .touchUpInside)
-        fizikiBtn.addTarget(self, action: #selector(fizikiClicked), for: .touchUpInside)
-        
-        horizontalScrollView.addSubview(step2)
-        
-        
-        // step3 -un detallari
-         step3.frame = CGRect(x: view.frame.size.width * CGFloat(2), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
-        step3.headerView.layer.cornerRadius = 10
-        step3.scrollView.layer.cornerRadius = 10
-        meqsedLbl = step3.meqsedLbl
-        meqsedBtn = step3.meqsedBtn
-        step3.meqsedBtn.layer.cornerRadius = 8
-        step3.meqsedBtn.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
-        step3.meqsedBtn.layer.borderWidth = 1
-        step3.meqsedBtn.layer.masksToBounds = true
-        step3.meqsedBtn2.backgroundColorForStates(normal: UIColor.clear, highlighted: UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5))
-        step3.meqsedBtn2.addTarget(self, action: #selector(test), for: .touchUpInside)
-      
-        
-        horizontalScrollView.addSubview(step3)
-        
-        
-        // Step4 - un detallari
-        configureStep4()
-        configureStep5()
-        configureStep6()
-        configureStep7()
-        
-    }
-    
     @objc func huquqiClicked(){
         
         huquqiBtn.backgroundColor = purpleColor
@@ -351,6 +301,64 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         })
         
     }
+    
+    func configureStep1(){
+        
+        step1.frame = CGRect(x: view.frame.size.width * CGFloat(0), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
+        step1.headerView.layer.cornerRadius = 10
+        step1.scrollView.layer.cornerRadius = 10
+        phoneTextField = step1.phoneTextField
+        mailTextField = step1.mailTextField
+        step1ScrollBottomConst = step1.bottomConst
+        phoneTextField.delegate = self
+        mailTextField.delegate = self
+        horizontalScrollView.addSubview(step1)
+        
+    }
+    
+    
+    func configureStep2(){
+        
+        // step2 - nin detallari
+        step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
+        step2.segmentView.layer.cornerRadius = 10
+        step2.segmentView.layer.borderColor = purpleColor.cgColor
+        step2.segmentView.layer.borderWidth = 1
+        step2.segmentView.layer.masksToBounds = true
+        step2.step2HeaderView.layer.cornerRadius = 10
+        step2.step2ScrollView.layer.cornerRadius = 10
+        fizikiBtn = step2.fizikiBtn
+        huquqiBtn = step2.huquqiBtn
+        nameTextField = step2.nameTextField
+        voenTextFiled = step2.voenTextField
+        nameTextField.delegate = self
+        voenTextFiled.delegate = self
+        huquqiBtn.addTarget(self, action: #selector(huquqiClicked), for: .touchUpInside)
+        fizikiBtn.addTarget(self, action: #selector(fizikiClicked), for: .touchUpInside)
+        
+        horizontalScrollView.addSubview(step2)
+    }
+    
+    func configureStep3(){
+        
+        // step3 -un detallari
+        step3.frame = CGRect(x: view.frame.size.width * CGFloat(2), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
+        step3.headerView.layer.cornerRadius = 10
+        step3.scrollView.layer.cornerRadius = 10
+        meqsedLbl = step3.meqsedLbl
+        meqsedBtn = step3.meqsedBtn
+        step3.meqsedBtn.layer.cornerRadius = 8
+        step3.meqsedBtn.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
+        step3.meqsedBtn.layer.borderWidth = 1
+        step3.meqsedBtn.layer.masksToBounds = true
+        step3.meqsedBtn2.backgroundColorForStates(normal: UIColor.clear, highlighted: UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5))
+        step3.meqsedBtn2.addTarget(self, action: #selector(test), for: .touchUpInside)
+        
+        
+        horizontalScrollView.addSubview(step3)
+        
+    }
+    
     
     func configureStep4(){
         
@@ -407,23 +415,26 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         
         let cellIdentifier = "cellIdentifier"
        // step6.fileCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.init())
-        let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
-        step6.fileCollectionView.setCollectionViewLayout(layout, animated: true)
+      //  let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
+      //  step6.fileCollectionView.setCollectionViewLayout(layout, animated: true)
         step6.fileCollectionView.delegate = self
         step6.fileCollectionView.dataSource = self
         
         step6.fileCollectionView.register(UINib(nibName:"FileCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
-        self.fileCollectionView = step6.fileCollectionView
+       // self.fileCollectionView = step6.fileCollectionView
+        
+       // print(step6.scrollView.touchesShouldCancel(in: step6.fil))
         //step6.fileCollectionView = self.fileCollectionView
         //or if you use class:
        // self.collectionView.register(MyCollectionCell.self, forCellWithReuseIdentifier: cellIdentifier)
         
-       // self.fileCollectionView.delegate = self
-       // self.fileCollectionView.dataSource = self
+        //self.fileCollectionView!.delegate = self
+     //   self.fileCollectionView!.dataSource = self
+        //self.fileCollectionView?.allowsSelection = true
         
-        
+        print("added")
         horizontalScrollView.addSubview(step6)
-        
+      
     }
     
     func configureStep7(){
@@ -481,7 +492,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -494,10 +505,14 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width/3 - 32, height: 70)
+        return CGSize(width: (view.frame.width - 74)/2 , height: 60)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("TOTOT")
+            
+       
     }
     
     
-
-
 }

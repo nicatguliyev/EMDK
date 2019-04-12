@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/ErizeViewController.swift"
-            timestampString = "576593533.59236"
+            timestampString = "576800413.739818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "initView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -152,7 +152,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/ErizeViewController.swift"
-            timestampString = "576593533.5932699"
+            timestampString = "576800413.740803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
@@ -168,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/ErizeViewController.swift"
-            timestampString = "576593533.593834"
+            timestampString = "576800413.7413059"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "addPages()"
             landmarkType = "7">
             <Locations>
@@ -216,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/ErizeViewController.swift"
-            timestampString = "576593533.594384"
+            timestampString = "576800413.741944"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "256"
-            endingLineNumber = "256"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
             landmarkName = "ErizeViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -232,28 +232,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/ErizeViewController.swift"
-            timestampString = "576593533.5950021"
+            timestampString = "576800413.742471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "334"
-            endingLineNumber = "334"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
             landmarkName = "fizikiClicked()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EMDK/ErizeViewController.swift"
-            timestampString = "576593533.595578"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "viewDidLayoutSubviews()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -280,7 +264,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/NewsViewController.swift"
-            timestampString = "576593533.5961781"
+            timestampString = "576800413.743012"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
@@ -328,7 +312,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/NewsViewController.swift"
-            timestampString = "576593533.596287"
+            timestampString = "576800413.743156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "187"
@@ -344,7 +328,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/NewsViewController.swift"
-            timestampString = "576593533.596337"
+            timestampString = "576800413.743227"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "250"
@@ -360,11 +344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/ErizeViewController.swift"
-            timestampString = "576593533.596385"
+            timestampString = "576800413.743276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "444"
-            endingLineNumber = "444"
+            startingLineNumber = "468"
+            endingLineNumber = "468"
             landmarkName = "configureStep7()"
             landmarkType = "7">
          </BreakpointContent>
@@ -514,46 +498,46 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/TestViewController.swift"
-            timestampString = "576339899.005358"
+            timestampString = "576800413.743861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "getFavoriteServices()"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "EMDK.TestViewController.getFavoriteServices() -&gt; ()"
                   moduleName = "EMDK"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ng/Documents/AppTest/EMDK3/EMDK/TestViewController.swift"
-                  timestampString = "576593533.814083"
+                  timestampString = "576766825.618655"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
                   offsetFromSymbolStart = "353">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EMDK.TestViewController.getFavoriteServices() -&gt; ()"
                   moduleName = "EMDK"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ng/Documents/AppTest/EMDK3/EMDK/TestViewController.swift"
-                  timestampString = "576593533.8167011"
+                  timestampString = "576766825.623613"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
                   offsetFromSymbolStart = "57">
                </Location>
             </Locations>
