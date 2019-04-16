@@ -8,8 +8,13 @@
 
 import UIKit
 
-class FileCollectionViewCell: UICollectionViewCell {
+class FileCollectionViewCell: UICollectionViewCell
 
+{
+
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var removeButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

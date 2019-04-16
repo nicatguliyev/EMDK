@@ -11,5 +11,6 @@ target 'EMDK' do
   pod 'SDWebImage', '~> 4.0'
   pod ‘StepIndicator’, '~> 1.0.6’
   pod 'Toast-Swift'
+  pod "BSImagePicker", "~> 2.8"
 
 end

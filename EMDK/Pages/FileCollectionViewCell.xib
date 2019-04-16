@@ -19,17 +19,64 @@
                 <rect key="frame" x="0.0" y="0.0" width="170" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ji-Wd-C6K">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAW-Oo-Yvn">
                         <rect key="frame" x="0.0" y="0.0" width="170" height="80"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.93155134484164059" green="0.82179156670525433" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="6l9-st-GnA">
+                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="80"/>
+                                <color key="backgroundColor" red="0.85509319119840854" green="0.85375651478434889" blue="0.87710492227979275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="haI-M5-2lf">
+                                <rect key="frame" x="76.5" y="0.0" width="93.5" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEQ-5a-bc0">
+                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="80"/>
+                                        <color key="backgroundColor" red="0.91764705882352937" green="0.93333333333333335" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="30" minY="22" maxX="30" maxY="22"/>
+                                        <state key="normal" image="deleteIcon.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.61624898471431366" green="0.72685470761297655" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dEQ-5a-bc0" secondAttribute="trailing" id="3Xy-0E-eYL"/>
+                                    <constraint firstItem="dEQ-5a-bc0" firstAttribute="top" secondItem="haI-M5-2lf" secondAttribute="top" id="AOD-ft-JDn"/>
+                                    <constraint firstAttribute="bottom" secondItem="dEQ-5a-bc0" secondAttribute="bottom" id="N1c-Ov-DCk"/>
+                                    <constraint firstItem="dEQ-5a-bc0" firstAttribute="leading" secondItem="haI-M5-2lf" secondAttribute="leading" id="lay-kf-K1a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="haI-M5-2lf" firstAttribute="leading" secondItem="6l9-st-GnA" secondAttribute="trailing" id="1Bc-Cm-y7u"/>
+                            <constraint firstItem="6l9-st-GnA" firstAttribute="width" secondItem="kAW-Oo-Yvn" secondAttribute="width" multiplier="0.45" id="1Vc-HA-VuX"/>
+                            <constraint firstItem="6l9-st-GnA" firstAttribute="top" secondItem="kAW-Oo-Yvn" secondAttribute="top" id="3cq-la-Cma"/>
+                            <constraint firstAttribute="trailing" secondItem="haI-M5-2lf" secondAttribute="trailing" id="EvN-bB-SZI"/>
+                            <constraint firstAttribute="bottom" secondItem="haI-M5-2lf" secondAttribute="bottom" id="Jhe-6Q-WTv"/>
+                            <constraint firstItem="haI-M5-2lf" firstAttribute="top" secondItem="kAW-Oo-Yvn" secondAttribute="top" id="Rsp-xr-lMJ"/>
+                            <constraint firstItem="6l9-st-GnA" firstAttribute="leading" secondItem="kAW-Oo-Yvn" secondAttribute="leading" id="YdE-9f-MRK"/>
+                            <constraint firstAttribute="bottom" secondItem="6l9-st-GnA" secondAttribute="bottom" id="bH3-3S-cEN"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="1" green="0.30196078430000001" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="kAW-Oo-Yvn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="85O-ji-xU3"/>
+                <constraint firstAttribute="bottom" secondItem="kAW-Oo-Yvn" secondAttribute="bottom" id="XLR-Eg-EQP"/>
+                <constraint firstItem="kAW-Oo-Yvn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yUR-Bw-TWD"/>
+                <constraint firstAttribute="trailing" secondItem="kAW-Oo-Yvn" secondAttribute="trailing" id="yYH-Sn-QKH"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="170" height="80"/>
-            <point key="canvasLocation" x="-587" y="-163"/>
+            <connections>
+                <outlet property="imageView" destination="6l9-st-GnA" id="PBv-ZL-UBV"/>
+                <outlet property="removeButton" destination="dEQ-5a-bc0" id="JuB-oy-Ui9"/>
+            </connections>
+            <point key="canvasLocation" x="-587.20000000000005" y="-163.71814092953525"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Logo.png" width="352" height="339"/>
+        <image name="deleteIcon.png" width="50" height="50"/>
+    </resources>
 </document>

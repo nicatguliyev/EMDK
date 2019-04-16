@@ -10,6 +10,8 @@ import UIKit
 import LGButton
 import ButtonBackgroundColor
 import StepIndicator
+import Photos
+import BSImagePicker
 
 class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
@@ -17,7 +19,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     var mailTextField = UITextField()
     var nameTextField = UITextField()
     var voenTextFiled = UITextField()
-  //  var fileCollectionView: UICollectionView?
+    var fileCollectionView: UICollectionView?
     var meqsedBtn = LGButton()
     var x = UIButton()
     var meqsedLbl = UILabel()
@@ -35,6 +37,11 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     var fizikiBtn = UIButton()
     var huquqiBtn = UIButton()
     var sendParameterToPopup = ""
+    var images = [Int]()
+    var fileCollectionViewHeight  = NSLayoutConstraint()
+    var selectedAssats = [PHAsset]()
+    var photoArray = [UIImage]()
+    
     
 
     
@@ -413,6 +420,9 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
        // step6.fileCollectionView = fileCollectionView
         step6.addButton.layer.cornerRadius = 8
         
+        step6.addButton.addTarget(self, action: #selector(addNewImage), for: .touchUpInside)
+        
+        
         let cellIdentifier = "cellIdentifier"
        // step6.fileCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.init())
       //  let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
@@ -421,6 +431,8 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         step6.fileCollectionView.dataSource = self
         
         step6.fileCollectionView.register(UINib(nibName:"FileCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        self.fileCollectionView = step6.fileCollectionView
+        self.fileCollectionViewHeight = step6.collectionHeightConst
        // self.fileCollectionView = step6.fileCollectionView
         
        // print(step6.scrollView.touchesShouldCancel(in: step6.fil))
@@ -432,7 +444,6 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
      //   self.fileCollectionView!.dataSource = self
         //self.fileCollectionView?.allowsSelection = true
         
-        print("added")
         horizontalScrollView.addSubview(step6)
       
     }
@@ -452,6 +463,64 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         
         
         horizontalScrollView.addSubview(step7)
+        
+    }
+    
+    
+    @objc func addNewImage(){
+       
+        let vc = BSImagePickerViewController()
+        
+        self.bs_presentImagePickerController(vc, animated: true,
+                                        select: { (asset: PHAsset) -> Void in
+                                            // User selected an asset.
+                                            // Do something with it, start upload perhaps?
+        }, deselect: { (asset: PHAsset) -> Void in
+            // User deselected an assets.
+            // Do something, cancel upload?
+        }, cancel: { (assets: [PHAsset]) -> Void in
+            // User cancelled. And this where the assets currently selected.
+        }, finish: { (assets: [PHAsset]) -> Void in
+            // User finished with these assets
+            for i in 0..<assets.count{
+                print(assets.count)
+                self.selectedAssats.append(assets[i])
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                self.reloadCollectionView()
+            })
+            
+        }, completion: nil)
+    
+    }
+    
+    func reloadCollectionView(){
+        
+        if(selectedAssats.count != 0){
+            self.photoArray = []
+            for i in 0..<selectedAssats.count{
+                let manager = PHImageManager.default()
+                let option = PHImageRequestOptions()
+                var thumbNail = UIImage()
+                option.isSynchronous = true
+                manager.requestImage(for: selectedAssats[i], targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFill, options: option, resultHandler: {(result, info) -> Void in
+                    thumbNail = result!
+                })
+                self.photoArray.append(thumbNail)
+                
+            }
+        }
+        
+     
+        if(photoArray.count % 2 == 1)
+        {
+            self.fileCollectionViewHeight.constant  = CGFloat((photoArray.count/2 + 1)*85)
+        }
+        else
+        {
+            self.fileCollectionViewHeight.constant  = CGFloat((photoArray.count/2)*85)
+        }
+                self.fileCollectionView?.reloadData()
         
     }
     
@@ -492,7 +561,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return photoArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -500,17 +569,21 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         
         //in this example I added a label named "title" into the MyCollectionCell class
        // cell.title.text = self.objects[indexPath.item]
+        cell.contentView.layer.cornerRadius = 10
+        cell.contentView.clipsToBounds = true
+        
+        cell.imageView.image = self.photoArray[indexPath.row]
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width - 74)/2 , height: 60)
+        return CGSize(width: (view.frame.width - 74)/2 , height: 75)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("TOTOT")
-            
+        
        
     }
     

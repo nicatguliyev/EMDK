@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6299E98812D1A7FFE98805BD094ABC8E"
+               BlueprintIdentifier = "3FB906F24FFB7D59AD933F3BDB6C3309"
                BuildableName = "StepIndicator.bundle"
                BlueprintName = "StepIndicator-StepIndicator"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6299E98812D1A7FFE98805BD094ABC8E"
+            BlueprintIdentifier = "3FB906F24FFB7D59AD933F3BDB6C3309"
             BuildableName = "StepIndicator.bundle"
             BlueprintName = "StepIndicator-StepIndicator"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -21,6 +21,7 @@
 		CD530E03225A674F001BD14C /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD530E02225A674F001BD14C /* IndicatorView.swift */; };
 		CD530E24225DFF6D001BD14C /* FileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD530E22225DFF6D001BD14C /* FileCollectionViewCell.swift */; };
 		CD530E25225DFF6D001BD14C /* FileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD530E23225DFF6D001BD14C /* FileCollectionViewCell.xib */; };
+		CD530E27226493AC001BD14C /* deleteIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD530E26226493AC001BD14C /* deleteIcon.png */; };
 		CD5C00592240C71100D6D86E /* Pods_EMDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07D27F4238B43B920492641 /* Pods_EMDK.framework */; };
 		CD5C005A2240C71100D6D86E /* Pods_EMDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A07D27F4238B43B920492641 /* Pods_EMDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD5C005C2240CFB200D6D86E /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5C005B2240CFB200D6D86E /* LoginWithEgov.framework */; };
@@ -145,6 +146,7 @@
 		CD530E02225A674F001BD14C /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		CD530E22225DFF6D001BD14C /* FileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD530E23225DFF6D001BD14C /* FileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileCollectionViewCell.xib; sourceTree = "<group>"; };
+		CD530E26226493AC001BD14C /* deleteIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deleteIcon.png; sourceTree = "<group>"; };
 		CD5C005B2240CFB200D6D86E /* LoginWithEgov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithEgov.framework; sourceTree = "<group>"; };
 		CD88CB7421CD1A9E0029F9CC /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		CD88CB7821CE9ED10029F9CC /* TenzimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenzimViewController.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				CDFED6EE224F657F00328886 /* icons8-christmas-star-50.png */,
 				CDFED6F3224F658000328886 /* icons8-ok-filled-50.png */,
 				CDFED6F5224F658000328886 /* purpleClose.png */,
+				CD530E26226493AC001BD14C /* deleteIcon.png */,
 				CDFED6EA224F657E00328886 /* purpleSetting.png */,
 				CDFED6F4224F658000328886 /* rightArrow.png */,
 				CDFED6EB224F657E00328886 /* share.png */,
@@ -527,6 +530,7 @@
 				CD530E25225DFF6D001BD14C /* FileCollectionViewCell.xib in Resources */,
 				CDFED6E7224F651500328886 /* Logo.png in Resources */,
 				CDFED6D9224F651500328886 /* step3.png in Resources */,
+				CD530E27226493AC001BD14C /* deleteIcon.png in Resources */,
 				CDFED6E6224F651500328886 /* step5.png in Resources */,
 				CD530DF9224FC691001BD14C /* CheckConnection.xib in Resources */,
 				CDFED6E1224F651500328886 /* dropDown.png in Resources */,
@@ -553,6 +557,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EMDK/Pods-EMDK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BSGridCollectionViewLayout/BSGridCollectionViewLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/BSImagePicker/BSImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/BSImageView/BSImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/ButtonBackgroundColor/ButtonBackgroundColor.framework",
 				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -564,6 +571,9 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSGridCollectionViewLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ButtonBackgroundColor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
