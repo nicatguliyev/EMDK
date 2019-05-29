@@ -10,11 +10,13 @@ import UIKit
 
 class CustomSWRevealController: SWRevealViewController {
     
-
+    var vc =  SplashViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       // vc.dismiss(animated: true, completion: nil)
+            // Do any additional setup after loading the view.
     }
     
 

@@ -35,13 +35,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      /// let controller = LoginController();
-        //let x = LoginController();
-       // x.setUpParams(baseURL: "http://example.az/", pathURL: "your/path/url");
-      //  self.present(x, animated: true, completion: nil);
-
         initMainView()
+    
     }
     
     @objc func asanTapped(){
@@ -54,6 +49,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         eGovView.layer.borderColor = borderColor.cgColor
         eGovDoneBackground.isHidden = true
         
+
+        
     }
     
     @objc func eGovTapped(){
@@ -64,6 +61,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         eGovShadowView.isHidden = true
         eGovView.layer.borderColor = navBarColor.cgColor
         eGovDoneBackground.isHidden = false
+        
     }
     
     @objc func mainTapped(){
@@ -200,8 +198,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func loginClicked(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "main") as! SWRevealViewController
-        self.present(vc, animated: true, completion: nil)
+        
+        LoginController.shared.getFinalToken(){
+            (token) in
+            if(token == ""){
+                let controller = LoginController()
+                controller.endpoint = "com.nicatguliyev.EMDK"
+                self.present(controller, animated: true, completion: nil)
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "main") as! SWRevealViewController
+                controller.controller = vc
+            }
+            else{                
+                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "main") as! SWRevealViewController
+                 self.present(vc, animated: true, completion: nil)
+            }
+        }
+        
     }
+    
+    
     
 }

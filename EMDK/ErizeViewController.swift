@@ -41,6 +41,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     var fileCollectionViewHeight  = NSLayoutConstraint()
     var selectedAssats = [PHAsset]()
     var photoArray = [UIImage]()
+    var selectedImage = UIImage()
     
     
 
@@ -503,7 +504,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                 let option = PHImageRequestOptions()
                 var thumbNail = UIImage()
                 option.isSynchronous = true
-                manager.requestImage(for: selectedAssats[i], targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFill, options: option, resultHandler: {(result, info) -> Void in
+                manager.requestImage(for: selectedAssats[i], targetSize: CGSize(width: 500, height: 500), contentMode: .aspectFill, options: option, resultHandler: {(result, info) -> Void in
                     thumbNail = result!
                 })
                 self.photoArray.append(thumbNail)
@@ -546,6 +547,21 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         
     }
     
+    @objc func removeImage(sender: UIButton){
+        photoArray.remove(at: sender.tag)
+        selectedAssats.remove(at: sender.tag)
+        fileCollectionView?.reloadData()
+        
+        if(photoArray.count % 2 == 1)
+        {
+            self.fileCollectionViewHeight.constant  = CGFloat((photoArray.count/2 + 1)*85)
+        }
+        else
+        {
+            self.fileCollectionViewHeight.constant  = CGFloat((photoArray.count/2)*85)
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if(segue.identifier == "segueToPopup")
@@ -553,6 +569,11 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         let vc = segue.destination as! ErizePopupViewController
         vc.type = self.sendParameterToPopup
         
+        }
+        if(segue.identifier == "segueToImageController"){
+            
+            let vc = segue.destination as! FullScreenImageController
+            vc.selectedImage = self.selectedImage
         }
     }
     
@@ -573,6 +594,8 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         cell.contentView.clipsToBounds = true
         
         cell.imageView.image = self.photoArray[indexPath.row]
+        cell.removeButton.tag = indexPath.row
+        cell.removeButton.addTarget(self, action: #selector(removeImage), for: .touchUpInside)
         
         return cell
     }
@@ -582,10 +605,13 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("TOTOT")
+        self.selectedImage = self.photoArray[indexPath.row]
+        performSegue(withIdentifier: "segueToImageController", sender: self)
         
        
     }
+    
+    
     
     
 }

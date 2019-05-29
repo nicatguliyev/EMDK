@@ -8,6 +8,7 @@
 
 import UIKit
 import Toast_Swift
+//import LoginWithEgov
 // deyisiklik edildi 2jjjj
 struct cellData {
     var id  = Int()
@@ -88,7 +89,9 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
         super.viewDidLoad()
 
         initView()
-        segmentView.backgroundColor = testColor     
+        segmentView.backgroundColor = testColor
+        UIView.setAnimationsEnabled(true)
+       // self.dismiss(animated: true, completion: nil)
     }
     
     

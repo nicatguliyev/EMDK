@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,7 +48,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.9941860465116279" green="0.98837209302325579" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="2sE-LB-4Ll" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eOS-q0-mnM"/>
                             <constraint firstItem="2sE-LB-4Ll" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qSg-CQ-eaa"/>
@@ -56,7 +56,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="V5r-G0-mE8" kind="show" identifier="segueToLogin" id="Aza-D5-bYW"/>
+                        <outlet property="appName" destination="gNa-FK-coe" id="S83-5b-MZP"/>
+                        <outlet property="splashImage" destination="883-iQ-38g" id="HoA-2d-OsJ"/>
+                        <segue destination="6vn-3V-97a" kind="show" identifier="segueToLogin" id="3bu-Q8-Rha"/>
+                        <segue destination="A53-rA-REG" kind="show" identifier="segueToMain" id="pRQ-RX-cJt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -407,6 +410,38 @@
             </objects>
             <point key="canvasLocation" x="1896.8" y="138.0809595202399"/>
         </scene>
+        <!--Login Button Controller-->
+        <scene sceneID="K90-uR-8H8">
+            <objects>
+                <viewController storyboardIdentifier="LoginId" id="6vn-3V-97a" customClass="LoginButtonController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="viL-Jb-fF3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KiT-q5-h0C" customClass="AsanLoginDesign" customModule="LoginWithEgov">
+                                <rect key="frame" x="32" y="296" width="311" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="95V-QS-Y0W"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KiT-q5-h0C" firstAttribute="centerY" secondItem="viL-Jb-fF3" secondAttribute="centerY" id="80t-mk-jE9"/>
+                            <constraint firstItem="Kkg-ls-oLV" firstAttribute="trailing" secondItem="KiT-q5-h0C" secondAttribute="trailing" constant="32" id="bmu-4e-BRF"/>
+                            <constraint firstItem="KiT-q5-h0C" firstAttribute="leading" secondItem="Kkg-ls-oLV" secondAttribute="leading" constant="32" id="r92-L1-JJ3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kkg-ls-oLV"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="KiT-q5-h0C" id="wIb-nE-qh5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmw-3P-dGD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="914.392803598201"/>
+        </scene>
         <!--Logut View Controller-->
         <scene sceneID="vbS-G3-cAS">
             <objects>
@@ -478,6 +513,7 @@
                         <outlet property="noBtn" destination="QWP-oM-TlF" id="3Ou-L5-u95"/>
                         <outlet property="popupView" destination="X0m-j3-TtM" id="Wc8-tH-f40"/>
                         <outlet property="yesBtn" destination="Tok-Db-Fa7" id="FJb-aw-hYC"/>
+                        <segue destination="6vn-3V-97a" kind="show" identifier="segueToLogin" id="pf1-Sy-ECH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VCx-8c-Shx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2125,11 +2161,83 @@
                         <outlet property="horizontalScrollView" destination="gqC-52-0xu" id="6uW-UF-lr9"/>
                         <outlet property="stepIndicator" destination="U3b-0a-roP" id="pU2-C2-PKh"/>
                         <segue destination="INs-cd-Gge" kind="presentation" identifier="segueToPopup" id="PT3-Yp-kSQ"/>
+                        <segue destination="mo0-Ic-xSe" kind="presentation" identifier="segueToImageController" id="4qK-Xt-Caw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPE-qT-ddQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4244" y="1692.5037481259371"/>
+        </scene>
+        <!--Full Screen Image Controller-->
+        <scene sceneID="iNQ-bW-hUX">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="mo0-Ic-xSe" customClass="FullScreenImageController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D9B-3a-FQG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZo-pn-ZJo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="WHE-Te-7hh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WHE-Te-7hh" firstAttribute="width" secondItem="zZo-pn-ZJo" secondAttribute="width" id="637-fB-hsS"/>
+                                    <constraint firstAttribute="trailing" secondItem="WHE-Te-7hh" secondAttribute="trailing" id="M0X-nG-g7d"/>
+                                    <constraint firstItem="WHE-Te-7hh" firstAttribute="leading" secondItem="zZo-pn-ZJo" secondAttribute="leading" id="SCS-Dy-dsd"/>
+                                    <constraint firstItem="WHE-Te-7hh" firstAttribute="top" secondItem="zZo-pn-ZJo" secondAttribute="top" id="eas-Sd-cWM"/>
+                                    <constraint firstItem="WHE-Te-7hh" firstAttribute="height" secondItem="zZo-pn-ZJo" secondAttribute="height" id="fnu-Kk-v7z"/>
+                                    <constraint firstAttribute="bottom" secondItem="WHE-Te-7hh" secondAttribute="bottom" id="nDN-kX-b9f"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ups-fr-Xcb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXo-tO-XpN">
+                                        <rect key="frame" x="8" y="5" width="50" height="50"/>
+                                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Yew-Bc-gwk"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                                        <state key="normal" image="deleteIcon.png"/>
+                                        <connections>
+                                            <action selector="backClicked:" destination="mo0-Ic-xSe" eventType="touchUpInside" id="SO4-Ms-KTy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="cXo-tO-XpN" secondAttribute="bottom" constant="5" id="6ib-mn-Zay"/>
+                                    <constraint firstItem="cXo-tO-XpN" firstAttribute="top" secondItem="Ups-fr-Xcb" secondAttribute="top" constant="5" id="DQi-Zn-5jQ"/>
+                                    <constraint firstAttribute="height" constant="60" id="QcH-iJ-Ig5"/>
+                                    <constraint firstItem="cXo-tO-XpN" firstAttribute="leading" secondItem="Ups-fr-Xcb" secondAttribute="leading" constant="8" id="ckE-LN-uhE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ups-fr-Xcb" secondAttribute="trailing" id="5dK-I1-STa"/>
+                            <constraint firstItem="zZo-pn-ZJo" firstAttribute="top" secondItem="D9B-3a-FQG" secondAttribute="top" id="95f-jH-dee"/>
+                            <constraint firstItem="zZo-pn-ZJo" firstAttribute="trailing" secondItem="dSi-qb-IDg" secondAttribute="trailing" id="FrH-ul-hnG"/>
+                            <constraint firstItem="zZo-pn-ZJo" firstAttribute="bottom" secondItem="dSi-qb-IDg" secondAttribute="bottom" id="GpK-eC-EFb"/>
+                            <constraint firstItem="Ups-fr-Xcb" firstAttribute="leading" secondItem="D9B-3a-FQG" secondAttribute="leading" id="Skv-fB-VFN"/>
+                            <constraint firstItem="Ups-fr-Xcb" firstAttribute="top" secondItem="dSi-qb-IDg" secondAttribute="top" id="WRL-lb-QKR"/>
+                            <constraint firstItem="zZo-pn-ZJo" firstAttribute="leading" secondItem="dSi-qb-IDg" secondAttribute="leading" id="uWH-aa-2HU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dSi-qb-IDg"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="WHE-Te-7hh" id="k7W-dT-jNU"/>
+                        <outlet property="scrollView" destination="zZo-pn-ZJo" id="Qav-uO-OuU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IVW-Vw-Cag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5148" y="1693.4032983508248"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4k-fj-Ogw">
@@ -2197,17 +2305,19 @@
     </scenes>
     <resources>
         <image name="Logo.png" width="352" height="339"/>
-        <image name="blackDone.png" width="50" height="50"/>
-        <image name="dropDown.png" width="29" height="16"/>
+        <image name="blackDone.png" width="37.5" height="37.5"/>
+        <image name="deleteIcon.png" width="156.52174377441406" height="156.52174377441406"/>
+        <image name="dropDown.png" width="29.5" height="16.5"/>
         <image name="electronLogo.png" width="58" height="58"/>
-        <image name="greenDone.png" width="50" height="50"/>
-        <image name="purpleClose.png" width="50" height="50"/>
-        <image name="purpleDone.png" width="50" height="50"/>
-        <image name="purpleSetting.png" width="50" height="50"/>
+        <image name="greenDone.png" width="180" height="180"/>
+        <image name="purpleClose.png" width="180" height="180"/>
+        <image name="purpleDone.png" width="180" height="180"/>
+        <image name="purpleSetting.png" width="180" height="180"/>
         <image name="test.png" width="1506" height="934"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="S5j-Yn-4pJ"/>
         <segue reference="PT3-Yp-kSQ"/>
+        <segue reference="3bu-Q8-Rha"/>
     </inferredMetricsTieBreakers>
 </document>

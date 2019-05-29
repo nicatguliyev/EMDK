@@ -70,8 +70,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         {
               self.revealViewController()?.revealToggle(animated: true)
               performSegue(withIdentifier: "segueToExit", sender: self)
-          //  self.dismiss(animated: true, completion: nil)
-         //   dismiss2()
+    
         }
     }
     
@@ -88,7 +87,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func dismiss2() -> () {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
             self.dismiss(animated: true, completion: nil)
-           // print("hahahah")
         })
        
         

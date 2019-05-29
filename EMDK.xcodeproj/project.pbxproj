@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52E234E2AA848E818EEDF550 /* Pods_EMDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07D27F4238B43B920492641 /* Pods_EMDK.framework */; };
+		CD076C55229C0DED00115D8C /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD076C54229C0DED00115D8C /* LoginWithEgov.framework */; };
+		CD076C56229C0DF400115D8C /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD076C54229C0DED00115D8C /* LoginWithEgov.framework */; };
+		CD076C57229C0DF400115D8C /* LoginWithEgov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD076C54229C0DED00115D8C /* LoginWithEgov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD076C59229D1FF400115D8C /* LoginButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD076C58229D1FF400115D8C /* LoginButtonController.swift */; };
 		CD50850721CECDCF007F1EB0 /* ErizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD50850621CECDCF007F1EB0 /* ErizeViewController.swift */; };
 		CD50851021CED4AB007F1EB0 /* Step1.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD50850F21CED4AB007F1EB0 /* Step1.xib */; };
 		CD50851221CED4F2007F1EB0 /* Step1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD50851121CED4F2007F1EB0 /* Step1.swift */; };
@@ -22,10 +27,7 @@
 		CD530E24225DFF6D001BD14C /* FileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD530E22225DFF6D001BD14C /* FileCollectionViewCell.swift */; };
 		CD530E25225DFF6D001BD14C /* FileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD530E23225DFF6D001BD14C /* FileCollectionViewCell.xib */; };
 		CD530E27226493AC001BD14C /* deleteIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD530E26226493AC001BD14C /* deleteIcon.png */; };
-		CD5C00592240C71100D6D86E /* Pods_EMDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07D27F4238B43B920492641 /* Pods_EMDK.framework */; };
-		CD5C005A2240C71100D6D86E /* Pods_EMDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A07D27F4238B43B920492641 /* Pods_EMDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CD5C005C2240CFB200D6D86E /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5C005B2240CFB200D6D86E /* LoginWithEgov.framework */; };
-		CD5C005E2240D03F00D6D86E /* LoginWithEgov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD5C005B2240CFB200D6D86E /* LoginWithEgov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD530E292265BD82001BD14C /* FullScreenImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD530E282265BD82001BD14C /* FullScreenImageController.swift */; };
 		CD88CB7521CD1A9E0029F9CC /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88CB7421CD1A9E0029F9CC /* UserDetailViewController.swift */; };
 		CD88CB7921CE9ED10029F9CC /* TenzimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88CB7821CE9ED10029F9CC /* TenzimViewController.swift */; };
 		CD973CC221D0D501008D7F9A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD973CC121D0D501008D7F9A /* TestViewController.swift */; };
@@ -114,14 +116,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CD5C0040223EE52D00D6D86E /* Embed Frameworks */ = {
+		CDDC00F32290A1D4003EFFD0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CD5C005A2240C71100D6D86E /* Pods_EMDK.framework in Embed Frameworks */,
-				CD5C005E2240D03F00D6D86E /* LoginWithEgov.framework in Embed Frameworks */,
+				CD076C57229C0DF400115D8C /* LoginWithEgov.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +133,8 @@
 		2DAB8307186345E507EBC45A /* Pods-EMDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMDK/Pods-EMDK.debug.xcconfig"; sourceTree = "<group>"; };
 		A07D27F4238B43B920492641 /* Pods_EMDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EMDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77735ED08746701B109F11C /* Pods-EMDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMDK/Pods-EMDK.release.xcconfig"; sourceTree = "<group>"; };
+		CD076C54229C0DED00115D8C /* LoginWithEgov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithEgov.framework; sourceTree = "<group>"; };
+		CD076C58229D1FF400115D8C /* LoginButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonController.swift; sourceTree = "<group>"; };
 		CD50850621CECDCF007F1EB0 /* ErizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErizeViewController.swift; sourceTree = "<group>"; };
 		CD50850F21CED4AB007F1EB0 /* Step1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Step1.xib; sourceTree = "<group>"; };
 		CD50851121CED4F2007F1EB0 /* Step1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step1.swift; sourceTree = "<group>"; };
@@ -147,7 +150,9 @@
 		CD530E22225DFF6D001BD14C /* FileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD530E23225DFF6D001BD14C /* FileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD530E26226493AC001BD14C /* deleteIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deleteIcon.png; sourceTree = "<group>"; };
-		CD5C005B2240CFB200D6D86E /* LoginWithEgov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithEgov.framework; sourceTree = "<group>"; };
+		CD530E282265BD82001BD14C /* FullScreenImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageController.swift; sourceTree = "<group>"; };
+		CD5E57CA229291B000DF0DFE /* LoginWithEgovDebug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoginWithEgovDebug.framework; path = "../../../Downloads/AsanLoginFramework-3/LoginWithEgovDebug.framework"; sourceTree = "<group>"; };
+		CD876538229568DC00478DB0 /* LoginWithEgov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoginWithEgov.framework; path = "../../../Downloads/AsanLoginFramework-5/LoginWithEgov.framework"; sourceTree = "<group>"; };
 		CD88CB7421CD1A9E0029F9CC /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		CD88CB7821CE9ED10029F9CC /* TenzimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenzimViewController.swift; sourceTree = "<group>"; };
 		CD973CC121D0D501008D7F9A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -244,8 +249,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5C00592240C71100D6D86E /* Pods_EMDK.framework in Frameworks */,
-				CD5C005C2240CFB200D6D86E /* LoginWithEgov.framework in Frameworks */,
+				52E234E2AA848E818EEDF550 /* Pods_EMDK.framework in Frameworks */,
+				CD076C55229C0DED00115D8C /* LoginWithEgov.framework in Frameworks */,
+				CD076C56229C0DF400115D8C /* LoginWithEgov.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +270,8 @@
 		9D3DF674D7CF70594DE8DB76 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD876538229568DC00478DB0 /* LoginWithEgov.framework */,
+				CD5E57CA229291B000DF0DFE /* LoginWithEgovDebug.framework */,
 				A07D27F4238B43B920492641 /* Pods_EMDK.framework */,
 			);
 			name = Frameworks;
@@ -295,7 +303,7 @@
 		CDACD21421C9197D0005AF76 = {
 			isa = PBXGroup;
 			children = (
-				CD5C005B2240CFB200D6D86E /* LoginWithEgov.framework */,
+				CD076C54229C0DED00115D8C /* LoginWithEgov.framework */,
 				CDACD21F21C9197D0005AF76 /* EMDK */,
 				CDACD21E21C9197D0005AF76 /* Products */,
 				0663C493DDBAE5A9F6C4869C /* Pods */,
@@ -354,6 +362,8 @@
 				CD530DFE2256A3C9001BD14C /* WarningModalController.swift */,
 				CD530E00225A672B001BD14C /* IndicatorView.xib */,
 				CD530E02225A674F001BD14C /* IndicatorView.swift */,
+				CD530E282265BD82001BD14C /* FullScreenImageController.swift */,
+				CD076C58229D1FF400115D8C /* LoginButtonController.swift */,
 			);
 			path = EMDK;
 			sourceTree = "<group>";
@@ -427,7 +437,7 @@
 				CDACD21A21C9197D0005AF76 /* Frameworks */,
 				CDACD21B21C9197D0005AF76 /* Resources */,
 				A55A9F74455E74DFBAE6F3AE /* [CP] Embed Pods Frameworks */,
-				CD5C0040223EE52D00D6D86E /* Embed Frameworks */,
+				CDDC00F32290A1D4003EFFD0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -621,6 +631,7 @@
 				CDCEAFDF21D18A3100DBD82C /* ImageCollectionViewCell.swift in Sources */,
 				CDCEAFB821D16F4500DBD82C /* Step6.swift in Sources */,
 				CD50851821CEF0DB007F1EB0 /* Step2.swift in Sources */,
+				CD076C59229D1FF400115D8C /* LoginButtonController.swift in Sources */,
 				CD50850721CECDCF007F1EB0 /* ErizeViewController.swift in Sources */,
 				CDCEAFAC21D1258000DBD82C /* Step4.swift in Sources */,
 				CDE65E4E21D236E900835247 /* QebulViewController.swift in Sources */,
@@ -631,6 +642,7 @@
 				CD50851221CED4F2007F1EB0 /* Step1.swift in Sources */,
 				CDACD24821CA2BD80005AF76 /* MenuTableCell.swift in Sources */,
 				CD973CC221D0D501008D7F9A /* TestViewController.swift in Sources */,
+				CD530E292265BD82001BD14C /* FullScreenImageController.swift in Sources */,
 				CDCEAFA421D10B5200DBD82C /* ErizePopupViewController.swift in Sources */,
 				CDACD22121C9197D0005AF76 /* AppDelegate.swift in Sources */,
 				CDE80D1721CBB15B008E05EC /* CustomFavCell.swift in Sources */,
@@ -804,6 +816,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = EMDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -812,8 +825,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EMDK/EMDK-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -830,6 +843,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = EMDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -837,8 +851,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicatguliyev.EMDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EMDK/EMDK-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
