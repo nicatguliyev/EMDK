@@ -15,5 +15,6 @@ class Step5: UIView {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var muddetLbl: UILabel!
     @IBOutlet weak var muddetView: UIView!
 }

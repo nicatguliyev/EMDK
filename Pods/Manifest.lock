@@ -5,6 +5,7 @@ PODS:
     - BSImageView (= 1.0.2)
   - BSImageView (1.0.2)
   - ButtonBackgroundColor (3.0.0)
+  - JWTDecode (2.2.0)
   - LGButton (1.0.5)
   - SDWebImage (4.4.3):
     - SDWebImage/Core (= 4.4.3)
@@ -16,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - BSImagePicker (~> 2.8)
   - ButtonBackgroundColor
+  - JWTDecode
   - LGButton
   - SDWebImage (~> 4.0)
   - StepIndicator (~> 1.0.6)
@@ -28,6 +30,7 @@ SPEC REPOS:
     - BSImagePicker
     - BSImageView
     - ButtonBackgroundColor
+    - JWTDecode
     - LGButton
     - SDWebImage
     - StepIndicator
@@ -39,12 +42,13 @@ SPEC CHECKSUMS:
   BSImagePicker: 553707de1adaad42eac252e0b84d20dbdba83fe9
   BSImageView: ab22ff8cae61f1ae17a3c9efeeb216af3cf84a09
   ButtonBackgroundColor: 512072926e57db9ef4eb7e2240d2cc1a544adc5b
+  JWTDecode: 85a405ab16d5473e99bd89ded1d535090ebd6a0e
   LGButton: 707ce916eb80b73a6c4688df34bee11adbafb663
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   StepIndicator: 73b4bcc8bcf816cb98479d99ada7e85463252caa
   SwiftyButton: 5b0ef314e9cf61cf8a83e456ddd1ea1f53f30598
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
 
-PODFILE CHECKSUM: c9aeeb4bf086745ea18e752354d9ac008bb6fe13
+PODFILE CHECKSUM: 78640a299fa4a229babc514a022dcafa9ad5be67
 
 COCOAPODS: 1.5.3

@@ -15,9 +15,11 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
 
     var types = ["Şikayət", "Təklif", "İrad", "Şikayət", "Təklif", "İrad", "Şikayət", "Təklif", "İrad","Şikayət", "Təklif", "İrad", "Şikayət", "Təklif", "İrad", "Şikayət", "Təklif", "İrad"]
     
-    var times = ["Gün", "Həftə", "Ay", "İl"]
+    var times = ["1 Gün", "2 Gün", "3 Gün", "4 Gün", "5 Gün", "6 Gün", "7 Gün", "8 Gün", "9 Gün", "10 Gün", "11 Gün", "12 Gün", "13 Gün", "14 Gün", "15 Gün", "16 Gün", "17 Gün", "18 Gün", "19 Gün", "20 Gün", "21 Gün", "22 Gün", "23 Gün", "24 Gün", "25 Gün", "26 Gün", "27 Gün", "28 Gün", "29 Gün", "30 Gün", "31 Gün"]
     
     var receivers = [ReceiverDataModel]()
+    var puposes = [PurposeDataModel]()
+    var allRegions = [RegionDataModel]()
 
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
@@ -30,9 +32,9 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
         if(type == "erize")
         {
         
-        if(CGFloat(types.count) * CGFloat(60) + CGFloat(50) < UIScreen.main.bounds.size.height - CGFloat(100))
+        if(CGFloat(types.count) * CGFloat(60) < UIScreen.main.bounds.size.height - CGFloat(100))
         {
-             tableHeight.constant = CGFloat(types.count) * CGFloat(60) + CGFloat(50)
+             tableHeight.constant = CGFloat(types.count) * CGFloat(60)
         }
         else
         {
@@ -41,9 +43,9 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         if(type == "region"){
-            if(CGFloat(countries.count) * CGFloat(60) + CGFloat(50) < UIScreen.main.bounds.size.height - CGFloat(100))
+            if(CGFloat(countries.count) * CGFloat(60) < UIScreen.main.bounds.size.height - CGFloat(100))
             {
-                tableHeight.constant = CGFloat(countries.count) * CGFloat(60) + CGFloat(50)
+                tableHeight.constant = CGFloat(countries.count) * CGFloat(60)
             }
             else
             {
@@ -53,9 +55,9 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         if(type == "receiver")
         {
-            if(CGFloat(receivers.count) * CGFloat(60) + CGFloat(50) < UIScreen.main.bounds.size.height - CGFloat(100))
+            if(CGFloat(receivers.count) * CGFloat(60) < UIScreen.main.bounds.size.height - CGFloat(100))
             {
-                tableHeight.constant = CGFloat(receivers.count) * CGFloat(60) + CGFloat(50)
+                tableHeight.constant = CGFloat(receivers.count) * CGFloat(60)
             }
             else
             {
@@ -76,24 +78,22 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if(type == "region")
-//        {
-//             return countries.count
-//        }
-//        if(type == "erize")
-//        {
-//            return types.count
-//        }
         if(type == "receiver")
         {
-            print()
             return receivers.count
             
         }
+        else if(type == "erize")
+        {
+            return puposes.count
+        }
+        else if(type == "region")
+        {
+            return allRegions.count
+        }
         else
         {
-            print(receivers)
-            return 1
+            return 31
         }
         
        
@@ -106,18 +106,21 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if(type == "region")
         {
-            cell.erizeTypeLbl.text = countries[indexPath.row]
+            cell.erizeTypeLbl.text = allRegions[indexPath.row].name
         }
         if(type == "erize")
         {
-            cell.erizeTypeLbl.text = types[indexPath.row]
+            cell.erizeTypeLbl.text = puposes[indexPath.row].title
         }
         
         if(type == "receiver")
         {
             cell.erizeTypeLbl.text = receivers[indexPath.row].name
         }
-        
+        if(type == "time"){
+            
+            cell.erizeTypeLbl.text = times[indexPath.row]
+        }
         
         return cell
         
@@ -129,7 +132,7 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        setReceiverName(indexPath.row)
+         setReceiverName(indexPath.row)
          dismiss(animated: true, completion: nil)
     }
     

@@ -23,6 +23,7 @@ class SplashViewController: UIViewController {
     
         LoginController.shared.getFinalToken(){(token) in
             
+            print(token)
             if(token == "")
             {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {

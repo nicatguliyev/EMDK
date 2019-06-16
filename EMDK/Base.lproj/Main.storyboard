@@ -613,6 +613,7 @@
                         <viewLayoutGuide key="safeArea" id="cEK-Rh-ylL"/>
                     </view>
                     <connections>
+                        <outlet property="menuTable" destination="6Oj-zg-sjf" id="V8l-5y-37e"/>
                         <segue destination="ec3-FZ-YjF" kind="custom" identifier="segueToNews" customClass="SWRevealViewControllerSeguePushController" id="DEO-oF-VOw"/>
                         <segue destination="GxF-ne-nel" kind="custom" identifier="segueToXidmet" customClass="SWRevealViewControllerSeguePushController" id="S5j-Yn-4pJ"/>
                         <segue destination="Cra-Fe-nIy" kind="custom" identifier="segueToSexsi" customClass="SWRevealViewControllerSeguePushController" id="hEw-lB-gwg"/>
@@ -1357,7 +1358,7 @@
                                 <rect key="frame" x="16" y="78.5" width="343" height="510"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c76-Z8-jYv">
-                                        <rect key="frame" x="0.0" y="50" width="343" height="460"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="510"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="erizeCell" rowHeight="59" id="zL6-E8-WC3" customClass="ErizeTypeCell" customModule="EMDK" customModuleProvider="target">
@@ -1392,24 +1393,16 @@
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eko-gh-9Y3">
-                                        <rect key="frame" x="298" y="10" width="35" height="35"/>
+                                        <rect key="frame" x="298" y="10" width="35" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="Atq-cw-syT"/>
-                                            <constraint firstAttribute="height" constant="35" id="sdD-RF-Rjq"/>
+                                            <constraint firstAttribute="height" id="sdD-RF-Rjq"/>
                                         </constraints>
                                         <state key="normal" image="purpleClose.png"/>
                                         <connections>
                                             <action selector="closeClicked:" destination="INs-cd-Gge" eventType="touchUpInside" id="U4r-ZO-naa"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ut-x6-mJh">
-                                        <rect key="frame" x="0.0" y="50" width="343" height="1"/>
-                                        <color key="backgroundColor" red="0.5568627451" green="0.2470588235" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" red="0.5568627451" green="0.2470588235" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="6uN-eb-E3i"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1417,16 +1410,13 @@
                                     <constraint firstAttribute="trailing" secondItem="eko-gh-9Y3" secondAttribute="trailing" constant="10" id="IdA-cp-3q3"/>
                                     <constraint firstItem="eko-gh-9Y3" firstAttribute="top" secondItem="0sR-h7-C8t" secondAttribute="top" constant="10" id="RPX-3o-aeC"/>
                                     <constraint firstAttribute="height" constant="510" id="aV8-Ml-VSh"/>
-                                    <constraint firstItem="7ut-x6-mJh" firstAttribute="leading" secondItem="0sR-h7-C8t" secondAttribute="leading" id="jMX-w9-LLw"/>
                                     <constraint firstAttribute="trailing" secondItem="c76-Z8-jYv" secondAttribute="trailing" id="o9B-WZ-62a"/>
                                     <constraint firstItem="c76-Z8-jYv" firstAttribute="leading" secondItem="0sR-h7-C8t" secondAttribute="leading" id="oB6-TV-gwZ"/>
-                                    <constraint firstItem="7ut-x6-mJh" firstAttribute="top" secondItem="eko-gh-9Y3" secondAttribute="bottom" constant="5" id="puF-Sk-TOF"/>
-                                    <constraint firstAttribute="trailing" secondItem="7ut-x6-mJh" secondAttribute="trailing" id="se8-Ut-HHf"/>
-                                    <constraint firstItem="c76-Z8-jYv" firstAttribute="top" secondItem="0sR-h7-C8t" secondAttribute="top" constant="50" id="z9m-bp-KFd"/>
+                                    <constraint firstItem="c76-Z8-jYv" firstAttribute="top" secondItem="0sR-h7-C8t" secondAttribute="top" id="z9m-bp-KFd"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.29376650528169013" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.61504181338028174" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0sR-h7-C8t" firstAttribute="leading" secondItem="gcn-jf-FMk" secondAttribute="leading" constant="16" id="79T-VQ-Bq8"/>
                             <constraint firstItem="gcn-jf-FMk" firstAttribute="trailing" secondItem="0sR-h7-C8t" secondAttribute="trailing" constant="16" id="D8l-7g-1Jf"/>
@@ -1975,7 +1965,6 @@
                         <outlet property="favoritTable" destination="NUY-3X-M75" id="Bvr-za-8hC"/>
                         <outlet property="segmentView" destination="bkT-Bc-ZlD" id="Wnx-oh-7Hf"/>
                         <outlet property="tabView" destination="2oK-E9-si9" id="4Yc-pl-NYM"/>
-                        <segue destination="DUT-zO-6hT" kind="show" identifier="segueToErize" id="jLA-na-5Dm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Eh-FV-B18" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2074,6 +2063,7 @@
                     <navigationItem key="navigationItem" title="Vətəndaşlar üçün" id="Y0w-sl-G4F"/>
                     <connections>
                         <segue destination="Oph-TZ-gri" kind="show" identifier="segueToQebul" id="ybt-2A-scu"/>
+                        <segue destination="DUT-zO-6hT" kind="show" identifier="segueToErize" id="620-7g-mzH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aST-A6-gsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2107,14 +2097,14 @@
             <objects>
                 <viewController id="DUT-zO-6hT" customClass="ErizeViewController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QuM-0m-NgX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqC-52-0xu">
-                                <rect key="frame" x="0.0" y="102" width="375" height="501"/>
+                                <rect key="frame" x="0.0" y="166" width="375" height="501"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3b-0a-roP" customClass="StepIndicatorView" customModule="StepIndicator">
-                                <rect key="frame" x="16" y="16" width="343" height="70"/>
+                                <rect key="frame" x="16" y="80" width="343" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="FKr-Ou-xuk"/>

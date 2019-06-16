@@ -10,16 +10,19 @@ import UIKit
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var menuImages = ["electronImg.png", "userImg.png", "notificationImg.png", "vetendasImg.png", "newsImg.png","tenzimImg.png", "logoutImg.png"]
+    var menuImages = ["electronImg.png", "userImg.png", "notificationImg.png", "vetendasImg.png", "newsImg.png", "logoutImg.png"]
     
-    var menuNames = ["Elektron xidmətlər", "Şəxsi kabinet", "Bildirişlər", "Vətəndaşlar üçün", "Xəbərlər", "Tənzimləmələr", "Təhlükəsiz çıxış"]
+    var menuNames = ["Elektron xidmətlər", "Şəxsi kabinet", "Bildirişlər", "Vətəndaşlar üçün", "Xəbərlər", "Təhlükəsiz çıxış"]
 
-
+    @IBOutlet weak var menuTable: UITableView!
+    
   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var index = NSIndexPath(row: 0, section: 0)
+        menuTable.selectRow(at: index as IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -58,7 +61,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if(indexPath.row == 1){
             performSegue(withIdentifier: "segueToSexsi", sender: self)
         }
-        if(indexPath.row == 5)
+        if(indexPath.row == 2)
         {
             performSegue(withIdentifier: "segueToTenzim", sender: self)
         }
@@ -66,7 +69,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             performSegue(withIdentifier: "segueToVetendas", sender: self)
         }
-        if(indexPath.row == 6)
+        if(indexPath.row == 5)
         {
               self.revealViewController()?.revealToggle(animated: true)
               performSegue(withIdentifier: "segueToExit", sender: self)

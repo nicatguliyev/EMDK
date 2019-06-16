@@ -292,7 +292,7 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
                 print("Xeta bas verdi")
                 if let error = err as NSError?
                 {
-                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost{
+                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost || error.code == NSURLErrorTimedOut{
                         
                         DispatchQueue.main.async {
                             

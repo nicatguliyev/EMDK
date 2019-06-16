@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		52E234E2AA848E818EEDF550 /* Pods_EMDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07D27F4238B43B920492641 /* Pods_EMDK.framework */; };
-		CD076C55229C0DED00115D8C /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD076C54229C0DED00115D8C /* LoginWithEgov.framework */; };
-		CD076C56229C0DF400115D8C /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD076C54229C0DED00115D8C /* LoginWithEgov.framework */; };
-		CD076C57229C0DF400115D8C /* LoginWithEgov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD076C54229C0DED00115D8C /* LoginWithEgov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CD076C59229D1FF400115D8C /* LoginButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD076C58229D1FF400115D8C /* LoginButtonController.swift */; };
 		CD50850721CECDCF007F1EB0 /* ErizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD50850621CECDCF007F1EB0 /* ErizeViewController.swift */; };
 		CD50851021CED4AB007F1EB0 /* Step1.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD50850F21CED4AB007F1EB0 /* Step1.xib */; };
@@ -42,6 +39,9 @@
 		CDACD24A21CA2C6F0005AF76 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDACD24921CA2C6F0005AF76 /* TableViewController.swift */; };
 		CDACD25F21CACC3F0005AF76 /* CustomElectronCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDACD25D21CACC3F0005AF76 /* CustomElectronCell.swift */; };
 		CDACD26021CACC3F0005AF76 /* CustomElectronCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDACD25E21CACC3F0005AF76 /* CustomElectronCell.xib */; };
+		CDC46C5822B6EAB400E34B3D /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC46C5722B6EAB400E34B3D /* LoginWithEgov.framework */; };
+		CDC46C5922B6EAC200E34B3D /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC46C5722B6EAB400E34B3D /* LoginWithEgov.framework */; };
+		CDC46C5A22B6EAC200E34B3D /* LoginWithEgov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDC46C5722B6EAB400E34B3D /* LoginWithEgov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CDCEAFA421D10B5200DBD82C /* ErizePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEAFA321D10B5200DBD82C /* ErizePopupViewController.swift */; };
 		CDCEAFA621D10BA400DBD82C /* ErizeTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEAFA521D10BA400DBD82C /* ErizeTypeCell.swift */; };
 		CDCEAFAA21D1256800DBD82C /* Step4.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCEAFA921D1256700DBD82C /* Step4.xib */; };
@@ -122,7 +122,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CD076C57229C0DF400115D8C /* LoginWithEgov.framework in Embed Frameworks */,
+				CDC46C5A22B6EAC200E34B3D /* LoginWithEgov.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +133,6 @@
 		2DAB8307186345E507EBC45A /* Pods-EMDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMDK/Pods-EMDK.debug.xcconfig"; sourceTree = "<group>"; };
 		A07D27F4238B43B920492641 /* Pods_EMDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EMDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77735ED08746701B109F11C /* Pods-EMDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMDK/Pods-EMDK.release.xcconfig"; sourceTree = "<group>"; };
-		CD076C54229C0DED00115D8C /* LoginWithEgov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithEgov.framework; sourceTree = "<group>"; };
 		CD076C58229D1FF400115D8C /* LoginButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonController.swift; sourceTree = "<group>"; };
 		CD50850621CECDCF007F1EB0 /* ErizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErizeViewController.swift; sourceTree = "<group>"; };
 		CD50850F21CED4AB007F1EB0 /* Step1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Step1.xib; sourceTree = "<group>"; };
@@ -170,6 +169,7 @@
 		CDACD24921CA2C6F0005AF76 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CDACD25D21CACC3F0005AF76 /* CustomElectronCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElectronCell.swift; sourceTree = "<group>"; };
 		CDACD25E21CACC3F0005AF76 /* CustomElectronCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomElectronCell.xib; sourceTree = "<group>"; };
+		CDC46C5722B6EAB400E34B3D /* LoginWithEgov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithEgov.framework; sourceTree = "<group>"; };
 		CDCEAFA321D10B5200DBD82C /* ErizePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErizePopupViewController.swift; sourceTree = "<group>"; };
 		CDCEAFA521D10BA400DBD82C /* ErizeTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErizeTypeCell.swift; sourceTree = "<group>"; };
 		CDCEAFA921D1256700DBD82C /* Step4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Step4.xib; sourceTree = "<group>"; };
@@ -250,8 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E234E2AA848E818EEDF550 /* Pods_EMDK.framework in Frameworks */,
-				CD076C55229C0DED00115D8C /* LoginWithEgov.framework in Frameworks */,
-				CD076C56229C0DF400115D8C /* LoginWithEgov.framework in Frameworks */,
+				CDC46C5822B6EAB400E34B3D /* LoginWithEgov.framework in Frameworks */,
+				CDC46C5922B6EAC200E34B3D /* LoginWithEgov.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +303,7 @@
 		CDACD21421C9197D0005AF76 = {
 			isa = PBXGroup;
 			children = (
-				CD076C54229C0DED00115D8C /* LoginWithEgov.framework */,
+				CDC46C5722B6EAB400E34B3D /* LoginWithEgov.framework */,
 				CDACD21F21C9197D0005AF76 /* EMDK */,
 				CDACD21E21C9197D0005AF76 /* Products */,
 				0663C493DDBAE5A9F6C4869C /* Pods */,
@@ -571,6 +571,7 @@
 				"${BUILT_PRODUCTS_DIR}/BSImagePicker/BSImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/BSImageView/BSImageView.framework",
 				"${BUILT_PRODUCTS_DIR}/ButtonBackgroundColor/ButtonBackgroundColor.framework",
+				"${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework",
 				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/StepIndicator/StepIndicator.framework",
@@ -585,6 +586,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImageView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ButtonBackgroundColor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StepIndicator.framework",

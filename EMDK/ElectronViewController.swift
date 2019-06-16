@@ -8,7 +8,8 @@
 
 import UIKit
 import Toast_Swift
-//import LoginWithEgov
+import LoginWithEgov
+import JWTDecode
 // deyisiklik edildi 2jjjj
 struct cellData {
     var id  = Int()
@@ -49,6 +50,15 @@ struct FavCellData {
 
 }
 
+struct userModel{
+    var pin = String()
+    var name = String()
+    var surname = String()
+    var fatherName = String()
+}
+
+
+
 class ElectronViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
  
     @IBOutlet weak var favoritBtn: UIButton!
@@ -83,6 +93,9 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     var addfavoriteIndicatorView = UIView()
     
     var task1: URLSessionDataTask?
+    var userToken = ""
+    
+    static var model: userModel?
     
     
     override func viewDidLoad() {
@@ -91,6 +104,14 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
         initView()
         segmentView.backgroundColor = testColor
         UIView.setAnimationsEnabled(true)
+        ElectronViewController.model = userModel()
+        getUserInformation()
+       // getServices()
+        
+        
+        LoginController.shared.getFinalToken{(token) in
+            self.userToken = token
+        }
        // self.dismiss(animated: true, completion: nil)
     }
     
@@ -116,6 +137,9 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
             connView = connectionView
             checkConnButtonView = connectionView.buttonView
             checkConnIndicator = connectionView.loadingIndicator
+            
+            connectionView.tryButton.addTarget(self, action: #selector(tryAgain), for: .touchUpInside)
+
         }
         
         
@@ -129,8 +153,8 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
             indicatorView.indicatorParentView.layer.cornerRadius = 10
         }
         
-        getServices()
-        
+       // getServices()
+        //ooooo//
         setUpMenuButton()
     }
     
@@ -235,8 +259,8 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
           let cell1 = nib[0]
             
             if(xidmetler[indexPath.section].opened == true && xidmetler[indexPath.section].sectionData.count != 0){
-                let seperatorColor = UIColor(red: 119/255, green: 119/255, blue: 118/255, alpha: 0.4)
-                cell1.bottomView.backgroundColor = seperatorColor
+               // let seperatorColor = UIColor(red: 119/255, green: 119/255, blue: 118/255, alpha: 0.4)
+              //  cell1.bottomView.backgroundColor = seperatorColor
                 cell1.bottomViewHeight.constant = 1
             }
         
@@ -292,7 +316,8 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
             // Ulduzlardan sonra istifade etmek ucun onlari taglayiriq
             cell2.favImage.tag = indexPath.section
             cell2.contentView.tag = indexPath.row
-            
+            cell2.contentView.layer.borderWidth = 1
+            cell2.contentView.layer.borderColor = UIColor(displayP3Red: 213/255, green: 213/255, blue: 213/255, alpha: 1).cgColor
             cell2.favImage.addTarget(self, action: #selector(favClicked), for: .touchUpInside)
             return cell2
             
@@ -343,7 +368,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
             }
             else // subservise tiklayanda..
             {
-                performSegue(withIdentifier: "segueToErize", sender: self)
+           //     performSegue(withIdentifier: "segueToErize", sender: self)
                
             }
             
@@ -399,13 +424,19 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     func getServices(){
         
         let urlString = "http://46.101.38.248/api/v1/electronic/services/list"
+       // var sToken = ""
+        
+        LoginController.shared.getFinalToken{(token) in
+         //   sToken = token
+        }
+        
         
         guard let url = URL(string: urlString)
             else {return}
         
         var urlRequest = URLRequest(url: url)
         
-        urlRequest.setValue("123123123", forHTTPHeaderField: "Authorization") // headerde parameter gonderir
+        urlRequest.setValue(self.userToken, forHTTPHeaderField: "Authorization") // headerde parameter gonderir
         
 
         URLSession.shared.dataTask(with: urlRequest){ (data, response, err) in
@@ -416,7 +447,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
                 
                 do{
                     let serviceDataModel = try JSONDecoder().decode([ServiceModel].self, from: data)
-                    
+                    print(serviceDataModel)
                    for i in 0..<serviceDataModel.count{
                     var x = cellData()
                     x.id = serviceDataModel[i].id
@@ -486,7 +517,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
         urlRequest.httpMethod = "POST"
         
         urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        urlRequest.setValue("123123123", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue(self.userToken, forHTTPHeaderField: "Authorization")
         
         let parameters: [String: Any] = [ // reuqest ile gonderilecek parameterler
             "service_id": serviceId
@@ -554,7 +585,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
 
         var urlRequest = URLRequest(url: url)
 
-        urlRequest.setValue("123123123", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue(self.userToken, forHTTPHeaderField: "Authorization")
 
         URLSession.shared.dataTask(with: urlRequest){ (data, response, err) in
 
@@ -626,7 +657,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
         urlRequest.httpMethod = "POST"
         
         urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        urlRequest.setValue("123123123", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue(self.userToken, forHTTPHeaderField: "Authorization")
         
         let parameters: [String: Any] = [
             "service_id": serviceId
@@ -701,7 +732,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
         urlRequest.httpMethod = "POST"
         
         urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        urlRequest.setValue("123123123", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue(self.userToken, forHTTPHeaderField: "Authorization")
         
         let parameters: [String: Any] = [
             "service_id": serviceId
@@ -793,6 +824,88 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
             alert.dismiss(animated: true, completion: nil)
         })
         
+        
+    }
+    
+    func getUserInformation(){
+        LoginController.shared.getFinalToken{(token) in
+            
+            do {
+                let jwt = try decode(jwt: token)
+                let body = jwt.body
+                let main = body["main"] as! [String: Any]
+                let person = main["person"] as! [String: String]
+                self.registerUser(name: person["name"]!, surname: person["surname"]!, fatherName: person["fatherName"]!, pin: person["pin"]!, token: token)
+                ElectronViewController.model?.name = person["name"]!
+                ElectronViewController.model?.surname = person["surname"]!
+                ElectronViewController.model?.fatherName = person["fatherName"]!
+                ElectronViewController.model?.pin = person["pin"]!
+            }
+            catch let error{
+                print("Error Bas verdi: \(error)")
+            }
+           
+            
+        }
+    }
+    
+    func registerUser(name: String, surname: String, fatherName: String, pin: String, token: String){
+        
+        let urlString = "http://46.101.38.248/api/v1/user/register"
+        
+        
+        guard let url = URL(string: urlString)
+            else {return}
+        
+        var urlRequest = URLRequest(url: url)
+        
+        urlRequest.httpMethod = "POST"
+        
+        urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
+        let parameters: [String: Any] = [
+            "name": name + " " + surname +  " " + fatherName,
+            "pin": pin,
+            "token": token
+        ]
+        urlRequest.httpBody = parameters.percentEscaped().data(using: .utf8)
+        
+        
+        let urlconfig = URLSessionConfiguration.default
+        urlconfig.timeoutIntervalForRequest = 3
+        urlconfig.timeoutIntervalForResource = 60
+        let session = Foundation.URLSession(configuration: urlconfig, delegate: self as? URLSessionDelegate, delegateQueue: OperationQueue.main)
+        
+       let task =  session.dataTask(with: urlRequest){ (data, response, err) in
+            
+            
+            if(err == nil){
+          
+                self.getServices()
+                
+            }
+            else
+            {
+                if let error = err as NSError?
+                {
+                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost{
+
+                        DispatchQueue.main.async {
+
+                            self.connView.isHidden = false
+                            self.checkConnIndicator.isHidden = true
+                            self.checkConnButtonView.isHidden = false
+
+                        }
+                    }
+                }
+                
+            }
+            
+            }
+        
+        task.resume()
+
         
     }
 

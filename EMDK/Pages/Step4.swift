@@ -14,7 +14,9 @@ class Step4: UIView {
     @IBOutlet weak var rayonBtn: UIButton!
     @IBOutlet weak var reystrTextField: UITextField!
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var textFieldView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var regionLbl: UILabel!
 }

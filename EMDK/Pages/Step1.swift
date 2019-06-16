@@ -17,6 +17,7 @@ class Step1: UIView {
     
     @IBOutlet weak var phoneTextField: UITextField!
     
+    @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var bottomConst: NSLayoutConstraint!
     @IBOutlet weak var mailTextField: UITextField!
 }

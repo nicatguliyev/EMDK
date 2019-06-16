@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,24 +19,26 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LN-tI-5cz">
                     <rect key="frame" x="16" y="20" width="343" height="60"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ƏRİZƏNİN MƏQSƏDİ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSB-JV-JXS">
-                            <rect key="frame" x="16" y="23" width="129" height="15"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ƏMLAK HAQQINDA MƏLUMATLAR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSB-JV-JXS">
+                            <rect key="frame" x="16" y="22.5" width="311" height="15"/>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                             <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="IVx-zA-f8r"/>
+                        <constraint firstItem="zSB-JV-JXS" firstAttribute="leading" secondItem="4LN-tI-5cz" secondAttribute="leading" constant="16" id="Zdu-Xr-hed"/>
+                        <constraint firstAttribute="trailing" secondItem="zSB-JV-JXS" secondAttribute="trailing" constant="16" id="bv4-ZS-5l8"/>
+                        <constraint firstItem="zSB-JV-JXS" firstAttribute="centerY" secondItem="4LN-tI-5cz" secondAttribute="centerY" id="gLd-Mb-Ojq"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeL-0G-wWG">
                     <rect key="frame" x="16" y="80" width="343" height="567"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mq-6P-bZc">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="422.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="344.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAYON:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aoj-ic-f1b">
                                     <rect key="frame" x="16" y="20" width="311" height="17.5"/>
@@ -84,29 +86,35 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daşınmaz əmlakınızın yerləşdiyi rayonu seçin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQW-bA-8Q0">
                                     <rect key="frame" x="16" y="115.5" width="311" height="14.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ƏRAZI IDARƏSININ ADI:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlh-Fy-Cui">
-                                    <rect key="frame" x="16" y="157" width="311" height="17.5"/>
+                                    <rect key="frame" x="16" y="130" width="311" height="0.0"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="Q68-Pv-mMJ"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beyləqan ərazi idarəsi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3U-JK-Gcq">
-                                    <rect key="frame" x="32" y="190.5" width="295" height="17.5"/>
+                                    <rect key="frame" x="32" y="130" width="295" height="0.0"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" id="x0W-B6-fmc"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                     <color key="textColor" red="0.1960784314" green="0.23529411759999999" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REYESTR NÖMRƏSI:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaW-tz-kgJ">
-                                    <rect key="frame" x="16" y="224" width="311" height="17.5"/>
+                                    <rect key="frame" x="16" y="146" width="311" height="17.5"/>
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJv-LS-r8R">
-                                    <rect key="frame" x="16" y="257.5" width="311" height="45"/>
+                                    <rect key="frame" x="16" y="179.5" width="311" height="45"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrE-b7-58w">
                                             <rect key="frame" x="261" y="0.0" width="50" height="72"/>
@@ -137,18 +145,18 @@
                                     </constraints>
                                 </view>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenDone.png" translatesAutoresizingMaskIntoConstraints="NO" id="sxU-et-SI6">
-                                    <rect key="frame" x="16" y="322.5" width="20" height="20"/>
+                                    <rect key="frame" x="16" y="244.5" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="20" id="50d-1U-DCh"/>
                                         <constraint firstAttribute="height" constant="20" id="fPW-8a-Lpz"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLr-6V-Z1F">
-                                    <rect key="frame" x="44" y="322.5" width="283" height="84"/>
+                                    <rect key="frame" x="44" y="244.5" width="283" height="84"/>
                                     <string key="text">Daşınmaz əmlakın alqı-satqı və ya bağışlama müqaviləsi, vərəsəlik şəhadətnaməsində göstərilmiş reyestr nömrəsini dəqiq və düzgün daxil edin
 </string>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -164,12 +172,12 @@
                                 <constraint firstItem="LaW-tz-kgJ" firstAttribute="top" secondItem="l3U-JK-Gcq" secondAttribute="bottom" constant="16" id="IBj-jz-Qjd"/>
                                 <constraint firstItem="Aoj-ic-f1b" firstAttribute="top" secondItem="7mq-6P-bZc" secondAttribute="top" constant="20" id="J0y-3i-MLv"/>
                                 <constraint firstItem="sxU-et-SI6" firstAttribute="leading" secondItem="7mq-6P-bZc" secondAttribute="leading" constant="16" id="JCk-pR-x3f"/>
-                                <constraint firstItem="nlh-Fy-Cui" firstAttribute="top" secondItem="MQW-bA-8Q0" secondAttribute="bottom" constant="27" id="L36-JH-b42"/>
+                                <constraint firstItem="nlh-Fy-Cui" firstAttribute="top" secondItem="MQW-bA-8Q0" secondAttribute="bottom" id="L36-JH-b42"/>
                                 <constraint firstItem="MQW-bA-8Q0" firstAttribute="leading" secondItem="7mq-6P-bZc" secondAttribute="leading" constant="16" id="LZP-Qh-22x"/>
                                 <constraint firstAttribute="bottom" secondItem="vLr-6V-Z1F" secondAttribute="bottom" constant="16" id="Npt-dc-VXj"/>
                                 <constraint firstItem="aJv-LS-r8R" firstAttribute="leading" secondItem="7mq-6P-bZc" secondAttribute="leading" constant="16" id="O2Y-lK-lpg"/>
                                 <constraint firstItem="aJv-LS-r8R" firstAttribute="top" secondItem="LaW-tz-kgJ" secondAttribute="bottom" constant="16" id="Sad-sM-inN"/>
-                                <constraint firstItem="l3U-JK-Gcq" firstAttribute="top" secondItem="nlh-Fy-Cui" secondAttribute="bottom" constant="16" id="WKZ-GC-FDR"/>
+                                <constraint firstItem="l3U-JK-Gcq" firstAttribute="top" secondItem="nlh-Fy-Cui" secondAttribute="bottom" id="WKZ-GC-FDR"/>
                                 <constraint firstAttribute="trailing" secondItem="c78-sw-fYW" secondAttribute="trailing" constant="16" id="WZK-zp-4Qh"/>
                                 <constraint firstItem="vLr-6V-Z1F" firstAttribute="top" secondItem="aJv-LS-r8R" secondAttribute="bottom" constant="20" id="XME-28-e9r"/>
                                 <constraint firstItem="Aoj-ic-f1b" firstAttribute="leading" secondItem="7mq-6P-bZc" secondAttribute="leading" constant="16" id="d8z-if-RQp"/>
@@ -210,7 +218,9 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="headerView" destination="4LN-tI-5cz" id="3fz-6c-vy6"/>
+                <outlet property="mainView" destination="7mq-6P-bZc" id="M4B-P7-B6c"/>
                 <outlet property="rayonBtn" destination="c78-sw-fYW" id="0nc-7m-JQ0"/>
+                <outlet property="regionLbl" destination="SEy-cW-dCa" id="cKE-do-VKN"/>
                 <outlet property="reystrTextField" destination="DMw-GL-j2p" id="lhs-jO-ihv"/>
                 <outlet property="scrollView" destination="IeL-0G-wWG" id="dNF-7m-pSM"/>
                 <outlet property="textFieldView" destination="aJv-LS-r8R" id="Xy4-Dv-Y2K"/>
@@ -219,7 +229,7 @@
         </view>
     </objects>
     <resources>
-        <image name="dropDown.png" width="88" height="49"/>
-        <image name="greenDone.png" width="50" height="50"/>
+        <image name="dropDown.png" width="29.5" height="16.5"/>
+        <image name="greenDone.png" width="180" height="180"/>
     </resources>
 </document>
