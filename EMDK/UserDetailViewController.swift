@@ -17,6 +17,13 @@ class UserDetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var finLbl: UILabel!
+    @IBOutlet weak var surnameLbl: UILabel!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var fatherNameLbl: UILabel!
+    
+    
+    
     var leftButton = UIButton()
     var rightButton = UIButton()
     var keyboardHeight = CGFloat()
@@ -58,14 +65,14 @@ class UserDetailViewController: UIViewController, UITextFieldDelegate {
         
         rightButton.setImage(UIImage(named: "whiteDone.png"), for: UIControl.State.normal)
         
-        rightButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-        rightButton.translatesAutoresizingMaskIntoConstraints = false
-        rightButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        rightButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        rightButton.imageEdgeInsets = UIEdgeInsets(top: 8, left: 15, bottom: 8, right: -5)
-        rightButton.addTarget(self, action: #selector(doneClicked), for: .touchUpInside)
-        let barButton2 = UIBarButtonItem(customView: rightButton)
-        self.navigationItem.rightBarButtonItem = barButton2
+//        rightButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+//        rightButton.translatesAutoresizingMaskIntoConstraints = false
+//        rightButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
+//        rightButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+//        rightButton.imageEdgeInsets = UIEdgeInsets(top: 8, left: 15, bottom: 8, right: -5)
+//        rightButton.addTarget(self, action: #selector(doneClicked), for: .touchUpInside)
+//        let barButton2 = UIBarButtonItem(customView: rightButton)
+//        self.navigationItem.rightBarButtonItem = barButton2
         
         self.title = "Şəxsi məlumatları yenilə"
         
@@ -78,6 +85,11 @@ class UserDetailViewController: UIViewController, UITextFieldDelegate {
         let viewTappedGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
         view.addGestureRecognizer(viewTappedGesture)
         view.isUserInteractionEnabled = true
+        
+        finLbl.text = ElectronViewController.model?.pin
+        surnameLbl.text = ElectronViewController.model?.surname
+        nameLbl.text = ElectronViewController.model?.name
+        fatherNameLbl.text = ElectronViewController.model?.fatherName
         
     }
     

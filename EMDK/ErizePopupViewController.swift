@@ -20,6 +20,7 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
     var receivers = [ReceiverDataModel]()
     var puposes = [PurposeDataModel]()
     var allRegions = [RegionDataModel]()
+    var deadlines = [String]()
 
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
@@ -32,9 +33,10 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
         if(type == "erize")
         {
         
-        if(CGFloat(types.count) * CGFloat(60) < UIScreen.main.bounds.size.height - CGFloat(100))
+        if(CGFloat(puposes.count) * CGFloat(60) < UIScreen.main.bounds.size.height - CGFloat(100))
         {
-             tableHeight.constant = CGFloat(types.count) * CGFloat(60)
+         
+             tableHeight.constant = CGFloat(puposes.count) * CGFloat(60)
         }
         else
         {
@@ -42,10 +44,10 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         }
         
-        if(type == "region"){
-            if(CGFloat(countries.count) * CGFloat(60) < UIScreen.main.bounds.size.height - CGFloat(100))
+       else if(type == "region"){
+            if(CGFloat(allRegions.count) * CGFloat(60) < UIScreen.main.bounds.size.height - CGFloat(100))
             {
-                tableHeight.constant = CGFloat(countries.count) * CGFloat(60)
+                tableHeight.constant = CGFloat(allRegions.count) * CGFloat(60)
             }
             else
             {
@@ -53,7 +55,7 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             
         }
-        if(type == "receiver")
+       else if(type == "receiver")
         {
             if(CGFloat(receivers.count) * CGFloat(60) < UIScreen.main.bounds.size.height - CGFloat(100))
             {
@@ -63,6 +65,17 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
             {
                 tableHeight.constant = UIScreen.main.bounds.size.height - CGFloat(100)
             }
+        }
+        else{
+            if(CGFloat(deadlines.count) * CGFloat(60) < UIScreen.main.bounds.size.height - CGFloat(100))
+            {
+                tableHeight.constant = CGFloat(deadlines.count) * CGFloat(60)
+            }
+            else
+            {
+                tableHeight.constant = UIScreen.main.bounds.size.height - CGFloat(100)
+            }
+            
         }
         
        
@@ -93,7 +106,7 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         else
         {
-            return 31
+            return deadlines.count
         }
         
        
@@ -119,7 +132,7 @@ class ErizePopupViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         if(type == "time"){
             
-            cell.erizeTypeLbl.text = times[indexPath.row]
+            cell.erizeTypeLbl.text = deadlines[indexPath.row] + " gün"
         }
         
         return cell

@@ -38,7 +38,7 @@
                     <rect key="frame" x="16" y="80" width="343" height="567"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdJ-Yg-o6U">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="342.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="325"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADI:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-fq-z2Z">
                                     <rect key="frame" x="16" y="16" width="105" height="17.5"/>
@@ -93,13 +93,13 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ƏLAQƏ TELEFONLARI:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og5-OA-4Vw">
-                                    <rect key="frame" x="16" y="87" width="311" height="17.5"/>
-                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                    <rect key="frame" x="16" y="87" width="311" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Lr-Rc-mrx">
-                                    <rect key="frame" x="16" y="120.5" width="311" height="45"/>
+                                    <rect key="frame" x="16" y="115.5" width="311" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="Vxb-5W-AJ5"/>
                                     </constraints>
@@ -108,13 +108,13 @@
                                     <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zql-py-Bus">
-                                    <rect key="frame" x="16" y="181.5" width="311" height="17.5"/>
-                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                    <rect key="frame" x="16" y="176.5" width="311" height="16.5"/>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zoW-Ab-wZR">
-                                    <rect key="frame" x="16" y="215" width="311" height="45"/>
+                                    <rect key="frame" x="16" y="205" width="311" height="45"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="45" id="WzN-UG-92V"/>
                                     </constraints>
@@ -123,15 +123,15 @@
                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                 </textField>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenDone.png" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-nE-egf">
-                                    <rect key="frame" x="16" y="276" width="20" height="20"/>
+                                    <rect key="frame" x="16" y="266" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="6qk-5D-80x"/>
                                         <constraint firstAttribute="width" constant="20" id="z1b-TQ-VbK"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sizinlə əlaqə telefonları və email vastəsilə əlaqə saxlanılacağına görə bu məlumatları dəqiq göstərməyiniz vacibdir." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi4-Oy-IVl">
-                                    <rect key="frame" x="44" y="276" width="283" height="50.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="44" y="266" width="283" height="43"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.50196078431372548" green="0.5607843137254902" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -143,7 +143,7 @@
                                 <constraint firstAttribute="trailing" secondItem="bi4-Oy-IVl" secondAttribute="trailing" constant="16" id="4HV-bo-xyz"/>
                                 <constraint firstAttribute="trailing" secondItem="3Lr-Rc-mrx" secondAttribute="trailing" constant="16" id="8UN-Sk-cEV"/>
                                 <constraint firstItem="zql-py-Bus" firstAttribute="leading" secondItem="NdJ-Yg-o6U" secondAttribute="leading" constant="16" id="Af7-eh-RoT"/>
-                                <constraint firstItem="3Lr-Rc-mrx" firstAttribute="top" secondItem="og5-OA-4Vw" secondAttribute="bottom" constant="16" id="E93-we-e7r"/>
+                                <constraint firstItem="3Lr-Rc-mrx" firstAttribute="top" secondItem="og5-OA-4Vw" secondAttribute="bottom" constant="12" id="E93-we-e7r"/>
                                 <constraint firstItem="zql-py-Bus" firstAttribute="top" secondItem="3Lr-Rc-mrx" secondAttribute="bottom" constant="16" id="HPb-2z-PHE"/>
                                 <constraint firstItem="X8s-rh-vXB" firstAttribute="top" secondItem="Grs-6U-y2U" secondAttribute="bottom" id="IRX-YO-CAs"/>
                                 <constraint firstItem="OPg-gF-S6Z" firstAttribute="top" secondItem="5dv-S0-gTq" secondAttribute="bottom" id="J6l-WY-cV1"/>
@@ -156,7 +156,7 @@
                                 <constraint firstItem="5dv-S0-gTq" firstAttribute="leading" secondItem="NdJ-Yg-o6U" secondAttribute="leading" constant="27" id="T53-lu-3dI"/>
                                 <constraint firstItem="og5-OA-4Vw" firstAttribute="leading" secondItem="NdJ-Yg-o6U" secondAttribute="leading" constant="16" id="V9J-DD-TVJ"/>
                                 <constraint firstAttribute="trailing" secondItem="Grs-6U-y2U" secondAttribute="trailing" constant="16" id="YCN-N6-MPm"/>
-                                <constraint firstItem="zoW-Ab-wZR" firstAttribute="top" secondItem="zql-py-Bus" secondAttribute="bottom" constant="16" id="ayn-G2-xX2"/>
+                                <constraint firstItem="zoW-Ab-wZR" firstAttribute="top" secondItem="zql-py-Bus" secondAttribute="bottom" constant="12" id="ayn-G2-xX2"/>
                                 <constraint firstItem="5dv-S0-gTq" firstAttribute="top" secondItem="X8s-rh-vXB" secondAttribute="bottom" constant="16" id="cE9-26-kRy"/>
                                 <constraint firstItem="kcL-nE-egf" firstAttribute="leading" secondItem="NdJ-Yg-o6U" secondAttribute="leading" constant="16" id="fvC-op-zFU"/>
                                 <constraint firstItem="Grs-6U-y2U" firstAttribute="leading" secondItem="NdJ-Yg-o6U" secondAttribute="leading" constant="27" id="hDW-Q7-k3V"/>

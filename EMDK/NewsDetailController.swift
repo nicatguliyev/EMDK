@@ -14,11 +14,11 @@ import SDWebImage
 
 struct NewsDetail: Decodable {
     
-    let id: Int
-    let title: String
-    let image: String
-    let body: String
-    let created_at: String
+    let id: Int?
+    let title: String?
+    let image: String?
+    let body: String?
+    let created_at: String?
     
 }
 
@@ -94,7 +94,7 @@ class NewsDetailController: UIViewController, WKNavigationDelegate {
     
     func getNewsDetail(newsId: Int){
         
-        let urlString = "http://142.93.186.89/api/v1/posts/show/" + "\(newsId)"
+        let urlString = "http://46.101.38.248/api/v1/posts/show/" + "\(newsId)"
        // let urlString = "http://142.93.186.89/api/v1/content/detail/117"
         
        // newsIsLoadin = true
@@ -138,7 +138,7 @@ class NewsDetailController: UIViewController, WKNavigationDelegate {
                 print("Xeta bas verdi")
                 if let error = err as NSError?
                 {
-                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost{
+                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost || error.code == NSURLErrorTimedOut{
                         
                         
                         

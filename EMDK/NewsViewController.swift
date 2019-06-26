@@ -17,10 +17,10 @@ struct PostNewsModel: Decodable {
 }
 
 struct PostNewsDataModel: Decodable {
-    let id: Int
-    let title: String
-    let image: String
-    let created_at: String
+    let id: Int?
+    let title: String?
+    let image: String?
+    let created_at: String?
 }
 
 class NewsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -165,7 +165,8 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedNewsId = postNews[indexPath.row].id
+        print(newImage[indexPath.row])
+        selectedNewsId = postNews[indexPath.row].id!
         performSegue(withIdentifier: "segueNewDetail", sender: self)
     }
     
@@ -190,7 +191,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func getPostNews(page: Int) {
-        let urlString = "http://142.93.186.89/api/v1/posts/index?page=" + "\(page)"
+        let urlString = "http://46.101.38.248/api/v1/posts/index?page=" + "\(page)"
         
         newsIsLoadin = true
         
@@ -208,7 +209,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 
                 for i in 0..<slideNews.data.count{
                     let model = slideNews.data[i]
-                    self.newImage.append(model.image)
+                    self.newImage.append(model.image!)
                     self.postNews.append(model)
                 }
                 
@@ -221,6 +222,8 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     self.reachedLastPage = true
                 }
                 
+                
+                print(self.postNews)
                 
             }
                 

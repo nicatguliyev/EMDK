@@ -16,4 +16,7 @@ class Step7: UIView {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var odeBtn: UIButton!
+    @IBOutlet weak var warningTableView: UITableView!
+    
+    @IBOutlet weak var warningTableHeight: NSLayoutConstraint!
 }

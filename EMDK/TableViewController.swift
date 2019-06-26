@@ -13,6 +13,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var menuImages = ["electronImg.png", "userImg.png", "notificationImg.png", "vetendasImg.png", "newsImg.png", "logoutImg.png"]
     
     var menuNames = ["Elektron xidmətlər", "Şəxsi kabinet", "Bildirişlər", "Vətəndaşlar üçün", "Xəbərlər", "Təhlükəsiz çıxış"]
+    
+    let darkView = UIView()
 
     @IBOutlet weak var menuTable: UITableView!
     
@@ -21,8 +23,12 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var index = NSIndexPath(row: 0, section: 0)
-        menuTable.selectRow(at: index as IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+//             let index = NSIndexPath(row: 0, section: 0)
+//              self.menuTable.selectRow(at: index as IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+//
+//        })
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,6 +47,18 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.menuImg.image = UIImage(named: menuImages[indexPath.row])
         cell.menuNameLbl.text = menuNames[indexPath.row]
         
+        if(indexPath.row == 0){
+         //   menuTable.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+           // let index = NSIndexPath(row: 0, section: 0)
+            self.menuTable.selectRow(at: indexPath as IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+            cell.menuNameLbl.textColor = UIColor.red
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+//                 cell.contentView.backgroundColor = UIColor(red: 142/255, green: 63/255, blue: 175/255, alpha: 1)
+//
+//            })
+           
+        }
+        
         return cell
     }
     
@@ -51,9 +69,13 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        // tableView.deselectRow(at: indexPath, animated: true)
         
+        let cell:MenuTableCell = tableView.cellForRow(at: indexPath) as! MenuTableCell
+       // cell.contentView.backgroundColor = UIColor(red: 142/255, green: 63/255, blue: 175/255, alpha: 1)
+        cell.menuNameLbl.textColor = UIColor.red
+     
         if(indexPath.row == 4){
             performSegue(withIdentifier: "segueToNews", sender: self)
-            
+           
         }
         if(indexPath.row == 0){
             performSegue(withIdentifier: "segueToXidmet", sender: self)
@@ -77,6 +99,12 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell:MenuTableCell = tableView.cellForRow(at: indexPath) as! MenuTableCell
+       // cell.contentView.backgroundColor = UIColor.white
+        cell.menuNameLbl.textColor = UIColor.black
+    }
+    
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -93,6 +121,18 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         })
        
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        darkView.addGestureRecognizer(revealViewController().tapGestureRecognizer())
+        darkView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        darkView.frame = self.revealViewController().frontViewController.view.bounds
+        self.revealViewController().frontViewController.view.addSubview(darkView)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        darkView.removeFromSuperview()
     }
 
     

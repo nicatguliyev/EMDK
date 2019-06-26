@@ -38,7 +38,7 @@
                     <rect key="frame" x="16" y="80" width="343" height="567"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUa-bZ-FFd">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="272"/>
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="237.5"/>
                             <subviews>
                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anp-na-cxh" customClass="LGButton" customModule="LGButton">
                                     <rect key="frame" x="16" y="37" width="311" height="50"/>
@@ -90,17 +90,17 @@
                                     </constraints>
                                 </switch>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenDone.png" translatesAutoresizingMaskIntoConstraints="NO" id="S4K-EC-npC">
-                                    <rect key="frame" x="16" y="168" width="20" height="20"/>
+                                    <rect key="frame" x="16" y="160" width="20" height="20"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="eyv-NE-hFD"/>
                                         <constraint firstAttribute="width" constant="20" id="onT-mB-fJB"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaG-5C-Dv5" userLabel="Daşınmaz əmlakın texniki pasportu və ya torpaq sahəsinin planı və ölçüsünün hazırlanması üçün bu sahəni işarələməlisiniz">
-                                    <rect key="frame" x="44" y="168" width="283" height="84"/>
+                                    <rect key="frame" x="44" y="160" width="283" height="57.5"/>
                                     <string key="text">Daşınmaz əmlakın texniki pasportu və ya torpaq sahəsinin planı və ölçüsünün hazırlanması üçün bu sahəni işarələməlisiniz
 </string>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <color key="textColor" red="0.50196078430000002" green="0.56078431370000004" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -115,10 +115,10 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="JqD-Ss-m10" secondAttribute="trailing" constant="16" id="7aN-CN-fht"/>
-                                <constraint firstItem="S4K-EC-npC" firstAttribute="top" secondItem="Q2I-PO-o0G" secondAttribute="bottom" constant="32" id="8Ms-Tt-sl8"/>
+                                <constraint firstItem="S4K-EC-npC" firstAttribute="top" secondItem="Q2I-PO-o0G" secondAttribute="bottom" constant="24" id="8Ms-Tt-sl8"/>
                                 <constraint firstAttribute="trailing" secondItem="GaG-5C-Dv5" secondAttribute="trailing" constant="16" id="MT0-2f-1xk"/>
                                 <constraint firstItem="JqD-Ss-m10" firstAttribute="top" secondItem="anp-na-cxh" secondAttribute="bottom" constant="26" id="Png-Qo-aTW"/>
-                                <constraint firstItem="GaG-5C-Dv5" firstAttribute="top" secondItem="Q2I-PO-o0G" secondAttribute="bottom" constant="32" id="PtJ-Iy-KEa"/>
+                                <constraint firstItem="GaG-5C-Dv5" firstAttribute="top" secondItem="Q2I-PO-o0G" secondAttribute="bottom" constant="24" id="PtJ-Iy-KEa"/>
                                 <constraint firstItem="EGq-YV-bFn" firstAttribute="top" secondItem="QUa-bZ-FFd" secondAttribute="top" constant="37" id="Qee-So-dPd"/>
                                 <constraint firstItem="EGq-YV-bFn" firstAttribute="leading" secondItem="QUa-bZ-FFd" secondAttribute="leading" constant="16" id="RjC-hd-IJ8"/>
                                 <constraint firstAttribute="trailing" secondItem="EGq-YV-bFn" secondAttribute="trailing" constant="16" id="Tes-bU-yUe"/>
@@ -160,7 +160,9 @@
                 <outlet property="meqsedBtn" destination="anp-na-cxh" id="LXH-Em-DiZ"/>
                 <outlet property="meqsedBtn2" destination="EGq-YV-bFn" id="ZEa-2H-cHH"/>
                 <outlet property="meqsedLbl" destination="axf-no-ydg" id="2ET-Q5-n1g"/>
+                <outlet property="passportLbl" destination="Q2I-PO-o0G" id="c3g-dd-dep"/>
                 <outlet property="scrollView" destination="tf6-Wu-Dxh" id="g9y-Cg-N2p"/>
+                <outlet property="switch" destination="JqD-Ss-m10" id="6s7-mU-YVm"/>
             </connections>
             <point key="canvasLocation" x="-122.40000000000001" y="-116.49175412293854"/>
         </view>

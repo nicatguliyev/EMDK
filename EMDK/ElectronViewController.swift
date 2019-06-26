@@ -25,6 +25,7 @@ struct SubServiceModel: Decodable {
     let electronic_service_id: Int
     let created_at: String
     var isFavourite: Bool
+    var purpose_id: Int
 }
 
 struct ServiceModel: Decodable {
@@ -94,6 +95,11 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     
     var task1: URLSessionDataTask?
     var userToken = ""
+    var selectedPurposeId = 0
+    
+    var subServiceId = 0
+    
+   // var arr = [SubServiceModel]()
     
     static var model: userModel?
     
@@ -368,7 +374,9 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
             }
             else // subservise tiklayanda..
             {
-           //     performSegue(withIdentifier: "segueToErize", sender: self)
+                 // selectedPurposeId = xidmetler[indexPath.section].sectionData[indexPath.row - 1].purpose_id
+                subServiceId = xidmetler[indexPath.section].sectionData[indexPath.row - 1].id
+                performSegue(withIdentifier: "segueToErize", sender: self)
                
             }
             
@@ -376,7 +384,22 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
         }
         else
         {
-            
+//            var arr = [SubServiceModel]()
+//            for i in 0..<xidmetler.count{
+//                for j in 0..<xidmetler[i].sectionData.count
+//                {
+//                    arr.append(xidmetler[i].sectionData[j])
+//                }
+//            }
+//            for k in 0..<arr.count{
+//                if(arr[k].id == FavoritXidmetler[indexPath.row].electronic_sub_service_id)
+//                {
+//                    selectedPurposeId = arr[k].purpose_id
+//                    break
+//                }
+//            }
+            subServiceId = FavoritXidmetler[indexPath.row].electronic_sub_service_id
+           performSegue(withIdentifier: "segueToErize", sender: self)
         }
         
     }
@@ -447,7 +470,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
                 
                 do{
                     let serviceDataModel = try JSONDecoder().decode([ServiceModel].self, from: data)
-                    print(serviceDataModel)
+                //    print(serviceDataModel)
                    for i in 0..<serviceDataModel.count{
                     var x = cellData()
                     x.id = serviceDataModel[i].id
@@ -486,7 +509,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
             { // Eger error olarsa Bglanti olmayan vienu gosterir ki baglanti yoxdu veya zeifdir
                 if let error = err as NSError?
                 {
-                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost{
+                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost || error.code == NSURLErrorTimedOut{
                         
                         DispatchQueue.main.async {
                             
@@ -646,7 +669,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     
     func unFavorite(serviceId: Int, section: Int, row: Int, sender: UIButton){
         
-        print(FavoritXidmetler)
+        //(FavoritXidmetler)
         
         let urlString = "http://46.101.38.248/api/v1/services/unFavourite"
         
@@ -907,6 +930,14 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
         task.resume()
 
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "segueToErize"){
+            let destVc = segue.destination as! ErizeViewController
+            destVc.subServiceId = self.subServiceId
+           // destVc.selectedPurposeId = self.selectedPurposeId
+        }
     }
 
 }
