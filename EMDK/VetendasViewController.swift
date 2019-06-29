@@ -10,7 +10,7 @@ import UIKit
 
 class VetendasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let navBarColor = UIColor(red: 142/255, green: 63/255, blue: 175/255, alpha: 1)
-    var xidmetler = ["Onlayn müraciət", "Qəbula yazıl"]
+    var xidmetler = ["Qəbula yazıl"]
     var menuBtn = UIButton(type: .custom)
     var menuBarItem = UIBarButtonItem()
     var revContr = CustomSWRevealController()
@@ -77,14 +77,11 @@ class VetendasViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         
-        if(indexPath.row == 1)
+        if(indexPath.row == 0)
         {
             performSegue(withIdentifier: "segueToQebul", sender: self)
         }
         
-        if(indexPath.row == 0){
-            performSegue(withIdentifier: "segueToErize", sender: self)
-        }
     }
     
   

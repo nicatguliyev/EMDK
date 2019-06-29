@@ -23,9 +23,10 @@ class SplashViewController: UIViewController {
     
         LoginController.shared.getFinalToken(){(token) in
             
-            print(token)
+           // print("token\(token)")
             if(token == "")
             {
+                print("Token yoxdur")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                     self.splashImage.isHidden = true
                     self.appName.isHidden = true
@@ -37,17 +38,14 @@ class SplashViewController: UIViewController {
                 
             }
             else{
-                
+                print("Token Var")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                     self.splashImage.isHidden = true
                     self.appName.isHidden = true
                     self.count = 1
                     self.dismiss(animated: true, completion: nil)
-//                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "main") as! SWRevealViewController
-//                    self.present(vc, animated: false, completion: nil)
                       UIView.setAnimationsEnabled(false)
                       self.performSegue(withIdentifier: "segueToMain", sender: self)
-                      //UIView.setAnimationsEnabled(true)
                 })
             }
         }

@@ -8,10 +8,13 @@ target 'EMDK' do
   pod 'LGButton'
   pod 'SwiftyButton'
   pod 'ButtonBackgroundColor'
-  pod 'SDWebImage', '~> 4.0'
+  pod 'SDWebImage'
   pod ‘StepIndicator’, '~> 1.0.6’
   pod 'Toast-Swift'
   pod "BSImagePicker", "~> 2.8"
   pod 'JWTDecode'
+  pod 'SDWebImageWebPCoder'
+  pod 'SDWebImage/WebP'
+  
 
 end

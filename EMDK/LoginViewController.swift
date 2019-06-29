@@ -203,7 +203,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             (token) in
             if(token == ""){
                 let controller = LoginController()
-                controller.endpoint = "com.nicatguliyev.EMDK"
+                controller.endpoint = "az.gov.emdk"
                 self.present(controller, animated: true, completion: nil)
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "main") as! SWRevealViewController
                 controller.controller = vc

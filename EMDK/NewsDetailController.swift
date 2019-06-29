@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 import SDWebImage
-
+import SDWebImageWebPCoder
 
 
 struct NewsDetail: Decodable {
@@ -56,16 +56,6 @@ class NewsDetailController: UIViewController, WKNavigationDelegate {
     let barButton = UIBarButtonItem(customView: leftButton)
     self.navigationItem.leftBarButtonItem = barButton
         
-    rightButton.setImage(UIImage(named: "share.png"), for: UIControl.State.normal)
-
-    rightButton.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
-    rightButton.translatesAutoresizingMaskIntoConstraints = false
-    rightButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
-    rightButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-    rightButton.imageEdgeInsets = UIEdgeInsets(top: 7, left: 15, bottom: 8, right: 0)
-    rightButton.addTarget(self, action: #selector(shareClicked), for: .touchUpInside)
-    let barButton2 = UIBarButtonItem(customView: rightButton)
-    self.navigationItem.rightBarButtonItem = barButton2
         
     self.title = "Xəbərlər"
         
@@ -123,11 +113,20 @@ class NewsDetailController: UIViewController, WKNavigationDelegate {
                         if let x = self.detailModel?.image{
                             let urlImage = URL(string: x)
                             self.newsImage.sd_setImage(with: urlImage)
-                        
-
+                            
+                         
                         }
                         self.newsTitle.text = self.detailModel?.title
-                        self.newsDate.text = self.detailModel?.created_at
+                        
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "YYYY-MM-dd"
+                        let date = dateFormatter.date(from: String((self.detailModel?.created_at!.prefix(10))!))
+                        
+                        dateFormatter.dateFormat = "dd-MM-yyyy"
+                        let goodDate = dateFormatter.string(from: date!)
+                        
+                        self.newsDate.text = goodDate + " | " + (self.detailModel?.created_at?.suffix(8))!
+
                         self.webView.loadHTMLString("<meta name=\"viewport\" content=\"initial-scale=1.0\" />" + (self.detailModel?.body)!, baseURL: nil)
                     }
                     

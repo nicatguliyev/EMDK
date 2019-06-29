@@ -38,6 +38,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let navBarColor = UIColor(red: 142/255, green: 63/255, blue: 175/255, alpha: 1)
     var indicator = UIActivityIndicatorView();
     var selectedNewsId = 0
+    var refresher: UIRefreshControl!
     
     var checkConnButtonView = UIView()
     var  tryAgainButton = UIButton()
@@ -46,10 +47,14 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(refreshPage), for: .valueChanged)
+        newsCollectionView.addSubview(refresher)
+        
         initView()
       
     }
-    
+
     
     
     func initView(){
@@ -86,6 +91,13 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
+    @objc func refreshPage(){
+        print("refresh")
+       // postNews = [PostNewsDataModel]()
+        getPostNews(page: 1)
+      //  refresher.endRefreshing()
+    }
+    
     func setUpMenuButton(){
         
         menuBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
@@ -102,7 +114,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         self.navigationItem.leftBarButtonItem = menuBarItem
         revealViewController()?.rearViewRevealWidth = UIScreen.main.bounds.size.width - 80
         
-    view.addGestureRecognizer((self.revealViewController()?.panGestureRecognizer())!)
+        view.addGestureRecognizer((self.revealViewController()?.panGestureRecognizer())!)
         
         
     }
@@ -122,18 +134,31 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.parentView.layer.masksToBounds = true
         cell.parentView.layer.borderColor = UIColor.gray.cgColor
         cell.parentView.layer.borderWidth = 0.5
+        print(postNews.count)
         
+        
+        if(postNews.count != 0){
         cell.newsNameLbl.text = postNews[indexPath.row].title
+        
+        //cell.newsNameLbl.text = "Emlak komitesinin sedri dasinmaz emlakin dasinmasi ile elaqader olaraq minskde kecirilen konfransda istirak edib"
+        
+        
         
         let urlImage = URL(string: newImage[indexPath.row])
         
         cell.newsImage.sd_setImage(with: urlImage)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        let date = dateFormatter.date(from: String(postNews[indexPath.row].created_at!.prefix(10)))
         
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let goodDate = dateFormatter.string(from: date!)
+        cell.newsDate.text = goodDate + " " + String(postNews[indexPath.row].created_at!.suffix(8))
         
         if(indexPath.row == postNews.count - 1){
             indicator = cell.loadIndicator
         }
-        
+        }
         return cell
         
     }
@@ -144,20 +169,20 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if(indexPath.row == postNews.count - 1){
             if(reachedLastPage == false)
             {
-                 return CGSize(width: screenWidth, height: 360)
+                 return CGSize(width: screenWidth, height: 340)
             }
            else
             {
-                 return CGSize(width: screenWidth, height: 320)
+                 return CGSize(width: screenWidth, height: 300)
             }
         }
         else
         {
-             return CGSize(width: screenWidth, height: 320)
+             return CGSize(width: screenWidth, height: 300)
         }
-        
+
     }
-    
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
@@ -193,6 +218,10 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func getPostNews(page: Int) {
         let urlString = "http://46.101.38.248/api/v1/posts/index?page=" + "\(page)"
         
+        if(page == 1)
+        {
+            self.postNews = []
+        }
         newsIsLoadin = true
         
         guard let url = URL(string: urlString)
@@ -239,10 +268,12 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     self.connView.isHidden = true
                     self.newsIsLoadin = false
                     self.indicator.isHidden = true
-                    self.newsCollectionView.reloadData()
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: {
-                  
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                      self.refresher.endRefreshing()
+                      self.newsCollectionView.reloadData()
+                      print("Reload oldu")
                     })
                     
                 }
@@ -263,6 +294,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
                             self.connView.isHidden = false
                             self.checkConnIndicator.isHidden = true
                             self.checkConnButtonView.isHidden = false
+                            self.refresher.endRefreshing()
                             
                         }
                     }
@@ -283,7 +315,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
             destinationVC.newsId = self.selectedNewsId
         }
     }
-
-
-
+    
 }
+
+

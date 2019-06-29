@@ -1,25 +1,53 @@
 PODS:
-  - BSGridCollectionViewLayout (1.2.2)
-  - BSImagePicker (2.9.0):
-    - BSGridCollectionViewLayout (= 1.2.2)
-    - BSImageView (= 1.0.2)
-  - BSImageView (1.0.2)
+  - BSGridCollectionViewLayout (1.2.3)
+  - BSImagePicker (2.10.0):
+    - BSGridCollectionViewLayout (= 1.2.3)
+    - BSImageView (= 1.0.3)
+  - BSImageView (1.0.3)
   - ButtonBackgroundColor (3.0.0)
-  - JWTDecode (2.2.0)
-  - LGButton (1.0.5)
-  - SDWebImage (4.4.3):
-    - SDWebImage/Core (= 4.4.3)
-  - SDWebImage/Core (4.4.3)
-  - StepIndicator (1.0.6.1)
+  - JWTDecode (2.3.0)
+  - LGButton (1.1.6)
+  - libwebp (1.0.2):
+    - libwebp/core (= 1.0.2)
+    - libwebp/dec (= 1.0.2)
+    - libwebp/demux (= 1.0.2)
+    - libwebp/dsp (= 1.0.2)
+    - libwebp/enc (= 1.0.2)
+    - libwebp/mux (= 1.0.2)
+    - libwebp/utils (= 1.0.2)
+    - libwebp/webp (= 1.0.2)
+  - libwebp/core (1.0.2):
+    - libwebp/webp
+  - libwebp/dec (1.0.2):
+    - libwebp/core
+  - libwebp/demux (1.0.2):
+    - libwebp/core
+  - libwebp/dsp (1.0.2):
+    - libwebp/core
+  - libwebp/enc (1.0.2):
+    - libwebp/core
+  - libwebp/mux (1.0.2):
+    - libwebp/core
+  - libwebp/utils (1.0.2):
+    - libwebp/core
+  - libwebp/webp (1.0.2)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
+  - SDWebImageWebPCoder (0.2.3):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.0)
+  - StepIndicator (1.0.7.1)
   - SwiftyButton (0.8.2)
-  - Toast-Swift (4.0.1)
+  - Toast-Swift (5.0.0)
 
 DEPENDENCIES:
   - BSImagePicker (~> 2.8)
   - ButtonBackgroundColor
   - JWTDecode
   - LGButton
-  - SDWebImage (~> 4.0)
+  - SDWebImage
+  - SDWebImageWebPCoder
   - StepIndicator (~> 1.0.6)
   - SwiftyButton
   - Toast-Swift
@@ -32,23 +60,27 @@ SPEC REPOS:
     - ButtonBackgroundColor
     - JWTDecode
     - LGButton
+    - libwebp
     - SDWebImage
+    - SDWebImageWebPCoder
     - StepIndicator
     - SwiftyButton
     - Toast-Swift
 
 SPEC CHECKSUMS:
-  BSGridCollectionViewLayout: 3e6f23b3a2b4f0ca9afae09ca01389d1057f7b32
-  BSImagePicker: 553707de1adaad42eac252e0b84d20dbdba83fe9
-  BSImageView: ab22ff8cae61f1ae17a3c9efeeb216af3cf84a09
+  BSGridCollectionViewLayout: 568273e113fbc815f868f1898ef0465aee68f955
+  BSImagePicker: fa0c15b6740e8aa7a7b7f0fe38a71ad4cfa0ec4a
+  BSImageView: a149459433a2687157d034c78e059d30ac7f2544
   ButtonBackgroundColor: 512072926e57db9ef4eb7e2240d2cc1a544adc5b
-  JWTDecode: 85a405ab16d5473e99bd89ded1d535090ebd6a0e
-  LGButton: 707ce916eb80b73a6c4688df34bee11adbafb663
-  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
-  StepIndicator: 73b4bcc8bcf816cb98479d99ada7e85463252caa
+  JWTDecode: fb77675c8049c1a7e9433c7cf448c3ce33ee4ac7
+  LGButton: 9f0a7f9d3030e3f504108342f6b66d64a429371b
+  libwebp: b068a3bd7c45f7460f6715be7bed1a18fd5d6b48
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  SDWebImageWebPCoder: 7568737603c50f6237850afedd7e9e28e5917e6b
+  StepIndicator: 8e907e2e3a72a3fc939177ef97abd28390416bfc
   SwiftyButton: 5b0ef314e9cf61cf8a83e456ddd1ea1f53f30598
-  Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: 78640a299fa4a229babc514a022dcafa9ad5be67
+PODFILE CHECKSUM: f29f27aedc97e32383d68396a0151d02c613782a
 
 COCOAPODS: 1.5.3

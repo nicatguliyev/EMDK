@@ -54,15 +54,25 @@
                             <constraint firstAttribute="trailing" secondItem="WvQ-tj-jnN" secondAttribute="trailing" constant="66" id="cro-Be-86q"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIO-31-jcZ">
+                        <rect key="frame" x="0.0" y="66.5" width="375" height="1"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.55449493839999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="zdP-dG-8x3"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="VsJ-sv-q5p" secondAttribute="trailing" id="1FG-1h-f9W"/>
                     <constraint firstItem="b3G-wV-KzF" firstAttribute="leading" secondItem="BOK-R0-QN1" secondAttribute="leading" id="5Pe-eq-Nu1"/>
+                    <constraint firstItem="b3G-wV-KzF" firstAttribute="top" secondItem="bIO-31-jcZ" secondAttribute="bottom" id="DrA-Om-0jE"/>
                     <constraint firstAttribute="trailing" secondItem="b3G-wV-KzF" secondAttribute="trailing" id="Mya-wP-4dO"/>
+                    <constraint firstItem="bIO-31-jcZ" firstAttribute="leading" secondItem="BOK-R0-QN1" secondAttribute="leading" id="VAs-Kj-PRp"/>
                     <constraint firstAttribute="bottom" secondItem="b3G-wV-KzF" secondAttribute="bottom" id="hc4-1a-TFC"/>
                     <constraint firstItem="VsJ-sv-q5p" firstAttribute="leading" secondItem="BOK-R0-QN1" secondAttribute="leading" id="irS-KV-yjG"/>
                     <constraint firstItem="VsJ-sv-q5p" firstAttribute="top" secondItem="BOK-R0-QN1" secondAttribute="top" id="lyG-qS-33K"/>
+                    <constraint firstAttribute="trailing" secondItem="bIO-31-jcZ" secondAttribute="trailing" id="qC9-9m-W2z"/>
                     <constraint firstItem="b3G-wV-KzF" firstAttribute="top" secondItem="VsJ-sv-q5p" secondAttribute="bottom" id="tCw-K1-kGR"/>
                 </constraints>
             </tableViewCellContentView>

@@ -204,12 +204,20 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
             
         })
         
-       
+        
+        
+        textView.layer.borderWidth = 1
+        textView.layer.cornerRadius = 5
+        textView.layer.borderColor = UIColor.purple.cgColor
     
     }
 
     func textViewDidEndEditing(_ textView: UITextView) {
         bootomConst.constant = 16
+       
+        textView.layer.borderWidth = 1.5
+        textView.layer.cornerRadius = 5
+        textView.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
     }
 
 
@@ -219,10 +227,16 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
           //  self.bootomConst.constant = self.keyboardHeight + 16
         })
           self.bootomConst.constant = self.keyboardHeight + 16
+        textField.layer.borderWidth = 1
+        textField.layer.cornerRadius = 5
+        textField.layer.borderColor = UIColor.purple.cgColor
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         bootomConst.constant = 16
+        textField.layer.borderWidth = 1.5
+        textField.layer.cornerRadius = 5
+        textField.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

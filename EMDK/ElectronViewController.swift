@@ -26,6 +26,7 @@ struct SubServiceModel: Decodable {
     let created_at: String
     var isFavourite: Bool
     var purpose_id: Int
+    var is_plan: Int
 }
 
 struct ServiceModel: Decodable {
@@ -96,6 +97,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     var task1: URLSessionDataTask?
     var userToken = ""
     var selectedPurposeId = 0
+    var isPlan = 0
     
     var subServiceId = 0
     
@@ -375,8 +377,11 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
             else // subservise tiklayanda..
             {
                  // selectedPurposeId = xidmetler[indexPath.section].sectionData[indexPath.row - 1].purpose_id
+                isPlan = xidmetler[indexPath.section].sectionData[indexPath.row-1].is_plan
                 subServiceId = xidmetler[indexPath.section].sectionData[indexPath.row - 1].id
+                print("ISPLAN:\(isPlan)")
                 performSegue(withIdentifier: "segueToErize", sender: self)
+                
                
             }
             
@@ -384,21 +389,22 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
         }
         else
         {
-//            var arr = [SubServiceModel]()
-//            for i in 0..<xidmetler.count{
-//                for j in 0..<xidmetler[i].sectionData.count
-//                {
-//                    arr.append(xidmetler[i].sectionData[j])
-//                }
-//            }
-//            for k in 0..<arr.count{
-//                if(arr[k].id == FavoritXidmetler[indexPath.row].electronic_sub_service_id)
-//                {
-//                    selectedPurposeId = arr[k].purpose_id
-//                    break
-//                }
-//            }
+            var arr = [SubServiceModel]()
+            for i in 0..<xidmetler.count{
+                for j in 0..<xidmetler[i].sectionData.count
+                {
+                    arr.append(xidmetler[i].sectionData[j])
+                }
+            }
+            for k in 0..<arr.count{
+                if(arr[k].id == FavoritXidmetler[indexPath.row].electronic_sub_service_id)
+                {
+                    isPlan = arr[k].is_plan
+                    break
+                }
+            }
             subServiceId = FavoritXidmetler[indexPath.row].electronic_sub_service_id
+            print("ISPLAN:\(isPlan)")
            performSegue(withIdentifier: "segueToErize", sender: self)
         }
         
@@ -935,6 +941,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "segueToErize"){
             let destVc = segue.destination as! ErizeViewController
+            destVc.isPlan = self.isPlan
             destVc.subServiceId = self.subServiceId
            // destVc.selectedPurposeId = self.selectedPurposeId
         }

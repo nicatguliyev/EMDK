@@ -117,6 +117,8 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     var selectedPurposeId = 0
     var selectedPusrposeIndex = 0
     var subServiceId = 0
+    
+    var isPlan = 0
 
     
     @IBOutlet weak var stepIndicator: StepIndicatorView!
@@ -124,6 +126,13 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if #available(iOS 12.0, *) {
+            
+        } else {
+            // Fallback on earlier versions
+        }
+    
 
        initView()
        addPages()
@@ -171,7 +180,6 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             getAppealPurposes2()
         }
         
-        print("SelectedPurpose \(selectedPurposeId)")
         
     }
     
@@ -235,7 +243,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     }
     
     @objc func tryAgain(){
-        getAppealPurposes()
+        getAppealPurposes2()
     }
     
     
@@ -368,7 +376,6 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     func textFieldDidBeginEditing(_ textField: UITextField) {
 
         focused = true
-         print(UIScreen.main.bounds.height)
 
         if(UIScreen.main.bounds.height < 600){
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: {
@@ -399,6 +406,11 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             step4.textFieldView.layer.borderWidth = 1
              step4.textFieldView.layer.cornerRadius = 5
              step4.textFieldView.layer.borderColor = UIColor.purple.cgColor
+        }
+        
+        if(textField == phoneTextField)
+        {
+            
         }
 
     }
@@ -437,8 +449,28 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
 
     @objc func huquqiClicked(){
         
+        
+        if(huquqiBtn.backgroundColor != purpleColor){
         huquqiBtn.backgroundColor = purpleColor
         huquqiBtn.setTitleColor(UIColor.white, for: .normal)
+            if(UIScreen.main.bounds.height < 600){
+                step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
+            }
+            else{
+                step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: 460)
+            }
+        }
+        else
+        {
+            huquqiBtn.backgroundColor = UIColor.white
+            huquqiBtn.setTitleColor(purpleColor, for: .normal)
+            if(UIScreen.main.bounds.height < 600){
+                step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
+            }
+            else{
+                step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: 180)
+            }
+        }
         
         fizikiBtn.backgroundColor = UIColor.white
         fizikiBtn.setTitleColor(purpleColor, for: .normal)
@@ -450,27 +482,30 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         step2.const1.constant = 12
         step2.const2.constant = 16
         
-        if(UIScreen.main.bounds.height < 600){
-            step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
-        }
-        else{
-            step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: 460)
-        }
-        
         step2.const3.constant = 16
         step2.voenTextField.isHidden = false
-        step2.voenLbl.text = "HÜQUQI ŞƏXSIN VÖEN-I:"
+        step2.voenLbl.text = "HÜQUQİ ŞƏXSIN VÖEN-İ:"
         step2.seriaTextfield.isHidden = true
         step2.seriaTextfield.resignFirstResponder()
         
     }
     
     @objc func fizikiClicked(){
+        
         huquqiBtn.backgroundColor = UIColor.white
         huquqiBtn.setTitleColor(purpleColor, for: .normal)
         
+        if(fizikiBtn.backgroundColor != purpleColor){
         fizikiBtn.backgroundColor = purpleColor
         fizikiBtn.setTitleColor(UIColor.white, for: .normal)
+            step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: 360)
+        }
+        else
+        {
+            fizikiBtn.backgroundColor = UIColor.white
+            fizikiBtn.setTitleColor(purpleColor, for: .normal)
+            step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: 180)
+        }
         
         step2.infLbl.text = "Adından etibarnamə ilə çıxış etdiyiniz fiziki şəxsin məlumatlarını dəqiq doldurun"
         step2.nameTextField.isHidden = true
@@ -482,9 +517,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         step2.const2.constant = 0
         step2.const3.constant = 0
         step2.nameLbl.isHidden = true
-        step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: 360)
         
-        print(deadlineString)
         
     }
     
@@ -541,7 +574,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
         }
         else{
-            step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: 460)
+            step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: 180)
         }
         
         step2.segmentView.layer.cornerRadius = 10
@@ -560,6 +593,12 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         fizikiBtn.addTarget(self, action: #selector(fizikiClicked), for: .touchUpInside)
         step2.seriaTextfield.delegate = self
         
+        huquqiBtn.backgroundColor = UIColor.white
+        huquqiBtn.setTitleColor(purpleColor, for: .normal)
+        huquqiBtn.layer.borderWidth = 0.5
+        huquqiBtn.layer.borderColor = purpleColor.cgColor
+        step2.step2ScrollView.isScrollEnabled = false
+        
         horizontalScrollView.addSubview(step2)
     }
     
@@ -577,6 +616,25 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         step3.meqsedBtn.layer.borderWidth = 1
         step3.meqsedBtn.layer.masksToBounds = true
         step3.meqsedBtn2.backgroundColorForStates(normal: UIColor.clear, highlighted: UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5))
+        step3.switch.isOn = false
+        if(subServiceId == 0)
+        {
+            step3.passportLbl.isHidden = false
+            step3.switch.isHidden = false
+        }
+        else
+        {
+            if(isPlan == 1){
+            step3.passportLbl.isHidden = false
+            step3.switch.isHidden = false
+            }
+            else
+            {
+                step3.passportLbl.isHidden = true
+                step3.switch.isHidden = true
+            }
+        }
+        
         step3.meqsedBtn2.addTarget(self, action: #selector(test), for: .touchUpInside)
         
         
@@ -683,6 +741,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         step7.imtinaBtn.layer.cornerRadius = 8
         step7.imtinaBtn.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
         step7.warningTableView.layer.cornerRadius = 10
+        step7.imtinaBtn.addTarget(self, action: #selector(cancelAppeal), for: .touchUpInside)
         
       //  step7.warningView.layer.cornerRadius = 8
         let cellId = "WarningCellId"
@@ -698,6 +757,10 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     
     @objc func sendAppeal(){
       addToAppeal()
+    }
+    
+    @objc func cancelAppeal(){
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func addNewImage(){
@@ -720,7 +783,6 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             }, finish: { (assets: [PHAsset]) -> Void in
                 // User finished with these assets
                 for i in 0..<assets.count{
-                    print(assets.count)
                     self.selectedAssats.append(assets[i])
                 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
@@ -852,7 +914,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         }
         if(segue.identifier == "segueToCompletionModal")
         {
-             let vc = segue.destination as! CompletionController
+            let vc = segue.destination as! CompletionController
             vc.date = self.date
             vc.number = self.senedNumber
             vc.VC = self
@@ -969,16 +1031,6 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                        self.step5.muddetLbl.text = self.deadlineArray[0] + " gün"
                         
                        self.getAllRegions()
-                  
-                        if(self.allPusrposes[0].is_plan == 0){
-                            self.step3.passportLbl.isHidden = true
-                            self.step3.switch.isHidden = true
-                        }
-                        else
-                        {
-                            self.step3.passportLbl.isHidden = false
-                            self.step3.switch.isHidden = false
-                        }
                         
                     }
                     
@@ -1013,7 +1065,6 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         
         
         let urlString = "http://46.101.38.248/api/v1/electronic/subservice/purposes/" + "\(subServiceId)"
-        print(urlString)
         
         guard let url = URL(string: urlString)
             else {return}
@@ -1048,9 +1099,6 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                         
                     }
                     
-                    print("YYY")
-                    print(self.allPusrposes)
-                    
                 }
                     
                 catch let jsonError {
@@ -1063,19 +1111,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
 
                         self.meqsedLbl.text = self.allPusrposes[0].title
                         self.step5.muddetLbl.text = self.deadlineArray[0] + " gün"
-
                         self.getAllRegions()
-
-                        if(self.allPusrposes[0].is_plan == 0){
-                            self.step3.passportLbl.isHidden = true
-                            self.step3.switch.isHidden = true
-                        }
-                        else
-                        {
-                            self.step3.passportLbl.isHidden = false
-                            self.step3.switch.isHidden = false
-                        }
-
                     }
                     
                 }
@@ -1121,7 +1157,6 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                 
                 do{
                     let regionList = try JSONDecoder().decode([RegionModel].self, from: data)
-                    print(regionList)
                     for i in 0..<regionList.count{
                         var model = RegionDataModel()
                         model.code = regionList[i].code
@@ -1181,14 +1216,22 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         let phoneParameter = step1.phoneTextField.text // 4 cu parameter
         let emailParazmeter = step1.mailTextField.text // 5 ci parameter
         var personTypeParameter = "" // 6 ci parameter
-        if(step2.seriaTextfield.isHidden){
+        var personNameParameter = ""
+        if(huquqiBtn.backgroundColor == purpleColor){
             personTypeParameter = "1"
+            personNameParameter = step2.nameTextField.text!
         }
-        else{
+        if(fizikiBtn.backgroundColor == purpleColor){
             personTypeParameter = "2"
+            personNameParameter = nameSurname + " " + fatherName
+        }
+        if(huquqiBtn.backgroundColor != purpleColor && fizikiBtn.backgroundColor != purpleColor)
+        {
+            personTypeParameter = "0"
+            personNameParameter = ""
         }
         let voenparameter = step2.voenTextField.text // 7 ci parameter
-        let personNameparameter = step2.nameTextField.text // 8 ci parameter
+        //let personNameparameter = step2.nameTextField.text // 8 ci parameter
         var isPlanParameter = "" // 9 cu parameter
         if(!step3.switch.isHidden)
         {
@@ -1272,7 +1315,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             "email": emailParazmeter!,
             "person_type": personTypeParameter,
             "person_voen": voenparameter!,
-            "person_name": personNameparameter!,
+            "person_name": personNameParameter,
             "purpose": selectedPurpose,
             "is_plan": isPlanParameter,
             "city": selectedRegion,
@@ -1286,7 +1329,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             "file_6": fayl6Parameter
         ]
         
-        //print(fayl1Parameter)
+        print("fayl1Parameter: \(personNameParameter)")
         urlRequest.httpBody = parameters.percentEscaped().data(using: .utf8)
         
         connView.isHidden = false
@@ -1295,6 +1338,8 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             
             if(err == nil){
                 guard let data = data else { return }
+              //  let outputStr  = String(data: data, encoding: String.Encoding.utf8) as String?
+             //   print(outputStr)
                 do{
                     if (try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary) != nil {
                         let fullResponse = try  JSONDecoder().decode(AppealResponseModel.self, from: data)
@@ -1319,8 +1364,9 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                     }
                     
                 }
-                catch _{
+                catch let jsonError {
                     DispatchQueue.main.async {
+                        print(jsonError)
                         self.view.makeToast("Xəta baş verdi")
                     }
                 }
@@ -1359,21 +1405,13 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     }
     
     
+    
     func setName(selectedIndex: Int) -> () {
         if(self.sendParameterToPopup == "erize"){
             meqsedLbl.text = allPusrposes[selectedIndex].title
             deadlineString = allPusrposes[selectedIndex].deadline
             deadlineArray = deadlineString.components(separatedBy: ",")
             step5.muddetLbl.text = deadlineArray[0] + " gün"
-            
-            if(allPusrposes[selectedIndex].is_plan == 0){
-                step3.passportLbl.isHidden = true
-                step3.switch.isHidden = true
-            }
-            else{
-                step3.passportLbl.isHidden = false
-                step3.switch.isHidden = false
-            }
             
             selectedPurpose = "\(allPusrposes[selectedIndex].id)"
             
@@ -1416,7 +1454,6 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("KOKOKOKOKOKOK")
         if(closeInformation == 1)
         {
             self.navigationController?.popViewController(animated: true)
@@ -1424,8 +1461,27 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         }
     }
     
-    
-    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        let protectedRange = NSRange(location: 0, length: 4)
+//        let intersection = NSIntersectionRange(protectedRange, range)
+//        if(textField.text?.count == 4)
+//        {
+//            print("OKKKKK")
+//            textField.text = (textField.text?.prefix(4))! + "(" + string
+//        }
+//        if intersection.length > 0 {
+//
+//            return false
+//        }
+//
+////        if range.location == 12 {
+////            return true
+////        }
+////        if range.location + range.length > 12 {
+////            return false
+////        }
+//        return true
+//    }
     
     
 }

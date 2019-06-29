@@ -15,6 +15,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var menuNames = ["Elektron xidmətlər", "Şəxsi kabinet", "Bildirişlər", "Vətəndaşlar üçün", "Xəbərlər", "Təhlükəsiz çıxış"]
     
     let darkView = UIView()
+    var selectedIndexPath = IndexPath()
 
     @IBOutlet weak var menuTable: UITableView!
     
@@ -22,13 +23,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-//             let index = NSIndexPath(row: 0, section: 0)
-//              self.menuTable.selectRow(at: index as IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
-//
-//        })
-        
+        selectedIndexPath = NSIndexPath(row: 0, section: 0) as IndexPath
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,29 +65,43 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
        // tableView.deselectRow(at: indexPath, animated: true)
         
         let cell:MenuTableCell = tableView.cellForRow(at: indexPath) as! MenuTableCell
-       // cell.contentView.backgroundColor = UIColor(red: 142/255, green: 63/255, blue: 175/255, alpha: 1)
+        if(indexPath.row != 5){
         cell.menuNameLbl.textColor = UIColor.red
+        }
      
         if(indexPath.row == 4){
             performSegue(withIdentifier: "segueToNews", sender: self)
+            selectedIndexPath = indexPath
            
         }
         if(indexPath.row == 0){
             performSegue(withIdentifier: "segueToXidmet", sender: self)
+            selectedIndexPath = indexPath
+
         }
         if(indexPath.row == 1){
             performSegue(withIdentifier: "segueToSexsi", sender: self)
+            selectedIndexPath = indexPath
+
         }
         if(indexPath.row == 2)
         {
             performSegue(withIdentifier: "segueToTenzim", sender: self)
+            selectedIndexPath = indexPath
+
         }
         if(indexPath.row == 3){
             
             performSegue(withIdentifier: "segueToVetendas", sender: self)
+            selectedIndexPath = indexPath
+
         }
         if(indexPath.row == 5)
         {
+            
+              self.menuTable.selectRow(at: selectedIndexPath as IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
+            let cell2:MenuTableCell = tableView.cellForRow(at: selectedIndexPath) as! MenuTableCell
+              cell2.menuNameLbl.textColor = UIColor.red
               self.revealViewController()?.revealToggle(animated: true)
               performSegue(withIdentifier: "segueToExit", sender: self)
     

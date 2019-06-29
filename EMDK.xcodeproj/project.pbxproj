@@ -33,9 +33,6 @@
 		CD88CB7521CD1A9E0029F9CC /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88CB7421CD1A9E0029F9CC /* UserDetailViewController.swift */; };
 		CD88CB7921CE9ED10029F9CC /* TenzimViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88CB7821CE9ED10029F9CC /* TenzimViewController.swift */; };
 		CD973CC221D0D501008D7F9A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD973CC121D0D501008D7F9A /* TestViewController.swift */; };
-		CD9B437822B79C8B00C5046D /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9B437722B79C8B00C5046D /* LoginWithEgov.framework */; };
-		CD9B437922B79CA100C5046D /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9B437722B79C8B00C5046D /* LoginWithEgov.framework */; };
-		CD9B437A22B79CA100C5046D /* LoginWithEgov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD9B437722B79C8B00C5046D /* LoginWithEgov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CDACD22121C9197D0005AF76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDACD22021C9197D0005AF76 /* AppDelegate.swift */; };
 		CDACD22621C9197D0005AF76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDACD22421C9197D0005AF76 /* Main.storyboard */; };
 		CDACD22821C9197E0005AF76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDACD22721C9197E0005AF76 /* Assets.xcassets */; };
@@ -48,6 +45,10 @@
 		CDACD25F21CACC3F0005AF76 /* CustomElectronCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDACD25D21CACC3F0005AF76 /* CustomElectronCell.swift */; };
 		CDACD26021CACC3F0005AF76 /* CustomElectronCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDACD25E21CACC3F0005AF76 /* CustomElectronCell.xib */; };
 		CDBC735322C24AF3002B2182 /* AppealDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC735222C24AF3002B2182 /* AppealDetailController.swift */; };
+		CDBC735522C4DB8E002B2182 /* noInternet.png in Resources */ = {isa = PBXBuildFile; fileRef = CDBC735422C4DB8E002B2182 /* noInternet.png */; };
+		CDBC738822C7E44D002B2182 /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBC738722C7E44D002B2182 /* LoginWithEgov.framework */; };
+		CDBC738922C7E46E002B2182 /* LoginWithEgov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDBC738722C7E44D002B2182 /* LoginWithEgov.framework */; };
+		CDBC738A22C7E46E002B2182 /* LoginWithEgov.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CDBC738722C7E44D002B2182 /* LoginWithEgov.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CDCEAFA421D10B5200DBD82C /* ErizePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEAFA321D10B5200DBD82C /* ErizePopupViewController.swift */; };
 		CDCEAFA621D10BA400DBD82C /* ErizeTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEAFA521D10BA400DBD82C /* ErizeTypeCell.swift */; };
 		CDCEAFAA21D1256800DBD82C /* Step4.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCEAFA921D1256700DBD82C /* Step4.xib */; };
@@ -128,7 +129,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CD9B437A22B79CA100C5046D /* LoginWithEgov.framework in Embed Frameworks */,
+				CDBC738A22C7E46E002B2182 /* LoginWithEgov.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,7 +167,6 @@
 		CD88CB7421CD1A9E0029F9CC /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		CD88CB7821CE9ED10029F9CC /* TenzimViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenzimViewController.swift; sourceTree = "<group>"; };
 		CD973CC121D0D501008D7F9A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		CD9B437722B79C8B00C5046D /* LoginWithEgov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithEgov.framework; sourceTree = "<group>"; };
 		CDACD21D21C9197D0005AF76 /* EMDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDACD22021C9197D0005AF76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDACD22521C9197D0005AF76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -182,6 +182,8 @@
 		CDACD25D21CACC3F0005AF76 /* CustomElectronCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomElectronCell.swift; sourceTree = "<group>"; };
 		CDACD25E21CACC3F0005AF76 /* CustomElectronCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomElectronCell.xib; sourceTree = "<group>"; };
 		CDBC735222C24AF3002B2182 /* AppealDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppealDetailController.swift; sourceTree = "<group>"; };
+		CDBC735422C4DB8E002B2182 /* noInternet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noInternet.png; sourceTree = "<group>"; };
+		CDBC738722C7E44D002B2182 /* LoginWithEgov.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithEgov.framework; sourceTree = "<group>"; };
 		CDCEAFA321D10B5200DBD82C /* ErizePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErizePopupViewController.swift; sourceTree = "<group>"; };
 		CDCEAFA521D10BA400DBD82C /* ErizeTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErizeTypeCell.swift; sourceTree = "<group>"; };
 		CDCEAFA921D1256700DBD82C /* Step4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Step4.xib; sourceTree = "<group>"; };
@@ -262,8 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E234E2AA848E818EEDF550 /* Pods_EMDK.framework in Frameworks */,
-				CD9B437822B79C8B00C5046D /* LoginWithEgov.framework in Frameworks */,
-				CD9B437922B79CA100C5046D /* LoginWithEgov.framework in Frameworks */,
+				CDBC738822C7E44D002B2182 /* LoginWithEgov.framework in Frameworks */,
+				CDBC738922C7E46E002B2182 /* LoginWithEgov.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +319,7 @@
 		CDACD21421C9197D0005AF76 = {
 			isa = PBXGroup;
 			children = (
-				CD9B437722B79C8B00C5046D /* LoginWithEgov.framework */,
+				CDBC738722C7E44D002B2182 /* LoginWithEgov.framework */,
 				CDACD21F21C9197D0005AF76 /* EMDK */,
 				CDACD21E21C9197D0005AF76 /* Products */,
 				0663C493DDBAE5A9F6C4869C /* Pods */,
@@ -402,6 +404,7 @@
 				CDFED6F3224F658000328886 /* icons8-ok-filled-50.png */,
 				CDFED6F5224F658000328886 /* purpleClose.png */,
 				CD530E26226493AC001BD14C /* deleteIcon.png */,
+				CDBC735422C4DB8E002B2182 /* noInternet.png */,
 				CDFED6EA224F657E00328886 /* purpleSetting.png */,
 				CDFED6F4224F658000328886 /* rightArrow.png */,
 				CDFED6EB224F657E00328886 /* share.png */,
@@ -524,6 +527,7 @@
 				CDCEAFB621D16F3500DBD82C /* Step6.xib in Resources */,
 				CDFED6DC224F651500328886 /* step2.png in Resources */,
 				CDACD22B21C9197E0005AF76 /* LaunchScreen.storyboard in Resources */,
+				CDBC735522C4DB8E002B2182 /* noInternet.png in Resources */,
 				CDFED6C6224F651500328886 /* logo2.png in Resources */,
 				CDFED6DE224F651500328886 /* menuIcon.png in Resources */,
 				CDACD22821C9197E0005AF76 /* Assets.xcassets in Resources */,
@@ -594,9 +598,11 @@
 				"${BUILT_PRODUCTS_DIR}/JWTDecode/JWTDecode.framework",
 				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImageWebPCoder/SDWebImageWebPCoder.framework",
 				"${BUILT_PRODUCTS_DIR}/StepIndicator/StepIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -609,9 +615,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImageWebPCoder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StepIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -842,12 +850,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = EMDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicatguliyev.EMDK;
+				PRODUCT_BUNDLE_IDENTIFIER = az.gov.emdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EMDK/EMDK-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -869,12 +877,12 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = EMDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nicatguliyev.EMDK;
+				PRODUCT_BUNDLE_IDENTIFIER = az.gov.emdk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EMDK/EMDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

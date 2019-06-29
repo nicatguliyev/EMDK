@@ -123,7 +123,7 @@ class AppealDetailController: UIViewController {
                           self.checkConnIndicator.isHidden = true
                         
                           self.nameField.text = model.name
-                          self.deadlineField.text = "\(model.deadline)"
+                          self.deadlineField.text = "\(model.deadline) gün"
                           self.documentField.text = model.emdk_document_no
                           self.emailField.text = model.email
                           self.endField.text = model.emdk_end_time

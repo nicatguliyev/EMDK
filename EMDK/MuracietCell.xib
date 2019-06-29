@@ -44,16 +44,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxe-6T-cwp">
+                                <rect key="frame" x="0.0" y="66.5" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.55449493838028174" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ybb-CE-8O8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3hv-WW-pzT" firstAttribute="top" secondItem="Dct-Yb-qx7" secondAttribute="top" constant="20" id="1oC-Aj-dDz"/>
+                            <constraint firstItem="pxe-6T-cwp" firstAttribute="leading" secondItem="Dct-Yb-qx7" secondAttribute="leading" id="3yp-Io-mqn"/>
                             <constraint firstAttribute="bottom" secondItem="y8v-hY-RUa" secondAttribute="bottom" constant="20" id="Afu-Hb-RcI"/>
                             <constraint firstItem="y8v-hY-RUa" firstAttribute="leading" secondItem="Dct-Yb-qx7" secondAttribute="leading" constant="16" id="GTW-i0-Dp0"/>
                             <constraint firstItem="y8v-hY-RUa" firstAttribute="centerY" secondItem="Dct-Yb-qx7" secondAttribute="centerY" id="HLu-Sl-3mN"/>
+                            <constraint firstAttribute="trailing" secondItem="pxe-6T-cwp" secondAttribute="trailing" id="MGr-lg-tg6"/>
                             <constraint firstAttribute="trailing" secondItem="3hv-WW-pzT" secondAttribute="trailing" constant="8" id="VsQ-xv-lu2"/>
                             <constraint firstItem="y8v-hY-RUa" firstAttribute="top" secondItem="Dct-Yb-qx7" secondAttribute="top" constant="20" id="h3V-Id-4Wj"/>
                             <constraint firstAttribute="trailing" secondItem="y8v-hY-RUa" secondAttribute="trailing" constant="120" id="l0t-vb-GNv"/>
+                            <constraint firstAttribute="bottom" secondItem="pxe-6T-cwp" secondAttribute="bottom" id="zGl-k5-vHe"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -73,7 +83,7 @@
                 <outlet property="muracietName" destination="y8v-hY-RUa" id="VBa-wX-uj9"/>
                 <outlet property="muracietView" destination="Dct-Yb-qx7" id="2xB-Y4-dUn"/>
             </connections>
-            <point key="canvasLocation" x="1037" y="-139"/>
+            <point key="canvasLocation" x="1036.9565217391305" y="-139.62053571428569"/>
         </tableViewCell>
     </objects>
 </document>
