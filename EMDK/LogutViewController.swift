@@ -35,7 +35,6 @@ class LogutViewController: UIViewController {
 
     @IBAction func yesClciked(_ sender: Any) {
         LoginController.shared.logOut()
-      //  performSegue(withIdentifier: "segueToLogin", sender: self)
         self.dismiss(animated: true, completion: nil)
         self.dismiss!()
         
