@@ -28,19 +28,6 @@ class LoginButtonController: UIViewController {
         controller.controller = vc
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        LoginController.shared.getFinalToken(){(token) in
-            
-            if(token == ""){
-                print("TTTTTTYoxdur")
-            }
-            else
-            {
-                print("TTTTTTvar")
-            }
-            
-        }
-        
-    }
+  
 
 }
