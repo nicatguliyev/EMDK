@@ -26,7 +26,6 @@ class SplashViewController: UIViewController {
            // print("token\(token)")
             if(token == "")
             {
-                print("Token yoxdur")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                     self.splashImage.isHidden = true
                     self.appName.isHidden = true
@@ -38,7 +37,6 @@ class SplashViewController: UIViewController {
                 
             }
             else{
-                print("Token Var")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                     self.splashImage.isHidden = true
                     self.appName.isHidden = true
