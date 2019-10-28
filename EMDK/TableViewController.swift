@@ -43,15 +43,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.menuNameLbl.text = menuNames[indexPath.row]
         
         if(indexPath.row == 0){
-         //   menuTable.selectRow(at: indexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
-           // let index = NSIndexPath(row: 0, section: 0)
             self.menuTable.selectRow(at: indexPath as IndexPath, animated: true, scrollPosition: UITableView.ScrollPosition.middle)
             cell.menuNameLbl.textColor = UIColor.red
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-//                 cell.contentView.backgroundColor = UIColor(red: 142/255, green: 63/255, blue: 175/255, alpha: 1)
-//
-//            })
-           
+
         }
         
         return cell

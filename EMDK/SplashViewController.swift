@@ -22,7 +22,6 @@ class SplashViewController: UIViewController {
         
     
         LoginController.shared.getFinalToken(){(token) in
-            
            // print("token\(token)")
             if(token == "")
             {
@@ -34,7 +33,6 @@ class SplashViewController: UIViewController {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginId") as! LoginButtonController
                     self.present(vc, animated: true, completion: nil)
                 })
-                
             }
             else{
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
@@ -47,7 +45,6 @@ class SplashViewController: UIViewController {
                 })
             }
         }
-        
     }
     
 

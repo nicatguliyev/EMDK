@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import LoginWithEgov
+
 
 struct Sexs: Decodable {
     let id: Int
@@ -17,6 +19,7 @@ struct ReceiverDataModel {
     var id = Int()
     var name = String()
 }
+
 
 class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
@@ -31,9 +34,13 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
     var allReceivers = [ReceiverDataModel]()
     var warningType = ""
     var doneCicked = false
+    var datePicker = UIDatePicker()
     
     let borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1)
-
+    
+    @IBOutlet weak var dateView: UIView!
+    @IBOutlet weak var dateTxtField: UITextField!
+    @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var qebulView: UIView!
     @IBOutlet weak var textArea: UITextView!
     @IBOutlet weak var qebulBtn: UIButton!
@@ -48,6 +55,7 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
     @IBOutlet weak var numberTextField: UITextField!
     var selectedReceiverId = 0
     @IBOutlet weak var unvanTextField: UITextField!
+    var userToken = ""
     
     
     
@@ -61,15 +69,29 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
             object: nil
         )
         
+        datePicker.datePickerMode = .date
+        datePicker.locale = Locale.init(identifier: "az")
+        datePicker.minimumDate = Date()
+        
         let tapGesure = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         view.addGestureRecognizer(tapGesure)
         view.isUserInteractionEnabled = true
+        
+        let tapGesure2 = UITapGestureRecognizer(target: self, action: #selector(dateTapped))
+        dateView.addGestureRecognizer(tapGesure2)
+        dateView.isUserInteractionEnabled = true
+        dateTxtField.inputView = datePicker
+        
+        LoginController.shared.getFinalToken{(token) in
+            self.userToken = token
+        }
+        
         
         
         getReceiverList()
         initView()
         
-
+        
     }
     
     func initView(){
@@ -78,13 +100,16 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
         textArea.layer.borderColor = borderColor.cgColor
         textArea.layer.borderWidth = 1
         textArea.backgroundColor = UIColor.white
-        textArea.layer.cornerRadius = 10
+        textArea.layer.cornerRadius = 5
         
         nameTextField.layer.borderColor = borderColor.cgColor
         surnameTextField.layer.borderColor = borderColor.cgColor
         emailTextField.layer.borderColor = borderColor.cgColor
         numberTextField.layer.borderColor = borderColor.cgColor
         unvanTextField.layer.borderColor = borderColor.cgColor
+        dateView.layer.borderColor = borderColor.cgColor
+        dateView.layer.borderWidth = 1
+        dateView.layer.cornerRadius = 5
         
         qebulBtn.layer.cornerRadius = 10
         qebulBtn.layer.borderColor = borderColor.cgColor
@@ -131,11 +156,15 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
             connectionView.tryButton.addTarget(self, action: #selector(tryAgain), for: .touchUpInside)
             
             qebulBtn.addTarget(self, action: #selector(openReceivers), for: .touchUpInside)
-
+            
         }
         
         self.title = "Qəbula yazıl"
         
+    }
+    
+    @objc func dateTapped(){
+        dateTxtField.becomeFirstResponder()
     }
     
     @objc func tryAgain(){
@@ -147,34 +176,12 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
     }
     
     @objc func backClicked(){
-       // self.navigationController?.dismiss(animated: true, completion: nil)
+        // self.navigationController?.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
     }
     
     @objc func doneClicked(){
-         doneCicked = true
-        if(!isValidEmail(testStr: emailTextField.text!)){
-            warningType = "email"
-            
-            if(nameTextField.text != "" && surnameTextField.text != "" && emailTextField.text != "" && numberTextField.text != "" && unvanTextField.text != "" && textArea.text != "")
-            {
-                performSegue(withIdentifier: "segueToWarningModal", sender: self)
-            }
-            
-        }
-        
-        if(nameTextField.text == "" || surnameTextField.text == "" || emailTextField.text == "" || numberTextField.text == "" || unvanTextField.text == "" || textArea.text == ""){
-            warningType = ""
-            performSegue(withIdentifier: "segueToWarningModal", sender: self)
-        }
-            
-        if(nameTextField.text != "" && surnameTextField.text != "" && emailTextField.text != "" && numberTextField.text != "" && unvanTextField.text != "" && textArea.text != "" && isValidEmail(testStr: emailTextField.text!)){
-            
-             addToAppeal(receiverId: selectedReceiverId, name: nameTextField.text!, surname: surnameTextField.text!, email: emailTextField.text!, phone: numberTextField.text!, adress: unvanTextField.text!, theme: textArea.text)
-            
-        }
-        
-        
+        addToAppeal(receiverId: selectedReceiverId, name: nameTextField.text!, surname: surnameTextField.text!, email: emailTextField.text!, phone: numberTextField.text!, adress: unvanTextField.text!, theme: textArea.text)
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -196,62 +203,79 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         
-        self.bootomConst.constant = self.keyboardHeight + 16
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-            
-            let bottomOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height)
-            self.scrollView.setContentOffset(bottomOffset, animated: true)
-            
-        })
+        //        self.bootomConst.constant = self.keyboardHeight + 16
+        //        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+        //
+        //            let bottomOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height)
+        //            self.scrollView.setContentOffset(bottomOffset, animated: true)
+        //
+        //        })
         
         
         
         textView.layer.borderWidth = 1
         textView.layer.cornerRadius = 5
         textView.layer.borderColor = UIColor.purple.cgColor
-    
+        
     }
-
+    
     func textViewDidEndEditing(_ textView: UITextView) {
         bootomConst.constant = 16
-       
+        
         textView.layer.borderWidth = 1.5
         textView.layer.cornerRadius = 5
         textView.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
     }
-
-
+    
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-       DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-
-          //  self.bootomConst.constant = self.keyboardHeight + 16
-        })
-          self.bootomConst.constant = self.keyboardHeight + 16
+        //       DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+        //
+        //          //  self.bootomConst.constant = self.keyboardHeight + 16
+        //        })
+        //       self.bootomConst.constant = self.keyboardHeight + 16
         textField.layer.borderWidth = 1
         textField.layer.cornerRadius = 5
         textField.layer.borderColor = UIColor.purple.cgColor
+        
+        if(textField == dateTxtField){
+            dateView.layer.borderWidth = 1
+            dateView.layer.cornerRadius = 5
+            dateView.layer.borderColor = UIColor.purple.cgColor
+        }
     }
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        bootomConst.constant = 16
+        //  bootomConst.constant = 16
         textField.layer.borderWidth = 1.5
         textField.layer.cornerRadius = 5
         textField.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
+        if(textField == dateTxtField){
+            dateView.layer.borderWidth = 1.5
+            dateView.layer.cornerRadius = 5
+            dateView.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
+            
+           //let dateString =
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            dateLbl.text = dateFormatter.string(from: datePicker.date)
+        }
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-
+        
         return true
     }
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if (text == "\n") {
-            textView.resignFirstResponder()
-        }
-        return true
-    }
-    
+    //    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    //        if (text == "\n") {
+    //            textView.resignFirstResponder()
+    //        }
+    //        return true
+    //    }
+    //
     
     func getReceiverList(){
         
@@ -262,7 +286,7 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
         
         var urlRequest = URLRequest(url: url)
         
-        urlRequest.setValue("123123123", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue(self.userToken, forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: urlRequest){ (data, response, err) in
             
@@ -281,7 +305,7 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
                         self.allReceivers.append(model)
                         
                     }
-
+                    
                 }
                     
                 catch let jsonError {
@@ -295,7 +319,7 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
                         self.connView.isHidden = true
                         self.receiverName.text = self.allReceivers[0].name
                         self.selectedReceiverId = self.allReceivers[0].id
-                    //    self.elektronTable.reloadData()
+                        //    self.elektronTable.reloadData()
                         
                     }
                     
@@ -320,12 +344,16 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
                 
             }
             
-            }.resume()
+        }.resume()
         
     }
     
     
     func addToAppeal(receiverId: Int, name: String, surname: String, email: String, phone: String, adress: String, theme: String){
+        
+        let selectedDate = datePicker.date
+        let timeInterval = selectedDate.timeIntervalSince1970
+        let intDate = Int(timeInterval)
         
         let urlString = "http://46.101.38.248/api/v1/receiver/appeals/add"
         
@@ -336,7 +364,7 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
         urlRequest.httpMethod = "POST"
         
         urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        urlRequest.setValue("123123123", forHTTPHeaderField: "Authorization")
+        urlRequest.setValue(self.userToken, forHTTPHeaderField: "Authorization")
         
         let parameters: [String: Any] = [
             "receiver_id": receiverId,
@@ -345,7 +373,8 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
             "email": email,
             "phone": phone,
             "address": adress,
-            "theme": theme
+            "theme": theme,
+            "date":  "\(intDate)"
         ]
         urlRequest.httpBody = parameters.percentEscaped().data(using: .utf8)
         
@@ -353,48 +382,89 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
         
         URLSession.shared.dataTask(with: urlRequest){ (data, response, err) in
             
-            if(err == nil){
-              //  print("Error yoxdur")
-                
-                DispatchQueue.main.async {
-                    self.connView.isHidden = true
-                    if(self.doneCicked == true){
-                        
-                    self.receiverName.text = self.allReceivers[0].name
-                    self.selectedReceiverId = self.allReceivers[0].id
-                    self.nameTextField.text = ""
-                    self.surnameTextField.text = ""
-                    self.emailTextField.text = ""
-                    self.unvanTextField.text = ""
-                    self.textArea.text = ""
-                    self.numberTextField.text = ""
-                        
-                    self.warningType = "success"
-                    self.performSegue(withIdentifier: "segueToWarningModal", sender: self)
-                    }
-                    
-                }
+            let output = String(bytes: data!, encoding: .utf8)
+            print(output)
+            DispatchQueue.main.async {
+                self.connView.isHidden = true
                 
             }
-            else
-            {
-                //     print("Error var")
-                if let error = err as NSError?
-                {
-                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost{
-            
+            if(err == nil){
+                
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    let code = httpResponse.statusCode
+                    
+                    if(code == 200){
                         DispatchQueue.main.async {
                             
-                            self.checkConnIndicator.isHidden = true
-                            self.checkConnButtonView.isHidden = false
-                    
+                            self.warningType = "Əməliyyat uğurla tamamlandı"
+                            self.performSegue(withIdentifier: "segueToWarningModal", sender: self)
+                            
+                            self.receiverName.text = self.allReceivers[0].name
+                            self.selectedReceiverId = self.allReceivers[0].id
+                            self.nameTextField.text = ""
+                            self.surnameTextField.text = ""
+                            self.emailTextField.text = ""
+                            self.unvanTextField.text = ""
+                            self.textArea.text = ""
+                            self.numberTextField.text = ""
+                            self.dateLbl.text = ""
+                            self.datePicker.date = Date()
+                        }
+                        
+                    }
+                    if(code == 422){
+                        
+                        guard let data = data else { return }
+                        do{
+                            let errorList = try JSONDecoder().decode([[String : String]].self, from: data)
+                            
+                            DispatchQueue.main.async {
+                                self.warningType = errorList[0]["message"]!
+                                
+                                self.performSegue(withIdentifier: "segueToWarningModal", sender: self)
+                            }
+                            
+                        }
+                        catch _{
+                            DispatchQueue.main.async {
+                                self.view.makeToast("Xəta baş verdi")
+                            }
+                            
+                        }
+                        
+                    }
+                    if(code == 500){
+                        DispatchQueue.main.async {
+                            self.view.makeToast("Xəta baş verdi")
                         }
                     }
                 }
                 
             }
+            else
+            {
+                
+                DispatchQueue.main.async {
+                    self.connView.isHidden = true
+                    
+                }
+                if let error = err as NSError?
+                {
+                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost{
+                        
+                        DispatchQueue.main.async {
+                            
+                            self.view.makeToast("Xəta: İnternet bağlantısını yoxlayın")
+                            
+                        }
+                    }
+                    
+                }
+                
+            }
             
-            }.resume()
+        }.resume()
         
     }
     
@@ -427,5 +497,5 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
     }
-
+    
 }

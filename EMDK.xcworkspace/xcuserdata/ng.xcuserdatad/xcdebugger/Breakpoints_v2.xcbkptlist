@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "2B8A0E2F-AC3D-4BAE-8B66-168E41DEE3D7"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "1F6F7A4A-0D28-4A14-9985-B8F59DF40CCE"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -19,6 +21,7 @@
             landmarkType = "3">
             <Locations>
                <Location
+                  uuid = "1F6F7A4A-0D28-4A14-9985-B8F59DF40CCE - 325bb6e4b24f37e1"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -34,6 +37,7 @@
                   offsetFromSymbolStart = "96">
                </Location>
                <Location
+                  uuid = "1F6F7A4A-0D28-4A14-9985-B8F59DF40CCE - e3f0160a37092795"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -49,6 +53,7 @@
                   offsetFromSymbolStart = "112">
                </Location>
                <Location
+                  uuid = "1F6F7A4A-0D28-4A14-9985-B8F59DF40CCE - 56aebb7d27389f83"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -64,6 +69,7 @@
                   offsetFromSymbolStart = "268">
                </Location>
                <Location
+                  uuid = "1F6F7A4A-0D28-4A14-9985-B8F59DF40CCE - 9ba3a600398f0f30"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -84,6 +90,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "C26C7123-09E2-4FFF-BA32-D217214407D9"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -97,6 +104,7 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "C26C7123-09E2-4FFF-BA32-D217214407D9 - 832ed6fff39ea215"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -112,6 +120,7 @@
                   offsetFromSymbolStart = "796">
                </Location>
                <Location
+                  uuid = "C26C7123-09E2-4FFF-BA32-D217214407D9 - 832ed6fff39ea215"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -132,6 +141,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "51E775A5-E2C7-446F-8E35-AE57E7482515"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -148,11 +158,12 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "287A370A-82DB-4F9F-8633-811C4631FE91"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/NewsViewController.swift"
-            timestampString = "583421596.107049"
+            timestampString = "592336121.812426"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "213"
@@ -164,11 +175,12 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "4CFC6563-DB06-421D-A5CE-66E38B4074A3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EMDK/NewsViewController.swift"
-            timestampString = "583421596.107244"
+            timestampString = "592336121.812934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "284"
@@ -180,84 +192,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EMDK/QebulViewController.swift"
-            timestampString = "583278075.319747"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "QebulViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EMDK.QebulViewController.qebulBtn.getter : weak Swift.Optional&lt;__C.UIButton&gt;"
-                  moduleName = "EMDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ng/Documents/AppTest/EMDK/EMDK/QebulViewController.swift"
-                  timestampString = "576012096.667902"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "86">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EMDK.QebulViewController.qebulBtn.setter : weak Swift.Optional&lt;__C.UIButton&gt;"
-                  moduleName = "EMDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ng/Documents/AppTest/EMDK/EMDK/QebulViewController.swift"
-                  timestampString = "576012096.67133"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "106">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EMDK.QebulViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; EMDK.QebulViewController"
-                  moduleName = "EMDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ng/Documents/AppTest/EMDK/EMDK/QebulViewController.swift"
-                  timestampString = "576012096.673164"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "796">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EMDK.QebulViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;EMDK.QebulViewController&gt;"
-                  moduleName = "EMDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ng/Documents/AppTest/EMDK/EMDK/QebulViewController.swift"
-                  timestampString = "576012096.67492"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "761">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
+            uuid = "1D994CDE-6A75-456A-8BD9-48472BCB9233"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -267,10 +202,11 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "getFavoriteServices()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
             <Locations>
                <Location
+                  uuid = "1D994CDE-6A75-456A-8BD9-48472BCB9233 - 204f9c35ebada505"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -286,6 +222,7 @@
                   offsetFromSymbolStart = "353">
                </Location>
                <Location
+                  uuid = "1D994CDE-6A75-456A-8BD9-48472BCB9233 - efe5eb663865f8dd"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -306,6 +243,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "6A5F0849-5B93-4D7F-9662-DA2C5053CE04"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"

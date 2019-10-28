@@ -5,6 +5,7 @@ PODS:
     - BSImageView (= 1.0.3)
   - BSImageView (1.0.3)
   - ButtonBackgroundColor (3.0.0)
+  - IQKeyboardManagerSwift (6.5.1)
   - JWTDecode (2.3.0)
   - LGButton (1.1.6)
   - libwebp (1.0.2):
@@ -44,6 +45,7 @@ PODS:
 DEPENDENCIES:
   - BSImagePicker (~> 2.8)
   - ButtonBackgroundColor
+  - IQKeyboardManagerSwift
   - JWTDecode
   - LGButton
   - SDWebImage
@@ -58,6 +60,7 @@ SPEC REPOS:
     - BSImagePicker
     - BSImageView
     - ButtonBackgroundColor
+    - IQKeyboardManagerSwift
     - JWTDecode
     - LGButton
     - libwebp
@@ -72,6 +75,7 @@ SPEC CHECKSUMS:
   BSImagePicker: fa0c15b6740e8aa7a7b7f0fe38a71ad4cfa0ec4a
   BSImageView: a149459433a2687157d034c78e059d30ac7f2544
   ButtonBackgroundColor: 512072926e57db9ef4eb7e2240d2cc1a544adc5b
+  IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
   JWTDecode: fb77675c8049c1a7e9433c7cf448c3ce33ee4ac7
   LGButton: 9f0a7f9d3030e3f504108342f6b66d64a429371b
   libwebp: b068a3bd7c45f7460f6715be7bed1a18fd5d6b48
@@ -81,6 +85,6 @@ SPEC CHECKSUMS:
   SwiftyButton: 5b0ef314e9cf61cf8a83e456ddd1ea1f53f30598
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: f29f27aedc97e32383d68396a0151d02c613782a
+PODFILE CHECKSUM: 2e05af548b164347dfff9fc4889d7a59d1091482
 
 COCOAPODS: 1.5.3

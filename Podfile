@@ -14,7 +14,7 @@ target 'EMDK' do
   pod "BSImagePicker", "~> 2.8"
   pod 'JWTDecode'
   pod 'SDWebImageWebPCoder'
-  pod 'SDWebImage/WebP'
+  pod 'IQKeyboardManagerSwift'
   
 
 end

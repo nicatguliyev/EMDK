@@ -377,22 +377,22 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
 
         focused = true
 
-        if(UIScreen.main.bounds.height < 600){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: {
-
-                self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - self.keyboardHeight, width:self.view.frame.size.width, height:self.view.frame.size.height);
-            
-        })
-        }
-        if(UIScreen.main.bounds.height > 650 && UIScreen.main.bounds.height < 700){
-            
-             self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 110, width:self.view.frame.size.width, height:self.view.frame.size.height);
-        }
-        
-        if(UIScreen.main.bounds.height > 700 && UIScreen.main.bounds.height < 750){
-            
-            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 75, width:self.view.frame.size.width, height:self.view.frame.size.height);
-        }
+//        if(UIScreen.main.bounds.height < 600){
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: {
+//
+//                self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - self.keyboardHeight, width:self.view.frame.size.width, height:self.view.frame.size.height);
+//
+//        })
+//        }
+//        if(UIScreen.main.bounds.height > 650 && UIScreen.main.bounds.height < 700){
+//
+//             self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 110, width:self.view.frame.size.width, height:self.view.frame.size.height);
+//        }
+//
+//        if(UIScreen.main.bounds.height > 700 && UIScreen.main.bounds.height < 750){
+//
+//            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 75, width:self.view.frame.size.width, height:self.view.frame.size.height);
+//        }
         
         
         if(textField != step4.reystrTextField){
@@ -417,19 +417,19 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        if(UIScreen.main.bounds.height < 600){
-            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + self.keyboardHeight, width:self.view.frame.size.width, height:self.view.frame.size.height);
-        }
-        
-        if(UIScreen.main.bounds.height > 650 && UIScreen.main.bounds.height < 700){
-            
-            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 110, width:self.view.frame.size.width, height:self.view.frame.size.height);
-        }
-        
-        if(UIScreen.main.bounds.height > 700 && UIScreen.main.bounds.height < 750){
-            
-            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 75, width:self.view.frame.size.width, height:self.view.frame.size.height);
-        }
+//        if(UIScreen.main.bounds.height < 600){
+//            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + self.keyboardHeight, width:self.view.frame.size.width, height:self.view.frame.size.height);
+//        }
+//        
+//        if(UIScreen.main.bounds.height > 650 && UIScreen.main.bounds.height < 700){
+//            
+//            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 110, width:self.view.frame.size.width, height:self.view.frame.size.height);
+//        }
+//        
+//        if(UIScreen.main.bounds.height > 700 && UIScreen.main.bounds.height < 750){
+//            
+//            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 75, width:self.view.frame.size.width, height:self.view.frame.size.height);
+//        }
         
         
         if(textField != step4.reystrTextField){

@@ -15,20 +15,9 @@ class WarningModalController: UIViewController {
     @IBOutlet weak var warningMessage: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+            warningMessage.text = warningType
         
-        if(warningType == "email"){
-            
-            warningMessage.text = "Email düzgün formatda deyil."
-        }
-        
-        if(warningType == "Xeta")
-        {
-            warningMessage.text = "Xəta baş verdi."
-        }
-        if(warningType == "success"){
-            warningMessage.text = "Əməliyyat uğurla tamamlandı."
-        }
-     
     }
     
 

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,7 +69,7 @@
             <objects>
                 <viewController id="A4y-Pd-o8q" customClass="LoginViewController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6zN-Rm-xic">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8k-Za-7l2">
@@ -233,7 +231,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="JFx-y0-OMc"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                         <connections>
@@ -303,7 +300,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="yXY-cC-cpB"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <connections>
@@ -358,7 +354,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oAk-Jd-uHx">
-                                <rect key="frame" x="0.0" y="465.5" width="375" height="137.5"/>
+                                <rect key="frame" x="0.0" y="465.5" width="375" height="157.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -415,11 +411,11 @@
             <objects>
                 <viewController storyboardIdentifier="LoginId" id="6vn-3V-97a" customClass="LoginButtonController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="viL-Jb-fF3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KiT-q5-h0C" customClass="AsanLoginDesign" customModule="LoginWithEgov">
-                                <rect key="frame" x="32" y="296" width="311" height="75"/>
+                                <rect key="frame" x="32" y="286" width="311" height="75"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="95V-QS-Y0W"/>
@@ -529,7 +525,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ag-3p-asQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                                <rect key="frame" x="0.0" y="-20" width="375" height="165"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0lK-UW-98v">
                                         <rect key="frame" x="16" y="37.5" width="90" height="90"/>
@@ -556,7 +552,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Oj-zg-sjf">
-                                <rect key="frame" x="0.0" y="165" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="145" width="375" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" rowHeight="65" id="I6E-FJ-wnD" customClass="MenuTableCell" customModule="EMDK" customModuleProvider="target">
@@ -634,7 +630,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eq2-cl-VDQ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="936"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="956"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H68-7t-JQV">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="877"/>
@@ -645,12 +641,11 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nicat Guliyev Elyar" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o8H-fi-RtP">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o8H-fi-RtP">
                                                 <rect key="frame" x="16" y="33.5" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="LSV-er-bxX"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -660,12 +655,11 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nicat Guliyev Elyar" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfj-f5-vai">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bfj-f5-vai">
                                                 <rect key="frame" x="16" y="120" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="78R-l3-3yf"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -675,12 +669,11 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nicat Guliyev Elyar" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weH-P0-AGO">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="weH-P0-AGO">
                                                 <rect key="frame" x="16" y="206.5" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="peH-oV-TIq"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -690,12 +683,11 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nicat Guliyev Elyar" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxs-l6-ew7">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxs-l6-ew7">
                                                 <rect key="frame" x="16" y="293" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="qN6-EA-wpW"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -705,12 +697,11 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nicat Guliyev Elyar" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5X-ev-rTw">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5X-ev-rTw">
                                                 <rect key="frame" x="16" y="379.5" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="w5D-Of-drw"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -720,12 +711,11 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nicat Guliyev Elyar" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QKh-u0-Bd6">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QKh-u0-Bd6">
                                                 <rect key="frame" x="16" y="466" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="rg3-Pu-cQq"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -735,12 +725,11 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nicat Guliyev Elyar" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TW3-4Z-ONz">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TW3-4Z-ONz">
                                                 <rect key="frame" x="16" y="552.5" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="C7o-7r-c88"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -750,12 +739,11 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nicat Guliyev Elyar" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-fr-lpy">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-fr-lpy">
                                                 <rect key="frame" x="16" y="639" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="zqb-Em-3ht"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -765,12 +753,11 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nicat Guliyev Elyar" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ciZ-Ib-otN">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ciZ-Ib-otN">
                                                 <rect key="frame" x="16" y="725.5" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="aQT-uU-CnS"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -780,13 +767,12 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nicat Guliyev Elyar" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aN9-zc-FtX">
+                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aN9-zc-FtX">
                                                 <rect key="frame" x="16" y="812" width="343" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="jkt-yT-iJb"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="zRu-x0-Yo1"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -892,7 +878,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0u-ZY-NpN" customClass="LGButton" customModule="LGButton">
-                                <rect key="frame" x="0.0" y="64" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="75"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbT-tN-IGF">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
@@ -951,7 +937,7 @@
                                 </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-dU-iZ4">
-                                <rect key="frame" x="16" y="202" width="343" height="449"/>
+                                <rect key="frame" x="16" y="182" width="343" height="469"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="1EO-9I-VHU" id="ijs-91-BLJ"/>
@@ -959,7 +945,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Müraciətlərim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8X-Cc-PXR">
-                                <rect key="frame" x="16" y="161" width="114.5" height="21"/>
+                                <rect key="frame" x="16" y="141" width="114.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1002,7 +988,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxr-LV-0iA">
-                                <rect key="frame" x="16" y="80" width="343" height="804"/>
+                                <rect key="frame" x="16" y="60" width="343" height="824"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-NR-WOF">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="364"/>
@@ -1087,7 +1073,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="p4c-Pf-rRg"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                                                 <connections>
@@ -1108,7 +1093,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="M9s-6S-c4B"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 <connections>
@@ -1129,7 +1113,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="2gW-y3-Rhw"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 <connections>
@@ -1150,7 +1133,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" id="jNl-TY-cl8"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                                 <connections>
@@ -1269,7 +1251,7 @@
                                         <rect key="frame" x="0.0" y="28" width="291" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TY5-IZ-NNK" id="qZG-w8-cF2">
-                                            <rect key="frame" x="0.0" y="0.0" width="291" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="291" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1293,7 +1275,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lY-so-MFw">
-                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BİLDİRİŞLƏR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-GJ-gCd">
                                         <rect key="frame" x="16" y="20" width="120" height="20"/>
@@ -1318,7 +1300,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZsT-hq-WPV">
-                                <rect key="frame" x="0.0" y="124" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="0.0"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DİL SEÇİMİ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It9-bD-BQP">
                                         <rect key="frame" x="16" y="-9" width="120" height="18.5"/>
@@ -1338,7 +1320,7 @@
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GfE-kX-k4a">
-                                <rect key="frame" x="0.0" y="124" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="0.0"/>
                                 <subviews>
                                     <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncs-bk-6VN">
                                         <rect key="frame" x="16" y="-1" width="343" height="1"/>
@@ -1377,7 +1359,7 @@
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnn-8z-aww">
-                                <rect key="frame" x="0.0" y="124" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="0.0"/>
                                 <subviews>
                                     <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKw-wi-coM">
                                         <rect key="frame" x="16" y="-1" width="343" height="1"/>
@@ -1450,11 +1432,11 @@
             <objects>
                 <viewController id="xVW-Sl-fCv" customClass="NewsViewController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xol-1d-g50">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="syu-oj-VO0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lm5-QQ-gyS">
                                     <size key="itemSize" width="375" height="388"/>
@@ -1588,11 +1570,11 @@
                                                 <rect key="frame" x="0.0" y="28" width="343" height="59"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zL6-E8-WC3" id="5nZ-q3-qHQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="58.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cm-wI-21h">
-                                                            <rect key="frame" x="16" y="16" width="311" height="26.5"/>
+                                                            <rect key="frame" x="16" y="16" width="311" height="27"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1769,9 +1751,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Okf-Ov-xx6">
                                 <rect key="frame" x="16" y="269" width="343" height="128"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Məlumatları tam daxil edin." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4Z-M1-AMI">
-                                        <rect key="frame" x="16" y="19" width="311" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Məlumatları tam daxil edin." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4Z-M1-AMI">
+                                        <rect key="frame" x="16" y="19" width="311" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1826,10 +1808,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8d-4i-0UK">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1436"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="1456"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykU-ow-vwP">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="998.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1102.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenDone.png" translatesAutoresizingMaskIntoConstraints="NO" id="a6H-rl-R05">
                                                 <rect key="frame" x="16" y="16" width="20" height="20"/>
@@ -1906,7 +1888,6 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="g01-Ms-ZMb"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <connections>
@@ -1924,7 +1905,6 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Ggg-yP-PEj"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <connections>
@@ -1942,7 +1922,6 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="4d3-WE-cBc"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done"/>
                                                 <connections>
@@ -1960,7 +1939,6 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="pxI-zo-nPY"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                                 <connections>
@@ -1978,7 +1956,6 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Ljb-hM-Dkm"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 <connections>
@@ -1986,13 +1963,13 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QƏBUL ZAMANI MÜZAKİRƏ OLUNACAQ MƏSƏLƏ HAQQINDA QISA MƏLUMAT:*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIX-t5-sM7">
-                                                <rect key="frame" x="16" y="763" width="343" height="34.5"/>
+                                                <rect key="frame" x="16" y="867" width="343" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="csb-qW-mkk">
-                                                <rect key="frame" x="16" y="813.5" width="343" height="165"/>
+                                                <rect key="frame" x="16" y="917.5" width="343" height="165"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="165" id="22R-pn-ksy"/>
@@ -2003,6 +1980,44 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                                     <outlet property="delegate" destination="Oph-TZ-gri" id="nCT-rc-4mw"/>
                                                 </connections>
                                             </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TARIX:*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTb-tc-GOc">
+                                                <rect key="frame" x="16" y="767" width="343" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32s-QF-PKv">
+                                                <rect key="frame" x="16" y="801" width="343" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NJ-bs-ozm">
+                                                        <rect key="frame" x="5" y="25" width="306" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JoM-Qh-7lh">
+                                                        <rect key="frame" x="334" y="50" width="2" height="0.0"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" id="EKa-au-heQ"/>
+                                                            <constraint firstAttribute="width" constant="2" id="jOa-U0-D4G"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Oph-TZ-gri" id="r81-4p-mZI"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="4my-GD-D1B"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4NJ-bs-ozm" secondAttribute="trailing" constant="32" id="Vo7-XR-PB8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JoM-Qh-7lh" secondAttribute="trailing" constant="7" id="Yf3-A5-Q2u"/>
+                                                    <constraint firstItem="4NJ-bs-ozm" firstAttribute="centerY" secondItem="32s-QF-PKv" secondAttribute="centerY" id="bWR-eP-JdI"/>
+                                                    <constraint firstItem="4NJ-bs-ozm" firstAttribute="leading" secondItem="32s-QF-PKv" secondAttribute="leading" constant="5" id="fyd-4Y-Eop"/>
+                                                    <constraint firstAttribute="bottom" secondItem="JoM-Qh-7lh" secondAttribute="bottom" id="jdT-4S-l2a"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -2011,12 +2026,14 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                             <constraint firstItem="V0D-ct-N6G" firstAttribute="leading" secondItem="a6H-rl-R05" secondAttribute="trailing" constant="8" id="2Yk-Oj-2xV"/>
                                             <constraint firstItem="D6k-ca-0cc" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="4Zh-q2-hgg"/>
                                             <constraint firstItem="Daq-fZ-KkG" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="5db-cJ-RKX"/>
-                                            <constraint firstItem="cIX-t5-sM7" firstAttribute="top" secondItem="KXs-o1-bxe" secondAttribute="bottom" constant="16" id="8CQ-9C-Fu7"/>
+                                            <constraint firstItem="cIX-t5-sM7" firstAttribute="top" secondItem="KXs-o1-bxe" secondAttribute="bottom" constant="120" id="8CQ-9C-Fu7"/>
                                             <constraint firstAttribute="trailing" secondItem="UPT-aB-R7Y" secondAttribute="trailing" constant="16" id="8gS-Dv-5Ly"/>
                                             <constraint firstItem="csb-qW-mkk" firstAttribute="top" secondItem="cIX-t5-sM7" secondAttribute="bottom" constant="16" id="8ry-zW-uIV"/>
                                             <constraint firstItem="csb-qW-mkk" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="9cz-sz-SRL"/>
                                             <constraint firstItem="beR-Ye-uiv" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="Az8-gD-trk"/>
                                             <constraint firstItem="TaG-hY-Gha" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="BGz-4R-WNO"/>
+                                            <constraint firstItem="32s-QF-PKv" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="C8S-PF-aqW"/>
+                                            <constraint firstAttribute="trailing" secondItem="32s-QF-PKv" secondAttribute="trailing" constant="16" id="CIT-xZ-uwh"/>
                                             <constraint firstAttribute="trailing" secondItem="csb-qW-mkk" secondAttribute="trailing" constant="16" id="FKK-Ka-H2c"/>
                                             <constraint firstAttribute="trailing" secondItem="1J3-7S-OcX" secondAttribute="trailing" constant="16" id="FyH-t7-Dmh"/>
                                             <constraint firstItem="VVn-7R-03n" firstAttribute="top" secondItem="exv-WO-BhR" secondAttribute="bottom" constant="20" id="HDh-Vg-bBF"/>
@@ -2025,17 +2042,21 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                             <constraint firstAttribute="trailing" secondItem="byv-Zp-dP3" secondAttribute="trailing" constant="16" id="Lrt-EM-LB4"/>
                                             <constraint firstItem="byv-Zp-dP3" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="M2t-ye-lVx"/>
                                             <constraint firstItem="AgW-63-QaQ" firstAttribute="top" secondItem="beR-Ye-uiv" secondAttribute="bottom" constant="20" id="MZx-Am-jDB"/>
+                                            <constraint firstItem="eTb-tc-GOc" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="Mjh-e3-MIb"/>
                                             <constraint firstAttribute="trailing" secondItem="D6k-ca-0cc" secondAttribute="trailing" constant="16" id="Neg-7k-bc3"/>
+                                            <constraint firstItem="32s-QF-PKv" firstAttribute="top" secondItem="eTb-tc-GOc" secondAttribute="bottom" constant="16" id="QDX-mm-Gql"/>
                                             <constraint firstItem="VVn-7R-03n" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="RE8-Zq-xUL"/>
                                             <constraint firstAttribute="trailing" secondItem="cIX-t5-sM7" secondAttribute="trailing" constant="16" id="RXn-LM-Tgg"/>
                                             <constraint firstItem="CYi-7I-OTe" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="Rax-dr-58U"/>
                                             <constraint firstAttribute="trailing" secondItem="V0D-ct-N6G" secondAttribute="trailing" constant="16" id="T7z-1M-cV3"/>
                                             <constraint firstAttribute="trailing" secondItem="CYi-7I-OTe" secondAttribute="trailing" constant="16" id="Tn5-uz-blL"/>
+                                            <constraint firstItem="eTb-tc-GOc" firstAttribute="top" secondItem="KXs-o1-bxe" secondAttribute="bottom" constant="20" id="Uaf-yg-c7G"/>
                                             <constraint firstItem="exv-WO-BhR" firstAttribute="top" secondItem="AgW-63-QaQ" secondAttribute="bottom" constant="16" id="Umf-LP-MoQ"/>
                                             <constraint firstItem="TaG-hY-Gha" firstAttribute="top" secondItem="1J3-7S-OcX" secondAttribute="bottom" constant="20" id="WOa-0I-Nnr"/>
                                             <constraint firstItem="D6k-ca-0cc" firstAttribute="top" secondItem="CYi-7I-OTe" secondAttribute="bottom" constant="16" id="X0M-Li-Nse"/>
                                             <constraint firstAttribute="trailing" secondItem="beR-Ye-uiv" secondAttribute="trailing" constant="16" id="XH8-0B-ybK"/>
                                             <constraint firstItem="exv-WO-BhR" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="XTD-Sx-1wn"/>
+                                            <constraint firstAttribute="trailing" secondItem="eTb-tc-GOc" secondAttribute="trailing" constant="16" id="YhH-2m-VE3"/>
                                             <constraint firstItem="UPT-aB-R7Y" firstAttribute="leading" secondItem="ykU-ow-vwP" secondAttribute="leading" constant="16" id="aTz-7g-HS5"/>
                                             <constraint firstAttribute="trailing" secondItem="9K2-Ae-CfG" secondAttribute="trailing" constant="16" id="bWG-F9-n30"/>
                                             <constraint firstAttribute="trailing" secondItem="TaG-hY-Gha" secondAttribute="trailing" constant="16" id="blF-hl-xK3"/>
@@ -2081,6 +2102,9 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                     <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="bootomConst" destination="eC7-jK-Cx3" id="C1k-RQ-swD"/>
+                        <outlet property="dateLbl" destination="4NJ-bs-ozm" id="IwO-dY-RQF"/>
+                        <outlet property="dateTxtField" destination="JoM-Qh-7lh" id="2WP-e8-iwi"/>
+                        <outlet property="dateView" destination="32s-QF-PKv" id="2Uf-Pg-65D"/>
                         <outlet property="emailTextField" destination="exv-WO-BhR" id="MQ9-P0-ixp"/>
                         <outlet property="nameTextField" destination="byv-Zp-dP3" id="OaJ-Rb-lPq"/>
                         <outlet property="numberTextField" destination="UPT-aB-R7Y" id="bcM-Lm-9pM"/>
@@ -2098,18 +2122,18 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8F-3a-jJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2078" y="3631"/>
+            <point key="canvasLocation" x="2077.5999999999999" y="3630.5847076461773"/>
         </scene>
         <!--News Detail Controller-->
         <scene sceneID="fNe-Wg-Onw">
             <objects>
                 <viewController id="Xuk-by-4FF" customClass="NewsDetailController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oDT-VU-MRS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imw-j4-G8A">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5u-vO-oJi">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
@@ -2199,7 +2223,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
             <objects>
                 <viewController id="IIK-Z0-cQV" customClass="ElectronViewController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kc1-I9-EKF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkT-Bc-ZlD">
@@ -2251,7 +2275,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7RX-Yt-G1m">
-                                <rect key="frame" x="16" y="76" width="343" height="524"/>
+                                <rect key="frame" x="16" y="76" width="343" height="544"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="IIK-Z0-cQV" id="HLN-5p-bhE"/>
@@ -2259,7 +2283,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                 </connections>
                             </tableView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NUY-3X-M75">
-                                <rect key="frame" x="16" y="76" width="343" height="524"/>
+                                <rect key="frame" x="16" y="76" width="343" height="544"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="dataSource" destination="IIK-Z0-cQV" id="KdA-ny-1Ev"/>
@@ -2305,7 +2329,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
             <objects>
                 <viewController storyboardIdentifier="main" id="A53-rA-REG" customClass="CustomSWRevealController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cuX-Hq-n99">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="OFf-BW-2yw"/>
@@ -2325,7 +2349,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V5r-G0-mE8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="6Xz-uK-yvY">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.36562534330000002" green="0.4775633648" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -2347,7 +2371,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GxF-ne-nel" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Kgo-Bh-dPN">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -2372,7 +2396,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="764-mL-IKI">
-                                <rect key="frame" x="16" y="80" width="343" height="567"/>
+                                <rect key="frame" x="16" y="60" width="343" height="587"/>
                                 <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ZwC-vr-gVH" id="laj-t8-59U"/>
@@ -2405,7 +2429,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ec3-FZ-YjF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wdv-EP-prS">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.5568627451" green="0.2470588235" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -2426,14 +2450,14 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="DUT-zO-6hT" customClass="ErizeViewController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QuM-0m-NgX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqC-52-0xu">
-                                <rect key="frame" x="0.0" y="166" width="375" height="501"/>
+                                <rect key="frame" x="0.0" y="102" width="375" height="521"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3b-0a-roP" customClass="StepIndicatorView" customModule="StepIndicator">
-                                <rect key="frame" x="16" y="80" width="343" height="70"/>
+                                <rect key="frame" x="16" y="16" width="343" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="FKr-Ou-xuk"/>
@@ -2514,7 +2538,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ups-fr-Xcb">
-                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXo-tO-XpN">
                                         <rect key="frame" x="8" y="5" width="50" height="50"/>
@@ -2565,7 +2589,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cra-Fe-nIy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TGc-0D-cyg">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2586,7 +2610,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wQf-ln-ZsJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eTq-VT-YFm">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2607,7 +2631,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7WY-jl-u4g" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="67b-Kr-WYA">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2636,7 +2660,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
         <image name="test.png" width="1506" height="934"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="620-7g-mzH"/>
+        <segue reference="6lB-p1-8qY"/>
         <segue reference="hf5-BT-MiX"/>
         <segue reference="8H6-B4-EyD"/>
         <segue reference="pf1-Sy-ECH"/>
