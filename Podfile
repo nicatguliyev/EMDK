@@ -15,6 +15,6 @@ target 'EMDK' do
   pod 'JWTDecode'
   pod 'SDWebImageWebPCoder'
   pod 'IQKeyboardManagerSwift'
-  
+  pod 'AnyFormatKit'
 
 end

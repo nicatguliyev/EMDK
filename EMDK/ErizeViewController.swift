@@ -13,6 +13,7 @@ import StepIndicator
 import Photos
 import BSImagePicker
 import LoginWithEgov
+import AnyFormatKit
 
 
 struct PurposeModel: Decodable {
@@ -20,6 +21,12 @@ struct PurposeModel: Decodable {
     let title: String
     let deadline: String
     let is_plan: Int
+}
+
+
+struct PayResponseModel:Decodable {
+    let success: Bool?
+    let message: String?
 }
 
 struct PurposeDataModel{
@@ -48,21 +55,26 @@ struct RegionDataModel{
 }
 
 struct AppealResponseModel: Decodable {
+    let data: AppealId?
     let responseEgov: ResponseEgovModel
 }
 
 struct ResponseEgovModel:Decodable {
-        let Sened_Nomresi: String
-        let Son_Icra_Tarixi: String
-        let Error: String
+    let Sened_Nomresi: String
+    let Son_Icra_Tarixi: String
+    let Error: String
 }
 
 struct EgovErrorModel:Decodable {
     let message: String
 }
 
-class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource{
+struct AppealId:Decodable {
+    let id: Int?
+}
 
+class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource{
+    
     var phoneTextField = UITextField()
     var mailTextField = UITextField()
     var nameTextField = UITextField()
@@ -119,7 +131,10 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     var subServiceId = 0
     
     var isPlan = 0
-
+    var appealId = 0
+    
+    var payUrl = ""
+    
     
     @IBOutlet weak var stepIndicator: StepIndicatorView!
     @IBOutlet weak var horizontalScrollView: UIScrollView!
@@ -132,10 +147,10 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         } else {
             // Fallback on earlier versions
         }
-    
-
-       initView()
-       addPages()
+        
+        
+        initView()
+        addPages()
         
         stepIndicator.layer.shadowOffset = CGSize(width: 0, height: 1)
         stepIndicator.layer.shadowColor = UIColor.lightGray.cgColor
@@ -144,8 +159,8 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         stepIndicator.layer.masksToBounds = false
         stepIndicator.circleStrokeWidth = 1.0
         stepIndicator.circleRadius = 10
-
-    NotificationCenter.default.addObserver(
+        
+        NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillShow),
             name: UIResponder.keyboardWillShowNotification,
@@ -169,8 +184,8 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             self.configureStep7()
         })
         
-      LoginController.shared.getFinalToken{(token) in
-        self.userToken = token
+        LoginController.shared.getFinalToken{(token) in
+            self.userToken = token
         }
         
         if(subServiceId == 0){
@@ -193,7 +208,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             let keyboardRectangle = keyboardFrame.cgRectValue
             
             keyboardHeight = keyboardRectangle.height
-         
+            
         }
     }
     
@@ -260,7 +275,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         }
         if(stepIndicator.currentStep == 2){
             horizontalScrollView.setContentOffset(CGPoint(x: self.view.frame.width, y: 0), animated: true)
-           stepIndicator.currentStep = 1
+            stepIndicator.currentStep = 1
         }
         if(stepIndicator.currentStep == 3){
             horizontalScrollView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat(2), y: 0), animated: true)
@@ -268,7 +283,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         }
         if(stepIndicator.currentStep == 4){
             horizontalScrollView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat(3), y: 0), animated: true)
-           stepIndicator.currentStep = 3
+            stepIndicator.currentStep = 3
         }
         if(stepIndicator.currentStep == 5){
             horizontalScrollView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat(4), y: 0), animated: true)
@@ -276,24 +291,24 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         }
         if(stepIndicator.currentStep == 6){
             horizontalScrollView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat(5), y: 0), animated: true)
-           stepIndicator.currentStep = 5
+            stepIndicator.currentStep = 5
             self.rightButton.isHidden = false
-
+            
         }
-     
+        
         
     }
     
     @objc func nextClicked(){
-      resignAllTextFields()
+        resignAllTextFields()
         
-        if(stepIndicator.currentStep == 5)
-        {
-            
-           stepIndicator.currentStep = 6
-            self.rightButton.isHidden = true
-            horizontalScrollView.setContentOffset(CGPoint(x: view.frame.width * CGFloat(6), y: 0), animated: true)
-        }
+        //        if(stepIndicator.currentStep == 5)
+        //        {
+        //
+        //           stepIndicator.currentStep = 6
+        //            self.rightButton.isHidden = true
+        //            horizontalScrollView.setContentOffset(CGPoint(x: view.frame.width * CGFloat(6), y: 0), animated: true)
+        //        }
         
         if(stepIndicator.currentStep == 4)
         {
@@ -329,28 +344,28 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             stepIndicator.currentStep = 1
             horizontalScrollView.setContentOffset(CGPoint(x: view.frame.width, y: 0), animated: true)
         }
-     
- 
+        
+        
     }
     
     
     func addPages(){
         
-           let screenWidth = UIScreen.main.bounds.size.width
+        let screenWidth = UIScreen.main.bounds.size.width
         
-         horizontalScrollView.contentSize = CGSize(width: screenWidth * CGFloat(7), height: horizontalScrollView.frame.height)
+        horizontalScrollView.contentSize = CGSize(width: screenWidth * CGFloat(7), height: horizontalScrollView.frame.height)
         
-         step1 = Bundle.main.loadNibNamed("Step1", owner: self, options: nil)?.first as! Step1
+        step1 = Bundle.main.loadNibNamed("Step1", owner: self, options: nil)?.first as! Step1
         
-         step2 = Bundle.main.loadNibNamed("Step2", owner: self, options: nil)?.first as! Step2
+        step2 = Bundle.main.loadNibNamed("Step2", owner: self, options: nil)?.first as! Step2
         
-         step3 = Bundle.main.loadNibNamed("Step3", owner: self, options: nil)?.first as! Step3
+        step3 = Bundle.main.loadNibNamed("Step3", owner: self, options: nil)?.first as! Step3
         
-         step4 = Bundle.main.loadNibNamed("Step4", owner: self, options: nil)?.first as! Step4
+        step4 = Bundle.main.loadNibNamed("Step4", owner: self, options: nil)?.first as! Step4
         
-         step5 = Bundle.main.loadNibNamed("Step5", owner: self, options: nil)?.first as! Step5
+        step5 = Bundle.main.loadNibNamed("Step5", owner: self, options: nil)?.first as! Step5
         
-         step6 = Bundle.main.loadNibNamed("Step6", owner: self, options: nil)?.first as! Step6
+        step6 = Bundle.main.loadNibNamed("Step6", owner: self, options: nil)?.first as! Step6
         
         step7 = Bundle.main.loadNibNamed("Step7", owner: self, options: nil)?.first as! Step7
         
@@ -368,91 +383,91 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             mailTextField.resignFirstResponder()
             focused = false
         }
-
+        
         return true
-
+        
     }
-
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-
+        
         focused = true
-
-//        if(UIScreen.main.bounds.height < 600){
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: {
-//
-//                self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - self.keyboardHeight, width:self.view.frame.size.width, height:self.view.frame.size.height);
-//
-//        })
-//        }
-//        if(UIScreen.main.bounds.height > 650 && UIScreen.main.bounds.height < 700){
-//
-//             self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 110, width:self.view.frame.size.width, height:self.view.frame.size.height);
-//        }
-//
-//        if(UIScreen.main.bounds.height > 700 && UIScreen.main.bounds.height < 750){
-//
-//            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 75, width:self.view.frame.size.width, height:self.view.frame.size.height);
-//        }
+        
+        //        if(UIScreen.main.bounds.height < 600){
+        //        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: {
+        //
+        //                self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - self.keyboardHeight, width:self.view.frame.size.width, height:self.view.frame.size.height);
+        //
+        //        })
+        //        }
+        //        if(UIScreen.main.bounds.height > 650 && UIScreen.main.bounds.height < 700){
+        //
+        //             self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 110, width:self.view.frame.size.width, height:self.view.frame.size.height);
+        //        }
+        //
+        //        if(UIScreen.main.bounds.height > 700 && UIScreen.main.bounds.height < 750){
+        //
+        //            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y - 75, width:self.view.frame.size.width, height:self.view.frame.size.height);
+        //        }
         
         
         if(textField != step4.reystrTextField){
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor.purple.cgColor
+            textField.layer.borderWidth = 1
+            textField.layer.cornerRadius = 5
+            textField.layer.borderColor = UIColor.purple.cgColor
         }
-        
+            
         else
         {
             step4.textFieldView.layer.borderWidth = 1
-             step4.textFieldView.layer.cornerRadius = 5
-             step4.textFieldView.layer.borderColor = UIColor.purple.cgColor
+            step4.textFieldView.layer.cornerRadius = 5
+            step4.textFieldView.layer.borderColor = UIColor.purple.cgColor
         }
         
         if(textField == phoneTextField)
         {
             
         }
-
+        
     }
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-//        if(UIScreen.main.bounds.height < 600){
-//            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + self.keyboardHeight, width:self.view.frame.size.width, height:self.view.frame.size.height);
-//        }
-//        
-//        if(UIScreen.main.bounds.height > 650 && UIScreen.main.bounds.height < 700){
-//            
-//            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 110, width:self.view.frame.size.width, height:self.view.frame.size.height);
-//        }
-//        
-//        if(UIScreen.main.bounds.height > 700 && UIScreen.main.bounds.height < 750){
-//            
-//            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 75, width:self.view.frame.size.width, height:self.view.frame.size.height);
-//        }
+        //        if(UIScreen.main.bounds.height < 600){
+        //            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + self.keyboardHeight, width:self.view.frame.size.width, height:self.view.frame.size.height);
+        //        }
+        //        
+        //        if(UIScreen.main.bounds.height > 650 && UIScreen.main.bounds.height < 700){
+        //            
+        //            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 110, width:self.view.frame.size.width, height:self.view.frame.size.height);
+        //        }
+        //        
+        //        if(UIScreen.main.bounds.height > 700 && UIScreen.main.bounds.height < 750){
+        //            
+        //            self.view.frame = CGRect(x:self.view.frame.origin.x, y:self.view.frame.origin.y + 75, width:self.view.frame.size.width, height:self.view.frame.size.height);
+        //        }
         
         
         if(textField != step4.reystrTextField){
-        textField.layer.borderWidth = 1.5
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
+            textField.layer.borderWidth = 1.5
+            textField.layer.cornerRadius = 5
+            textField.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
         }
         else
         {
             step4.textFieldView.layer.borderWidth = 1.5
-           step4.textFieldView.layer.cornerRadius = 5
+            step4.textFieldView.layer.cornerRadius = 5
             step4.textFieldView.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
         }
-       
+        
     }
     
-
+    
     @objc func huquqiClicked(){
         
         
         if(huquqiBtn.backgroundColor != purpleColor){
-        huquqiBtn.backgroundColor = purpleColor
-        huquqiBtn.setTitleColor(UIColor.white, for: .normal)
+            huquqiBtn.backgroundColor = purpleColor
+            huquqiBtn.setTitleColor(UIColor.white, for: .normal)
             if(UIScreen.main.bounds.height < 600){
                 step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
             }
@@ -496,8 +511,8 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         huquqiBtn.setTitleColor(purpleColor, for: .normal)
         
         if(fizikiBtn.backgroundColor != purpleColor){
-        fizikiBtn.backgroundColor = purpleColor
-        fizikiBtn.setTitleColor(UIColor.white, for: .normal)
+            fizikiBtn.backgroundColor = purpleColor
+            fizikiBtn.setTitleColor(UIColor.white, for: .normal)
             step2.frame = CGRect(x: view.frame.size.width * CGFloat(1), y: 0, width: view.frame.size.width, height: 360)
         }
         else
@@ -530,11 +545,11 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         step2.seriaTextfield.resignFirstResponder()
     }
     
-
+    
     @objc func test(){
         sendParameterToPopup = "erize"
         step3.meqsedBtn2.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.5)
-         performSegue(withIdentifier: "segueToPopup", sender: self)
+        performSegue(withIdentifier: "segueToPopup", sender: self)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
             self.step3.meqsedBtn2.backgroundColor = UIColor.clear
         })
@@ -545,7 +560,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         
         
         if(UIScreen.main.bounds.height < 600){
-             step1.frame = CGRect(x: view.frame.size.width * CGFloat(0), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
+            step1.frame = CGRect(x: view.frame.size.width * CGFloat(0), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
         }
         else{
             step1.frame = CGRect(x: view.frame.size.width * CGFloat(0), y: 0, width: view.frame.size.width, height: 430)
@@ -555,6 +570,12 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         
         let nameSurname = ElectronViewController.model!.name + " " + ElectronViewController.model!.surname
         let fatherName = ElectronViewController.model!.fatherName
+        
+        let lbl = UILabel(frame: CGRect(x: 15, y: 0, width: 41, height: 30))
+        lbl.text = " +994"
+        lbl.font = lbl.font.withSize(14)
+        step1.phoneTextField.leftViewMode = .always
+        step1.phoneTextField.leftView = lbl
         
         step1.nameLbl.text = nameSurname + " " + fatherName
         phoneTextField = step1.phoneTextField
@@ -582,7 +603,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         step2.segmentView.layer.borderWidth = 1
         step2.segmentView.layer.masksToBounds = true
         step2.step2HeaderView.layer.cornerRadius = 10
-         step2.step2ScrollView.layer.cornerRadius = 10
+        step2.step2ScrollView.layer.cornerRadius = 10
         fizikiBtn = step2.fizikiBtn
         huquqiBtn = step2.huquqiBtn
         nameTextField = step2.nameTextField
@@ -608,7 +629,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         step3.frame = CGRect(x: view.frame.size.width * CGFloat(2), y: 0, width: view.frame.size.width, height: 310)
         step3.headerView.layer.cornerRadius = 10
         step3.scrollView.layer.cornerRadius = 10
-      
+        
         meqsedLbl = step3.meqsedLbl
         meqsedBtn = step3.meqsedBtn
         step3.meqsedBtn.layer.cornerRadius = 8
@@ -625,8 +646,8 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         else
         {
             if(isPlan == 1){
-            step3.passportLbl.isHidden = false
-            step3.switch.isHidden = false
+                step3.passportLbl.isHidden = false
+                step3.switch.isHidden = false
             }
             else
             {
@@ -651,10 +672,10 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         else{
             step4.frame = CGRect(x: view.frame.size.width * CGFloat(3), y: 0, width: view.frame.size.width, height: 410)
         }
-
+        
         step4.headerView.layer.cornerRadius = 10
         step4.scrollView.layer.cornerRadius = 10
-       
+        
         step4.rayonBtn.layer.cornerRadius = 8
         step4.rayonBtn.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
         step4.rayonBtn.layer.borderWidth = 1
@@ -682,7 +703,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         else{
             step5.frame = CGRect(x: view.frame.size.width * CGFloat(4), y: 0, width: view.frame.size.width, height: 400)
         }
-
+        
         step5.headerView.layer.cornerRadius = 10
         step5.scrollView.layer.cornerRadius = 10
         step5.muddetLbl.text = "1 Gün"
@@ -703,12 +724,12 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     
     func configureStep6(){
         
-        if(UIScreen.main.bounds.height < 600){
-            step6.frame = CGRect(x: view.frame.size.width * CGFloat(5), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
-        }
-        else{
-            step6.frame = CGRect(x: view.frame.size.width * CGFloat(5), y: 0, width: view.frame.size.width, height: 340)
-        }
+        //   if(UIScreen.main.bounds.height < 600){
+        step6.frame = CGRect(x: view.frame.size.width * CGFloat(5), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
+        //   }
+        //  else{
+        //       step6.frame = CGRect(x: view.frame.size.width * CGFloat(5), y: 0, width: view.frame.size.width, /height: 450)
+        //    }
         
         step6.headerView.layer.cornerRadius = 10
         step6.scrollView.layer.cornerRadius = 10
@@ -724,9 +745,24 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         step6.fileCollectionView.register(UINib(nibName:"FileCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
         self.fileCollectionView = step6.fileCollectionView
         self.fileCollectionViewHeight = step6.collectionHeightConst
-  
+        
+        step6.odeBtn.layer.cornerRadius = 8
+        step6.odeBtn.addTarget(self, action: #selector(sendAppeal), for: .touchUpInside)
+        step6.imtinaBtn.layer.borderWidth = 1
+        step6.imtinaBtn.layer.cornerRadius = 8
+        step6.imtinaBtn.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
+        step6.warningTableView.layer.cornerRadius = 10
+        step6.imtinaBtn.addTarget(self, action: #selector(cancelAppeal), for: .touchUpInside)
+        
+        //  step7.warningView.layer.cornerRadius = 8
+        let cellId = "WarningCellId"
+        step6.warningTableView.register(UINib(nibName: "WarningTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
+        step6.warningTableView.delegate = self
+        step6.warningTableView.dataSource = self
+        step6.warningTableView.isHidden  = true
+        
         horizontalScrollView.addSubview(step6)
-      
+        
     }
     
     func configureStep7(){
@@ -734,37 +770,54 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         step7.frame = CGRect(x: view.frame.size.width * CGFloat(6), y: 0, width: view.frame.size.width, height: horizontalScrollView.frame.height)
         step7.headerView.layer.cornerRadius = 10
         step7.scrollView.layer.cornerRadius = 10
-        
+        //
         step7.odeBtn.layer.cornerRadius = 8
-        step7.odeBtn.addTarget(self, action: #selector(sendAppeal), for: .touchUpInside)
+        step7.odeBtn.addTarget(self, action: #selector(pay1), for: .touchUpInside)
+        step7.ode2Btn.addTarget(self, action: #selector(pay2), for: .touchUpInside)
+        step7.ode2Btn.layer.cornerRadius = 8
         step7.imtinaBtn.layer.borderWidth = 1
         step7.imtinaBtn.layer.cornerRadius = 8
         step7.imtinaBtn.layer.borderColor = UIColor(red: 233/255, green: 239/255, blue: 244/255, alpha: 1).cgColor
-        step7.warningTableView.layer.cornerRadius = 10
-        step7.imtinaBtn.addTarget(self, action: #selector(cancelAppeal), for: .touchUpInside)
+        step7.warningVieew.layer.cornerRadius = 10
+        //        step7.warningTableView.layer.cornerRadius = 10
+                step7.imtinaBtn.addTarget(self, action: #selector(cancelAppeal2), for: .touchUpInside)
+        //
+        //      //  step7.warningView.layer.cornerRadius = 8
+        //        let cellId = "WarningCellId"
+        //        step7.warningTableView.register(UINib(nibName: "WarningTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
+        //        step7.warningTableView.delegate = self
+        //        step7.warningTableView.dataSource = self
+        //        step7.warningTableView.isHidden  = true
         
-      //  step7.warningView.layer.cornerRadius = 8
-        let cellId = "WarningCellId"
-        step7.warningTableView.register(UINib(nibName: "WarningTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
-        step7.warningTableView.delegate = self
-        step7.warningTableView.dataSource = self
-        step7.warningTableView.isHidden  = true
         
         horizontalScrollView.addSubview(step7)
         
     }
     
+    @objc func pay1(){
+        payDovlet()
+    }
+    
+    @objc func pay2(){
+        payXidmet()
+    }
+    
     
     @objc func sendAppeal(){
-      addToAppeal()
+        addToAppeal()
     }
     
     @objc func cancelAppeal(){
         self.navigationController?.popViewController(animated: true)
     }
     
-    @objc func addNewImage(){
+    @objc func cancelAppeal2(){
+           self.navigationController?.popViewController(animated: true)
+       }
        
+    
+    @objc func addNewImage(){
+        
         if(photoArray.count == 6){
             self.view.makeToast("Maksimum 6 ədəd fayl seçə bilərsiniz")
         }
@@ -791,7 +844,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                 
             }, completion: nil)
         }
-       
+        
     }
     
     func reloadCollectionView(){
@@ -812,43 +865,43 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             }
         }
         
-     
+        
         if(photoArray.count % 2 == 1)
         {
             self.fileCollectionViewHeight.constant  = CGFloat((photoArray.count/2 + 1)*85)
-            
-            if(horizontalScrollView.frame.size.height > 340.0 + fileCollectionViewHeight.constant)
-            {
-                step6.frame.size.height = 340.0 + fileCollectionViewHeight.constant
-            }
-            
-            else
 
-            {
-               
-                step6.frame.size.height = horizontalScrollView.frame.height
-            }
-            
+//            if(horizontalScrollView.frame.size.height > 340.0 + fileCollectionViewHeight.constant)
+//            {
+//                step6.frame.size.height = 340.0 + fileCollectionViewHeight.constant
+//            }
+//
+//            else
+//
+//            {
+//
+//                step6.frame.size.height = horizontalScrollView.frame.height
+//            }
+
         }
         else
         {
             self.fileCollectionViewHeight.constant  = CGFloat((photoArray.count/2)*85)
-            
-            if(horizontalScrollView.frame.size.height > 340.0 + fileCollectionViewHeight.constant)
-            {
-                step6.frame.size.height = 340.0 + fileCollectionViewHeight.constant
-            }
-                
-            else
-                
-            {
-                
-                step6.frame.size.height = horizontalScrollView.frame.height
-            }
-            
-            
+//
+//            if(horizontalScrollView.frame.size.height > 340.0 + fileCollectionViewHeight.constant)
+//            {
+//                step6.frame.size.height = 340.0 + fileCollectionViewHeight.constant
+//            }
+//
+//            else
+//
+//            {
+//
+//                step6.frame.size.height = horizontalScrollView.frame.height
+//            }
+
+
         }
-                self.fileCollectionView?.reloadData()
+        self.fileCollectionView?.reloadData()
         
     }
     
@@ -857,14 +910,14 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     @objc func chooseRegion(){
         sendParameterToPopup = "region"
         performSegue(withIdentifier: "segueToPopup", sender: self)
-   
+        
         
     }
     
     @objc func chooseTime(){
         sendParameterToPopup = "time"
         performSegue(withIdentifier: "segueToPopup", sender: self)
-    
+        
     }
     
     @objc func removeImage(sender: UIButton){
@@ -882,30 +935,30 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             self.fileCollectionViewHeight.constant  = CGFloat((photoArray.count/2)*85)
         }
         
-        if(horizontalScrollView.frame.size.height > 340.0 + fileCollectionViewHeight.constant)
-        {
-            step6.frame.size.height = 340.0 + fileCollectionViewHeight.constant
-        }
-            
-        else
-            
-        {
-            
-            step6.frame.size.height = horizontalScrollView.frame.height
-        }
+        //        if(horizontalScrollView.frame.size.height > 340.0 + fileCollectionViewHeight.constant)
+        //        {
+        //            step6.frame.size.height = 340.0 + fileCollectionViewHeight.constant
+        //        }
+        //
+        //        else
+        //
+        //        {
+        
+        step6.frame.size.height = horizontalScrollView.frame.height
+        //        }
         
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     if(segue.identifier == "segueToPopup")
-     {
-        let vc = segue.destination as! ErizePopupViewController
-        vc.type = self.sendParameterToPopup
-        vc.puposes = self.allPusrposes
-        vc.setReceiverName = self.setName
-        vc.allRegions = self.allRegions
-        vc.deadlines = self.deadlineArray
+        if(segue.identifier == "segueToPopup")
+        {
+            let vc = segue.destination as! ErizePopupViewController
+            vc.type = self.sendParameterToPopup
+            vc.puposes = self.allPusrposes
+            vc.setReceiverName = self.setName
+            vc.allRegions = self.allRegions
+            vc.deadlines = self.deadlineArray
         }
         if(segue.identifier == "segueToImageController"){
             
@@ -918,6 +971,10 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             vc.date = self.date
             vc.number = self.senedNumber
             vc.VC = self
+        }
+        if(segue.identifier == "segueToWebView"){
+            let VC = segue.destination as! PayViewController
+            VC.url = self.payUrl
         }
     }
     
@@ -933,7 +990,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellIdentifier", for: indexPath) as! FileCollectionViewCell
         
         //in this example I added a label named "title" into the MyCollectionCell class
-       // cell.title.text = self.objects[indexPath.item]
+        // cell.title.text = self.objects[indexPath.item]
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.clipsToBounds = true
         
@@ -952,7 +1009,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         self.selectedImage = self.photoArray[indexPath.row]
         performSegue(withIdentifier: "segueToImageController", sender: self)
         
-       
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -1009,7 +1066,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                         
                         self.allPusrposes.append(model)
                         
-                    
+                        
                         self.deadlineString = self.allPusrposes[0].deadline
                         self.deadlineArray = self.deadlineString.components(separatedBy: ",")
                         self.selectedPurpose = "\(self.allPusrposes[0].id)"
@@ -1027,10 +1084,10 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                 {
                     DispatchQueue.main.async {
                         
-                       self.meqsedLbl.text = self.allPusrposes[0].title
-                       self.step5.muddetLbl.text = self.deadlineArray[0] + " gün"
+                        self.meqsedLbl.text = self.allPusrposes[0].title
+                        self.step5.muddetLbl.text = self.deadlineArray[0] + " gün"
                         
-                       self.getAllRegions()
+                        self.getAllRegions()
                         
                     }
                     
@@ -1054,7 +1111,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                 
             }
             
-            }.resume()
+        }.resume()
         
     }
     
@@ -1108,7 +1165,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                 if (err == nil)
                 {
                     DispatchQueue.main.async {
-
+                        
                         self.meqsedLbl.text = self.allPusrposes[0].title
                         self.step5.muddetLbl.text = self.deadlineArray[0] + " gün"
                         self.getAllRegions()
@@ -1134,7 +1191,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                 
             }
             
-            }.resume()
+        }.resume()
         
     }
     
@@ -1201,7 +1258,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                 
             }
             
-            }.resume()
+        }.resume()
         
     }
     
@@ -1213,7 +1270,14 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         let nameParameter = nameSurname + " " + fatherName // 1-ci parameter
         let pinParameter = ElectronViewController.model?.pin // 2 ci parameter
         let passportParamater = step2.seriaTextfield.text // 3 cu parameter
-        let phoneParameter = step1.phoneTextField.text // 4 cu parameter
+       // let phoneParameter = step1.phoneTextField.text // 4 cu parameter
+        var phoneParameter = ""
+        if(step1.phoneTextField.text == ""){
+            phoneParameter = ""
+        }
+        else{
+            phoneParameter = "+994" + step1.phoneTextField.text!
+        }
         let emailParazmeter = step1.mailTextField.text // 5 ci parameter
         var personTypeParameter = "" // 6 ci parameter
         var personNameParameter = ""
@@ -1293,10 +1357,10 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             fayl6Parameter = base64Array[5]
         }
         
-      
-
         
-      //  let urlString = "https://ticket.ady.az/test.php"
+        self.step7.warningVieew.isHidden  = true
+        
+        //  let urlString = "https://ticket.ady.az/test.php"
         let urlString = "http://46.101.38.248/api/v1/appeals/add"
         guard let url = URL(string: urlString)
             else {return}
@@ -1311,7 +1375,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             "name": nameParameter,
             "pin": pinParameter!,
             "passport_number": passportParamater!,
-            "phone": phoneParameter!,
+            "phone": phoneParameter,
             "email": emailParazmeter!,
             "person_type": personTypeParameter,
             "person_voen": voenparameter!,
@@ -1338,26 +1402,40 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             
             if(err == nil){
                 guard let data = data else { return }
-              //  let outputStr  = String(data: data, encoding: String.Encoding.utf8) as String?
-             //   print(outputStr)
+                // let outputStr  = String(data: data, encoding: String.Encoding.utf8) as String?
+                //  print(outputStr)
                 do{
                     if (try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary) != nil {
                         let fullResponse = try  JSONDecoder().decode(AppealResponseModel.self, from: data)
+                        //print(fullResponse)
                         self.date = fullResponse.responseEgov.Son_Icra_Tarixi
                         self.senedNumber = fullResponse.responseEgov.Sened_Nomresi
+                        self.appealId = (fullResponse.data?.id)!
                         DispatchQueue.main.async {
-                            self.performSegue(withIdentifier: "segueToCompletionModal", sender: self)
-                            self.step7.warningTableView.isHidden = true
+                            //self.performSegue(withIdentifier: "segueToCompletionModal", sender: self)
+                             self.step6.warningTableView.isHidden = true
+                            if(self.stepIndicator.currentStep == 5)
+                            {
+                                
+                                self.stepIndicator.currentStep = 6
+                                self.rightButton.isHidden = true
+                                self.horizontalScrollView.setContentOffset(CGPoint(x: self.view.frame.width * CGFloat(6), y: 0), animated: true)
+                                self.step7.senedNoTextField.text = self.senedNumber
+                            }
                         }
-                    } else if (try JSONSerialization.jsonObject(with: data, options: []) as? NSArray) != nil {
-                       self.errorList = try JSONDecoder().decode([EgovErrorModel].self, from: data)
-                        DispatchQueue.main.async {
-                              self.step7.warningTableView.reloadData()
-                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-                                    self.step7.warningTableView.isHidden = false
-                                     self.step7.warningTableHeight.constant = self.step7.warningTableView.contentSize.height
-                             })
                         
+                        
+                    } else if (try JSONSerialization.jsonObject(with: data, options: []) as? NSArray) != nil {
+                        self.errorList = try JSONDecoder().decode([EgovErrorModel].self, from: data)
+                        DispatchQueue.main.async {
+                            self.step6.warningTableView.reloadData()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                                self.step6.warningTableView.isHidden = false
+                                self.step6.warningTableHeight.constant = self.step6.warningTableView.contentSize.height
+                                let bottomOffset = CGPoint(x: 0, y: self.step6.scrollView.contentSize.height - self.step6.scrollView.bounds.size.height + self.step6.scrollView.contentInset.bottom)
+                                self.step6.scrollView.setContentOffset(bottomOffset, animated: true)
+                            })
+                            
                         }
                     } else {
                         print("dataVal is not valid JSON data")
@@ -1370,10 +1448,10 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                         self.view.makeToast("Xəta baş verdi")
                     }
                 }
-            
+                
                 DispatchQueue.main.async {
                     self.connView.isHidden = true
-              
+                    
                 }
                 
             }
@@ -1387,7 +1465,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                             
                             self.connView.isHidden = true
                             self.view.makeToast("Xəta baş verdi. İnternet bağlantısını yoxlayın")
-                            self.step7.warningTableView.isHidden = true
+                            self.step6.warningTableView.isHidden = true
                             
                         }
                     }
@@ -1395,7 +1473,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                 
             }
             
-            }.resume()
+        }.resume()
         
     }
     
@@ -1457,31 +1535,161 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         if(closeInformation == 1)
         {
             self.navigationController?.popViewController(animated: true)
-
+            
         }
     }
     
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        let protectedRange = NSRange(location: 0, length: 4)
-//        let intersection = NSIntersectionRange(protectedRange, range)
-//        if(textField.text?.count == 4)
-//        {
-//            print("OKKKKK")
-//            textField.text = (textField.text?.prefix(4))! + "(" + string
-//        }
-//        if intersection.length > 0 {
-//
-//            return false
-//        }
-//
-////        if range.location == 12 {
-////            return true
-////        }
-////        if range.location + range.length > 12 {
-////            return false
-////        }
-//        return true
-//    }
+    
+    func payDovlet(){
+        
+        connView.isHidden = false
+        
+        let urlString = "http://46.101.38.248/api/v1/appeals/check/debt/" + self.senedNumber
+        
+        guard let url = URL(string: urlString)
+            else {return}
+        
+        var urlRequest = URLRequest(url: url)
+        
+        urlRequest.setValue(self.userToken, forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: urlRequest){ (data, response, err) in
+            
+            DispatchQueue.main.async {
+                self.connView.isHidden = true
+            }
+            
+            if(err == nil){
+                guard let data = data else { return }
+                
+                do{
+                    let payResponse = try JSONDecoder().decode(PayResponseModel.self, from: data)
+                    
+                    if(payResponse.success! == false){
+                        DispatchQueue.main.async {
+                            
+                            self.step7.warningVieew.isHidden = false
+                        }
+                    }
+                    else{
+                        DispatchQueue.main.async {
+                            self.step7.warningVieew.isHidden = true
+                            self.payUrl = "http://46.101.38.248/payment/rusum/" + "\(self.appealId)"
+                            self.performSegue(withIdentifier: "segueToWebView", sender: self)
+                        }
+                        
+                    }
+                    
+                }
+                    
+                catch let jsonError {
+                    self.view.makeToast("Xeta bas verdi: \(jsonError)")
+                }
+                
+            }
+            else
+            {
+                if let error = err as NSError?
+                {
+                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost || error.code == NSURLErrorTimedOut{
+                        
+                        DispatchQueue.main.async {
+                            
+                            self.view.makeToast("Xəta: Internet bağlantısını yoxlayın")
+                        }
+                    }
+                }
+                
+            }
+            
+        }.resume()
+        
+    }
+    
+    func payXidmet(){
+        
+        connView.isHidden = false
+        
+        let urlString = "http://46.101.38.248/api/v1/appeals/check/debt/" + self.senedNumber
+        
+        guard let url = URL(string: urlString)
+            else {return}
+        
+        var urlRequest = URLRequest(url: url)
+        
+        urlRequest.setValue(self.userToken, forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: urlRequest){ (data, response, err) in
+            
+            DispatchQueue.main.async {
+                self.connView.isHidden = true
+            }
+            
+            if(err == nil){
+                guard let data = data else { return }
+                
+                do{
+                    let payResponse = try JSONDecoder().decode(PayResponseModel.self, from: data)
+                    
+                    if(payResponse.success! == false){
+                        DispatchQueue.main.async {
+                            
+                            self.step7.warningVieew.isHidden = false
+                        }
+                    }
+                    else{
+                        DispatchQueue.main.async {
+                            self.step7.warningVieew.isHidden = true
+                            self.payUrl = "http://46.101.38.248/payment/checkout/" + "\(self.appealId)"
+                            self.performSegue(withIdentifier: "segueToWebView", sender: self)
+                        }
+                        
+                    }
+                    
+                }
+                    
+                catch let jsonError {
+                    self.view.makeToast("Xeta bas verdi: \(jsonError)")
+                }
+                
+            }
+            else
+            {
+                if let error = err as NSError?
+                {
+                    if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost || error.code == NSURLErrorTimedOut{
+                        
+                        DispatchQueue.main.async {
+                            
+                            self.view.makeToast("Xəta: Internet bağlantısını yoxlayın")
+                        }
+                    }
+                }
+                
+            }
+            
+        }.resume()
+        
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+       
+        if(textField == step1.phoneTextField){
+            let formatter = DefaultTextInputFormatter(textPattern: "(##) ###-##-##")
+
+            // inside of UITextFieldDelegate shouldChangeTextIn method
+            let result = formatter.formatInput(currentText: textField.text!, range: range, replacementString: string)
+            textField.text = result.formattedText
+           // textField.setCursorLocation(result.caretBeginOffset)
+            return false
+        }
+        else{
+            return true
+        }
+        
+    }
     
     
 }
+    
+

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "64BAE4E1D3984280C78E172B4A355047"
+               BlueprintIdentifier = "EC3F81A088D9C4099FD4197BD8F72B2B"
                BuildableName = "StepIndicator.bundle"
                BlueprintName = "StepIndicator-StepIndicator"
                ReferencedContainer = "container:Pods.xcodeproj">

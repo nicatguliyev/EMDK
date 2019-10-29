@@ -59,6 +59,8 @@
 		CDCEAFB821D16F4500DBD82C /* Step6.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEAFB721D16F4400DBD82C /* Step6.swift */; };
 		CDCEAFDF21D18A3100DBD82C /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEAFDD21D18A3100DBD82C /* ImageCollectionViewCell.swift */; };
 		CDCEAFE021D18A3100DBD82C /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDCEAFDE21D18A3100DBD82C /* ImageCollectionViewCell.xib */; };
+		CDE417DA23679D0F0089A331 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE417D923679D0F0089A331 /* PayViewController.swift */; };
+		CDE417DC23681BC80089A331 /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE417DB23681BC80089A331 /* StringFormatter.swift */; };
 		CDE65E4621D213E100835247 /* Step7.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDE65E4521D213E100835247 /* Step7.xib */; };
 		CDE65E4821D213FB00835247 /* Step7.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE65E4721D213FB00835247 /* Step7.swift */; };
 		CDE65E4C21D21C3800835247 /* VetendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE65E4B21D21C3800835247 /* VetendasViewController.swift */; };
@@ -196,6 +198,8 @@
 		CDCEAFB721D16F4400DBD82C /* Step6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step6.swift; sourceTree = "<group>"; };
 		CDCEAFDD21D18A3100DBD82C /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		CDCEAFDE21D18A3100DBD82C /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		CDE417D923679D0F0089A331 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		CDE417DB23681BC80089A331 /* StringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
 		CDE65E4521D213E100835247 /* Step7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Step7.xib; sourceTree = "<group>"; };
 		CDE65E4721D213FB00835247 /* Step7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step7.swift; sourceTree = "<group>"; };
 		CDE65E4B21D21C3800835247 /* VetendasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetendasViewController.swift; sourceTree = "<group>"; };
@@ -386,6 +390,8 @@
 				CD32BE7C22C16EAC009A985D /* MuracietCell.swift */,
 				CD32BE7D22C16EAC009A985D /* MuracietCell.xib */,
 				CDBC735222C24AF3002B2182 /* AppealDetailController.swift */,
+				CDE417D923679D0F0089A331 /* PayViewController.swift */,
+				CDE417DB23681BC80089A331 /* StringFormatter.swift */,
 			);
 			path = EMDK;
 			sourceTree = "<group>";
@@ -593,6 +599,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EMDK/Pods-EMDK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AnyFormatKit/AnyFormatKit.framework",
 				"${BUILT_PRODUCTS_DIR}/BSGridCollectionViewLayout/BSGridCollectionViewLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/BSImagePicker/BSImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/BSImageView/BSImageView.framework",
@@ -611,6 +618,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnyFormatKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSGridCollectionViewLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BSImageView.framework",
@@ -660,6 +668,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDE65E6221D27CF200835247 /* LogutViewController.swift in Sources */,
+				CDE417DA23679D0F0089A331 /* PayViewController.swift in Sources */,
 				CD88CB7521CD1A9E0029F9CC /* UserDetailViewController.swift in Sources */,
 				CDACD23821C9227D0005AF76 /* LoginViewController.swift in Sources */,
 				CDCEAFDF21D18A3100DBD82C /* ImageCollectionViewCell.swift in Sources */,
@@ -686,6 +695,7 @@
 				CD530DFF2256A3C9001BD14C /* WarningModalController.swift in Sources */,
 				CD7D66FD22BF7E6800882F3B /* WarningTableViewCell.swift in Sources */,
 				CD530E24225DFF6D001BD14C /* FileCollectionViewCell.swift in Sources */,
+				CDE417DC23681BC80089A331 /* StringFormatter.swift in Sources */,
 				CDE80D1C21CBE39F008E05EC /* NewsCollectionCell.swift in Sources */,
 				CDE80D2221CC2908008E05EC /* NewsDetailController.swift in Sources */,
 				CDCEAFA621D10BA400DBD82C /* ErizeTypeCell.swift in Sources */,

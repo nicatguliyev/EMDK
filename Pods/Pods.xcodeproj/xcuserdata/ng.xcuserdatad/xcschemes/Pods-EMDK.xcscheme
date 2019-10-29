@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F846EC0B5F756FE15CC4553C3B8BAD9"
+               BlueprintIdentifier = "E152BF838E080F6024376208CBAF93C2"
                BuildableName = "Pods_EMDK.framework"
                BlueprintName = "Pods-EMDK"
                ReferencedContainer = "container:Pods.xcodeproj">

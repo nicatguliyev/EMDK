@@ -2324,6 +2324,41 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
             </objects>
             <point key="canvasLocation" x="4244" y="915.29235382308855"/>
         </scene>
+        <!--Pay View Controller-->
+        <scene sceneID="M6e-32-xM3">
+            <objects>
+                <viewController id="xqa-le-DQh" customClass="PayViewController" customModule="EMDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ojX-EA-fRa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3QN-t4-d3f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3QN-t4-d3f" firstAttribute="leading" secondItem="rLi-gE-EWH" secondAttribute="leading" id="I1Q-bw-5VK"/>
+                            <constraint firstItem="rLi-gE-EWH" firstAttribute="trailing" secondItem="3QN-t4-d3f" secondAttribute="trailing" id="P9W-to-ZWG"/>
+                            <constraint firstItem="3QN-t4-d3f" firstAttribute="top" secondItem="rLi-gE-EWH" secondAttribute="top" id="ZfX-au-HyS"/>
+                            <constraint firstItem="rLi-gE-EWH" firstAttribute="bottom" secondItem="3QN-t4-d3f" secondAttribute="bottom" id="rlo-Yf-Fp8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rLi-gE-EWH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wwa-Q7-8Ez"/>
+                    <connections>
+                        <outlet property="webView" destination="3QN-t4-d3f" id="97g-9E-xgP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vso-wL-hqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5148" y="915"/>
+        </scene>
         <!--CustomSW Reveal Controller-->
         <scene sceneID="5N5-Ie-fcW">
             <objects>
@@ -2506,6 +2541,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
                         <segue destination="INs-cd-Gge" kind="presentation" identifier="segueToPopup" id="PT3-Yp-kSQ"/>
                         <segue destination="mo0-Ic-xSe" kind="presentation" identifier="segueToImageController" id="4qK-Xt-Caw"/>
                         <segue destination="zW0-NJ-Bc7" kind="presentation" identifier="segueToCompletionModal" id="q4A-7T-qZy"/>
+                        <segue destination="xqa-le-DQh" kind="show" identifier="segueToWebView" id="q6j-pW-rVv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPE-qT-ddQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2662,7 +2698,7 @@ Formanın ulduz ilə (*) işarələnən qrafaları real məlumatla doldurun. Mö
     <inferredMetricsTieBreakers>
         <segue reference="6lB-p1-8qY"/>
         <segue reference="hf5-BT-MiX"/>
-        <segue reference="8H6-B4-EyD"/>
+        <segue reference="PT3-Yp-kSQ"/>
         <segue reference="pf1-Sy-ECH"/>
     </inferredMetricsTieBreakers>
 </document>

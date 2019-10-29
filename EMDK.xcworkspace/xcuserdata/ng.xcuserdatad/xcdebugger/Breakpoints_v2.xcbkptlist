@@ -90,57 +90,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C26C7123-09E2-4FFF-BA32-D217214407D9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EMDK/ErizeViewController.swift"
-            timestampString = "583421596.106817"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "341"
-            endingLineNumber = "341"
-            landmarkName = "addPages()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C26C7123-09E2-4FFF-BA32-D217214407D9 - 832ed6fff39ea215"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EMDK.ErizeViewController.addPages() -&gt; ()"
-                  moduleName = "EMDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ng/Desktop/EMDK/EMDK/ErizeViewController.swift"
-                  timestampString = "567286702.931607"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "796">
-               </Location>
-               <Location
-                  uuid = "C26C7123-09E2-4FFF-BA32-D217214407D9 - 832ed6fff39ea215"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EMDK.ErizeViewController.addPages() -&gt; ()"
-                  moduleName = "EMDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ng/Desktop/EMDK/EMDK/ErizeViewController.swift"
-                  timestampString = "567286702.937681"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "122"
-                  endingLineNumber = "122"
-                  offsetFromSymbolStart = "2236">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "51E775A5-E2C7-446F-8E35-AE57E7482515"
             shouldBeEnabled = "No"
             ignoreCount = "0"

@@ -17,4 +17,9 @@ class Step6: UIView {
     @IBOutlet weak var collectionHeightConst: NSLayoutConstraint!
     @IBOutlet weak var fileCollectionView: UICollectionView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var odeBtn: UIButton!
+    @IBOutlet weak var imtinaBtn: UIButton!
+    @IBOutlet weak var warningTableView: UITableView!
+    @IBOutlet weak var warningTableHeight: NSLayoutConstraint!
+    
 }
