@@ -21,4 +21,5 @@ class Step7: UIView {
     
     @IBOutlet weak var warningVieew: UIView!
     
+    @IBOutlet weak var senedNoTextFieldHeight: NSLayoutConstraint!
 }

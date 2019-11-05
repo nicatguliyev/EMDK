@@ -73,6 +73,12 @@ struct AppealId:Decodable {
     let id: Int?
 }
 
+struct CheckPayment: Decodable {
+    let success: Bool?
+    let showDocumentNo: Bool?
+    let message: String?
+}
+
 class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource{
     
     var phoneTextField = UITextField()
@@ -134,7 +140,9 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     var appealId = 0
     
     var payUrl = ""
-    
+    var firstTime = true
+    var addfavoriteIndicatorView = UIView()
+    var tryAgainType = 1
     
     @IBOutlet weak var stepIndicator: StepIndicatorView!
     @IBOutlet weak var horizontalScrollView: UIScrollView!
@@ -148,6 +156,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             // Fallback on earlier versions
         }
         
+        print("SUBSERVICE: \(subServiceId)")
         
         initView()
         addPages()
@@ -193,6 +202,15 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         }
         else{
             getAppealPurposes2()
+        }
+        
+        if let indicatorView = Bundle.main.loadNibNamed("IndicatorView", owner: self, options: nil)?.first as? IndicatorView {
+        self.view.addSubview(indicatorView);
+        indicatorView.frame.size.height = UIScreen.main.bounds.height
+        indicatorView.frame.size.width = UIScreen.main.bounds.width
+        indicatorView.isHidden = true
+        self.addfavoriteIndicatorView = indicatorView
+        indicatorView.indicatorParentView.layer.cornerRadius = 10
         }
         
         
@@ -258,7 +276,12 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     }
     
     @objc func tryAgain(){
-        getAppealPurposes2()
+        if(tryAgainType == 1){
+            getAppealPurposes2()
+        }
+        else{
+            isPaymentSuccessfull()
+        }
     }
     
     
@@ -795,15 +818,18 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     }
     
     @objc func pay1(){
+        firstTime = false
         payDovlet()
     }
     
     @objc func pay2(){
+        firstTime = false
         payXidmet()
     }
     
     
     @objc func sendAppeal(){
+        self.step7.senedNoTextFieldHeight.constant = 0
         addToAppeal()
     }
     
@@ -1393,7 +1419,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             "file_6": fayl6Parameter
         ]
         
-        print("fayl1Parameter: \(personNameParameter)")
+       // print("fayl1Parameter: \(selectedPurpose)")
         urlRequest.httpBody = parameters.percentEscaped().data(using: .utf8)
         
         connView.isHidden = false
@@ -1402,7 +1428,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             
             if(err == nil){
                 guard let data = data else { return }
-                // let outputStr  = String(data: data, encoding: String.Encoding.utf8) as String?
+             //    let outputStr  = String(data: data, encoding: //String.Encoding.utf8) as String?
                 //  print(outputStr)
                 do{
                     if (try JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary) != nil {
@@ -1537,12 +1563,22 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
             self.navigationController?.popViewController(animated: true)
             
         }
+        if(firstTime){
+            step7.senedNoTextFieldHeight.constant = 0
+        }
+        else{
+            //step7.senedNoTextFieldHeight.constant = 40
+            self.isPaymentSuccessfull()
+
+        }
     }
     
     
     func payDovlet(){
         
         connView.isHidden = false
+        checkConnIndicator.isHidden = false
+        checkConnButtonView.isHidden = true
         
         let urlString = "http://46.101.38.248/api/v1/appeals/check/debt/" + self.senedNumber
         
@@ -1608,7 +1644,11 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     
     func payXidmet(){
         
+        
+        
         connView.isHidden = false
+        checkConnIndicator.isHidden = false
+        checkConnButtonView.isHidden = true
         
         let urlString = "http://46.101.38.248/api/v1/appeals/check/debt/" + self.senedNumber
         
@@ -1690,6 +1730,80 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     }
     
     
+    func isPaymentSuccessfull(){
+        tryAgainType = 2
+        self.connView.isHidden = false
+        self.checkConnIndicator.isHidden = false
+        self.checkConnButtonView.isHidden = true
+           // self.addfavoriteIndicatorView.isHidden = false
+
+            let urlString = "http://46.101.38.248/api/v1/appeals/check/payment/" + self.senedNumber
+            
+            guard let url = URL(string: urlString)
+                else {return}
+            
+            var urlRequest = URLRequest(url: url)
+            
+            urlRequest.setValue(self.userToken, forHTTPHeaderField: "Authorization")
+            
+            URLSession.shared.dataTask(with: urlRequest){ (data, response, err) in
+        
+                if(err == nil){
+                    DispatchQueue.main.async {
+                        self.connView.isHidden = true
+                    }
+                    guard let data = data else { return }
+                    
+                    do{
+                        let payResponse = try JSONDecoder().decode(CheckPayment.self, from: data)
+                        
+                        if(payResponse.showDocumentNo! == true){
+                            DispatchQueue.main.async {
+                                self.step7.senedNoTextFieldHeight.constant = 40
+                            }
+                          
+                        }
+                        else{
+                            DispatchQueue.main.async {
+                              self.step7.senedNoTextFieldHeight.constant = 0
+                            }
+                            
+                        }
+                        
+                    }
+                        
+                    catch let jsonError {
+                        self.view.makeToast("Xeta bas verdi: \(jsonError)")
+                    }
+                    
+                }
+                else
+                {
+                    if let error = err as NSError?
+                    {
+                        if error.code == NSURLErrorNotConnectedToInternet || error.code == NSURLErrorCannotConnectToHost || error.code == NSURLErrorTimedOut{
+                            
+                            DispatchQueue.main.async {
+                                self.connView.isHidden = false
+                                self.checkConnIndicator.isHidden = true
+                                self.checkConnButtonView.isHidden = false
+                              //   self.view.makeToast("Xəta: Internet bağlantısını yoxlayın")
+                            }
+                        }
+                        else{
+                            DispatchQueue.main.async {
+                                self.connView.isHidden = true
+                                self.view.makeToast("Bilinməyən xəta")
+                            }
+                        }
+                    }
+                    
+                    
+                }
+                
+            }.resume()
+    
+    
 }
     
-
+}
