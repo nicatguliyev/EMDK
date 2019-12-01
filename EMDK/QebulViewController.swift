@@ -279,7 +279,7 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
     
     func getReceiverList(){
         
-        let urlString = "http://46.101.38.248/api/v1/receiver/list"
+        let urlString = "http://31.170.236.6:81/api/v1/receiver/list"
         
         guard let url = URL(string: urlString)
             else {return}
@@ -355,7 +355,7 @@ class QebulViewController: UIViewController, UITextFieldDelegate, UITextViewDele
         let timeInterval = selectedDate.timeIntervalSince1970
         let intDate = Int(timeInterval)
         
-        let urlString = "http://46.101.38.248/api/v1/receiver/appeals/add"
+        let urlString = "http://31.170.236.6:81/api/v1/receiver/appeals/add"
         
         guard let url = URL(string: urlString)
             else {return}

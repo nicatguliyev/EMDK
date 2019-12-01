@@ -79,7 +79,7 @@ class TestViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func getFavoriteServices(){
         
-        let urlString = "http://46.101.38.248/api/v1/user/favourites/list?type=1"
+        let urlString = "http://31.170.236.6:81/api/v1/user/favourites/list?type=1"
         
         guard let url = URL(string: urlString)
             else {return}

@@ -98,7 +98,7 @@ class AppealDetailController: UIViewController {
     
     func getAppealDetail() {
     
-        let urlString = "http://46.101.38.248/api/v1/appeals/show/" + "\(selectedAppealId)"
+        let urlString = "http://31.170.236.6:81/api/v1/appeals/show/" + "\(selectedAppealId)"
         
         print(urlString)
         guard let url = URL(string: urlString)
