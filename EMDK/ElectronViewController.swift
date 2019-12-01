@@ -452,7 +452,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     
     func getServices(){
         
-        let urlString = "http://46.101.38.248/api/v1/electronic/services/list"
+        let urlString = "http://31.170.236.6:81/api/v1/electronic/services/list"
        // var sToken = ""
         
         LoginController.shared.getFinalToken{(token) in
@@ -537,7 +537,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     func addToFavorites(serviceId: Int, section: Int, row: Int, sender: UIButton){
         
        
-        let urlString = "http://46.101.38.248/api/v1/services/favourites/add"
+        let urlString = "http://31.170.236.6:81/api/v1/services/favourites/add"
         
         guard let url = URL(string: urlString)
             else {return}
@@ -607,7 +607,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     
     func getFavoriteServices(){
 
-        let urlString = "http://46.101.38.248/api/v1/user/favourites/list?type=1"
+        let urlString = "http://31.170.236.6:81/api/v1/user/favourites/list?type=1"
 
         guard let url = URL(string: urlString)
             else {return}
@@ -677,7 +677,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
         
         //(FavoritXidmetler)
         
-        let urlString = "http://46.101.38.248/api/v1/services/unFavourite"
+        let urlString = "http://31.170.236.6:81/api/v1/services/unFavourite"
         
         guard let url = URL(string: urlString)
             else {return}
@@ -752,7 +752,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     
     func unFavoriteFromFavTab(serviceId: Int, sender: UIButton){
         
-        let urlString = "http://46.101.38.248/api/v1/services/unFavourite"
+        let urlString = "http://31.170.236.6:81/api/v1/services/unFavourite"
         
         guard let url = URL(string: urlString)
             else {return}
@@ -880,7 +880,7 @@ class ElectronViewController: UIViewController , UITableViewDelegate, UITableVie
     
     func registerUser(name: String, surname: String, fatherName: String, pin: String, token: String){
         
-        let urlString = "http://46.101.38.248/api/v1/user/register"
+        let urlString = "http://31.170.236.6:81/api/v1/user/register"
         
         
         guard let url = URL(string: urlString)

@@ -180,7 +180,7 @@ class SexsiViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.checkConnButtonView.isHidden = true
         self.checkConnIndicator.isHidden = false
         
-        let urlString = "http://46.101.38.248/api/v1/appeals/list"
+        let urlString = "http://31.170.236.6:81/api/v1/appeals/list"
         
         guard let url = URL(string: urlString)
             else {return}

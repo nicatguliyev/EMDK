@@ -1065,7 +1065,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         self.checkConnButtonView.isHidden = true
         
         
-        let urlString = "http://46.101.38.248/api/v1/appeals/purposes/list"
+        let urlString = "http://31.170.236.6:81/api/v1/appeals/purposes/list"
         
         guard let url = URL(string: urlString)
             else {return}
@@ -1147,7 +1147,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         self.checkConnButtonView.isHidden = true
         
         
-        let urlString = "http://46.101.38.248/api/v1/electronic/subservice/purposes/" + "\(subServiceId)"
+        let urlString = "http://31.170.236.6:81/api/v1/electronic/subservice/purposes/" + "\(subServiceId)"
         
         guard let url = URL(string: urlString)
             else {return}
@@ -1223,7 +1223,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
     
     func getAllRegions(){
         
-        let urlString = "http://46.101.38.248/api/v1/cities/list"
+        let urlString = "http://31.170.236.6:81/api/v1/cities/list"
         
         guard let url = URL(string: urlString)
             else {return}
@@ -1387,7 +1387,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         self.step7.warningVieew.isHidden  = true
         
         //  let urlString = "https://ticket.ady.az/test.php"
-        let urlString = "http://46.101.38.248/api/v1/appeals/add"
+        let urlString = "http://31.170.236.6:81/api/v1/appeals/add"
         guard let url = URL(string: urlString)
             else {return}
         
@@ -1580,7 +1580,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         checkConnIndicator.isHidden = false
         checkConnButtonView.isHidden = true
         
-        let urlString = "http://46.101.38.248/api/v1/appeals/check/debt/" + self.senedNumber
+        let urlString = "http://31.170.236.6:81/api/v1/appeals/check/debt/" + self.senedNumber
         
         guard let url = URL(string: urlString)
             else {return}
@@ -1610,7 +1610,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                     else{
                         DispatchQueue.main.async {
                             self.step7.warningVieew.isHidden = true
-                            self.payUrl = "http://46.101.38.248/payment/rusum/" + "\(self.appealId)"
+                            self.payUrl = "http://31.170.236.6:81/payment/rusum/" + "\(self.appealId)"
                             self.performSegue(withIdentifier: "segueToWebView", sender: self)
                         }
                         
@@ -1650,7 +1650,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         checkConnIndicator.isHidden = false
         checkConnButtonView.isHidden = true
         
-        let urlString = "http://46.101.38.248/api/v1/appeals/check/debt/" + self.senedNumber
+        let urlString = "http://31.170.236.6:81/api/v1/appeals/check/debt/" + self.senedNumber
         
         guard let url = URL(string: urlString)
             else {return}
@@ -1680,7 +1680,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
                     else{
                         DispatchQueue.main.async {
                             self.step7.warningVieew.isHidden = true
-                            self.payUrl = "http://46.101.38.248/payment/checkout/" + "\(self.appealId)"
+                            self.payUrl = "http://31.170.236.6:81/payment/checkout/" + "\(self.appealId)"
                             self.performSegue(withIdentifier: "segueToWebView", sender: self)
                         }
                         
@@ -1737,7 +1737,7 @@ class ErizeViewController: UIViewController, UITextFieldDelegate, UICollectionVi
         self.checkConnButtonView.isHidden = true
            // self.addfavoriteIndicatorView.isHidden = false
 
-            let urlString = "http://46.101.38.248/api/v1/appeals/check/payment/" + self.senedNumber
+            let urlString = "http://31.170.236.6:81/api/v1/appeals/check/payment/" + self.senedNumber
             
             guard let url = URL(string: urlString)
                 else {return}

@@ -84,7 +84,7 @@ class NewsDetailController: UIViewController, WKNavigationDelegate {
     
     func getNewsDetail(newsId: Int){
         
-        let urlString = "http://46.101.38.248/api/v1/posts/show/" + "\(newsId)"
+        let urlString = "http://31.170.236.6:81/api/v1/posts/show/" + "\(newsId)"
        // let urlString = "http://142.93.186.89/api/v1/content/detail/117"
         
        // newsIsLoadin = true

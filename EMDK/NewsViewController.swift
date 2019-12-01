@@ -216,7 +216,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func getPostNews(page: Int) {
-        let urlString = "http://46.101.38.248/api/v1/posts/index?page=" + "\(page)"
+        let urlString = "http://31.170.236.6:81/api/v1/posts/index?page=" + "\(page)"
         
         if(page == 1)
         {
